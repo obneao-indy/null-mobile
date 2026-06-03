@@ -10,7 +10,9 @@
 html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--fg);font-family:"Courier New",monospace;touch-action:none;user-select:none}
 #app{width:var(--w);height:100dvh;margin:0 auto;position:relative;overflow:hidden;background:#080808}
 canvas{position:absolute;inset:0;width:100%;height:100%}
-.screen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;background:var(--bg)}
+#bg-canvas{z-index:0;pointer-events:none}
+#game-canvas{z-index:1}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;background:var(--bg);z-index:10}
 .screen.active{opacity:1;pointer-events:all}
 .logo{font-size:clamp(56px,18vw,88px);font-weight:900;letter-spacing:.2em;text-shadow:0 0 40px #fff,0 0 90px #fff8;animation:pulse 3s ease-in-out infinite}
 .tap{font-size:13px;letter-spacing:.3em;color:var(--mid);margin-top:40px;animation:blink 1.4s steps(1) infinite}
@@ -37,11 +39,11 @@ h2{font-size:12px;letter-spacing:.4em;color:var(--mid);margin-bottom:34px}
 #modal{position:absolute;inset:0;background:#000c;display:flex;align-items:flex-end;opacity:0;pointer-events:none;transition:opacity .2s;z-index:100}
 #modal.open{opacity:1;pointer-events:all}#modal-inner{width:100%;max-height:62vh;overflow-y:auto;background:#111;border-top:1px solid #333;padding:20px}.pick-item{margin-bottom:8px}
 #modal-cancel{width:100%;padding:13px;background:none;border:none;color:var(--mid);font:12px "Courier New",monospace;letter-spacing:.2em}
-#hud{position:absolute;top:0;left:0;right:0;height:12%;display:none;align-items:center;justify-content:space-between;padding:12px 16px;z-index:10;pointer-events:none}
+#hud{position:absolute;top:0;left:0;right:0;height:12%;display:none;align-items:center;justify-content:space-between;padding:12px 16px;z-index:20;pointer-events:none}
 #pause-btn{pointer-events:all;background:none;border:none;color:var(--mid);font:18px "Courier New",monospace;padding:8px}
 #life-display{display:flex;gap:6px}.life-pip{width:8px;height:8px;border-radius:50%;background:#fff}.life-pip.dead{background:transparent;border:1px solid #333}
 #timer-display{font-size:18px;font-weight:700}.danger{color:var(--red);animation:blink .4s steps(1) infinite}
-#skill-bar{position:absolute;bottom:0;left:0;right:0;height:18%;display:none;align-items:center;justify-content:center;gap:12px;padding:0 16px;z-index:10;background:linear-gradient(transparent,#000a)}
+#skill-bar{position:absolute;bottom:0;left:0;right:0;height:18%;display:none;align-items:center;justify-content:center;gap:12px;padding:0 16px;z-index:20;background:linear-gradient(transparent,#000a)}
 .sk-btn{flex:1;max-width:100px;height:64px;border:1px solid #333;background:#0008;color:#fff;font:9px "Courier New",monospace;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
 .sk-btn.active{border-color:var(--cyan)}.sk-btn.on-cd{border-color:#222;color:#555}.cd-overlay{position:absolute;inset:0;background:#0009;transform-origin:bottom;transform:scaleY(var(--cd,0))}
 .reward-items{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:38px}.ri-tag{font-size:9px;color:var(--mid);letter-spacing:.3em}.ri-name{font-size:15px;color:var(--neon);margin-top:5px}.def-txt{font-size:32px;font-weight:900;letter-spacing:.3em;color:var(--red);text-shadow:0 0 40px var(--red);margin-bottom:48px}
@@ -83,8 +85,8 @@ function tone(f,type,d,v=.25){try{audioCtx ||= new (AudioContext||webkitAudioCon
 function seUI(){tone(500,"sine",.06,.16)}function seShoot(){tone(820,"square",.04,.1)}function seHit(){tone(220,"sawtooth",.1,.25)}function sePickup(){tone(1300,"sine",.08,.2)}
 function startBGM(){stopBGM();try{audioCtx ||= new (AudioContext||webkitAudioContext)();const notes=[110,123,130,98],gain=audioCtx.createGain();gain.gain.value=.05*(saveData.options.volume/100);gain.connect(audioCtx.destination);let i=0;bgm=setInterval(()=>{const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type="square";o.frequency.value=notes[i++%notes.length];g.gain.value=.25;o.connect(g);g.connect(gain);o.start();o.stop(audioCtx.currentTime+.16)},300)}catch(e){}}
 function stopBGM(){if(bgm)clearInterval(bgm);bgm=null}
-const bg=$("bg-canvas"),bc=bg.getContext("2d"),cv=$("game-canvas"),ctx=cv.getContext("2d");let bgDots=[];
-function resize(){bg.width=bg.offsetWidth;bg.height=bg.offsetHeight;cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;bgDots=Array.from({length:18},()=>({x:Math.random()*bg.width,y:Math.random()*bg.height,r:4+Math.random()*20,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,o:.03+Math.random()*.06}))}
+const app=$("app"),bg=$("bg-canvas"),bc=bg.getContext("2d"),cv=$("game-canvas"),ctx=cv.getContext("2d");let bgDots=[];
+function resize(){let W=app.clientWidth||app.offsetWidth||innerWidth,H=app.clientHeight||app.offsetHeight||innerHeight;bg.width=W;bg.height=H;cv.width=W;cv.height=H;bgDots=Array.from({length:18},()=>({x:Math.random()*bg.width,y:Math.random()*bg.height,r:4+Math.random()*20,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,o:.03+Math.random()*.06}))}
 function drawBg(){bc.clearRect(0,0,bg.width,bg.height);if(!["s-title","s-home"].includes(currentScreen))return;bgDots.forEach(d=>{d.x=(d.x+d.vx+bg.width)%bg.width;d.y=(d.y+d.vy+bg.height)%bg.height;bc.beginPath();bc.arc(d.x,d.y,d.r,0,Math.PI*2);bc.strokeStyle=`rgba(240,240,240,${d.o})`;bc.stroke()})}
 function createEnemy(stage,i){const W=cv.width,H=cv.height,aT=H*.12,aB=H*.82,cols=stage.enemyCount===1?[.5]:[.25,.5,.75],row=stage.enemyCount===1?.25:.2+(i%2)*.16;return{x:W*cols[i],y:aT+(aB-aT)*row,vx:0,vy:0,hp:10,maxHp:10,r:16,hitR:16,atk:.25+i*.28,attackCT:stage.attackCT,scale:0,skill:2+i*.8,dead:false}}
 function createGame(stageId="STAGE_001"){const W=cv.width,H=cv.height,aT=H*.12,aB=H*.82,eq=equipmentDB[saveData.equippedEquip]||equipmentDB.EQ_001,stage=stageDB[stageId]||stageDB.STAGE_001,enemies=Array.from({length:stage.enemyCount},(_,i)=>createEnemy(stage,i));return{stageId,stage,W,H,aT,aB,time:90,phase:"playing",shake:0,player:{x:W/2,y:aT+(aB-aT)*.72,vx:0,vy:0,hp:3,r:16,hitR:9,inv:0,vis:true},enemy:enemies[0],enemies,drag:{active:false},pBullets:[],eBullets:[],drops:[],particles:[],eq,atk:0,keys:{},skills:saveData.equippedSkills.map(id=>id?{id,timer:0,active:false,duration:0,ct:skillDB[id].ct}:null)}}
