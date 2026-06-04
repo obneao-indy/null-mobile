@@ -73,7 +73,7 @@ input[type=range]{width:120px}.help-section p{font-size:12px;line-height:1.8;col
 <script>
 const enemyDB={ENE_001:{id:"ENE_001",name:"Black Circle",hp:10,speedRatio:.7,size:32,attackCT:.5,attackAngles:[-15,0,15]}};
 const stageDB={STAGE_001:{id:"STAGE_001",name:"Black Circle",enemyCount:1,attackCT:.5,enemyType:"black"},STAGE_002:{id:"STAGE_002",name:"Triple Circle",enemyCount:3,attackCT:.82,enemyType:"black"},STAGE_003:{id:"STAGE_003",name:"Shift",enemyCount:1,attackCT:3.5,enemyType:"shift"},STAGE_004:{id:"STAGE_004",name:"Triple Shift",enemyCount:3,attackCT:3.5,enemyType:"shift"}};
-const equipmentDB={EQ_001:{id:"EQ_001",name:"単発弾",nameEn:"SINGLE",desc:"single shot",bulletCount:1,spread:0},EQ_003:{id:"EQ_003",name:"スラッシュ",nameEn:"SLASH",desc:"short frontal area hit",bulletCount:0,spread:0,melee:true,range:86,arc:105}};
+const equipmentDB={EQ_001:{id:"EQ_001",name:"単発弾",nameEn:"SINGLE",desc:"single shot",bulletCount:1,spread:0},EQ_003:{id:"EQ_003",name:"インパクト",nameEn:"IMPACT",desc:"short frontal impact hit",bulletCount:0,spread:0,melee:true,range:86,arc:105}};
 const skillDB={SK_001:{id:"SK_001",name:"巨大化",nameEn:"SCALE",desc:"attack size +50% / Lv3 dmg x2",ct:10,duration:3,maxStack:3},SK_002:{id:"SK_002",name:"散弾",nameEn:"SCATTER",desc:"widens attack angle by level",ct:8,duration:4,maxStack:3},SK_003:{id:"SK_003",name:"シフト",nameEn:"SHIFT",desc:"warp behind nearest enemy",ct:8,duration:.45,maxStack:3}};
 const SAVE_KEY="null_v01_save";let saveData={ownedEquip:["EQ_001"],ownedSkills:{},equippedEquip:"EQ_001",equippedSkills:[null,null,null],wins:{ENE_001:0},unlockedStages:["STAGE_001"],tutorialDone:false,options:{volume:60,shake:true}};
 try{Object.assign(saveData,JSON.parse(localStorage.getItem(SAVE_KEY)||"null")||{})}catch(e){}
