@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-12T23:42:41",
+  "generatedAt": "2026-06-13T01:09:58",
   "monsters": {
     "M_BLACKSQUARE": {
       "id": "M_BLACKSQUARE",
@@ -128,6 +128,47 @@
         }
       },
       "desc": "高速で突入する異形。Level3で光速突進を行う。"
+    },
+    "M_HAMMER": {
+      "id": "M_HAMMER",
+      "name": "ハンマー",
+      "glyph": "T",
+      "hp": 10,
+      "speed": 5,
+      "slots": 1,
+      "trait": null,
+      "levels": {
+        "2": {
+          "hp": 10,
+          "speed": 5
+        },
+        "3": {
+          "hp": 15,
+          "speed": 5,
+          "trait": "heavyStrike"
+        }
+      },
+      "desc": "1ターン溜めて強打を行う低速個体。"
+    },
+    "M_POZ": {
+      "id": "M_POZ",
+      "name": "ポズ",
+      "glyph": "♟",
+      "hp": 10,
+      "speed": 10,
+      "slots": 1,
+      "trait": "poisonSecretion",
+      "levels": {
+        "2": {
+          "hp": 6,
+          "speed": 15
+        },
+        "3": {
+          "hp": 7,
+          "speed": 15
+        }
+      },
+      "desc": "通常攻撃で毒を分泌する状態異常型個体。"
     }
   },
   "traits": {
@@ -158,6 +199,14 @@
     "lightRush": {
       "name": "光速突進",
       "desc": "ターン最初の行動時、通常攻撃がSの0.5倍ダメージになる。"
+    },
+    "heavyStrike": {
+      "name": "強打",
+      "desc": "通常攻撃を選ぶと1ターン溜め、次ターンに現在HPと同じダメージを与える。"
+    },
+    "poisonSecretion": {
+      "name": "毒分泌",
+      "desc": "通常攻撃命中時、30%で対象を2ターン毒状態にする。"
     }
   },
   "skills": {
@@ -293,6 +342,42 @@
         10,
         9,
         8
+      ]
+    },
+    "SK_HEAVY_STRIKE": {
+      "id": "SK_HEAVY_STRIKE",
+      "name": "強打",
+      "glyph": "T",
+      "desc": "1ターン溜め、次ターンに現在HPと同じダメージ。",
+      "target": "enemy",
+      "targets": 1,
+      "hpStrike": true,
+      "ct": [
+        0,
+        8,
+        7,
+        6
+      ]
+    },
+    "SK_POISON_SECRETION": {
+      "id": "SK_POISON_SECRETION",
+      "name": "分泌毒",
+      "glyph": "♟",
+      "desc": "通常攻撃後、対象へ毒を確定付与。",
+      "target": "enemy",
+      "targets": 1,
+      "poisonAttack": true,
+      "poisonTurns": [
+        0,
+        2,
+        2,
+        3
+      ],
+      "ct": [
+        0,
+        6,
+        5,
+        4
       ]
     }
   },
@@ -566,6 +651,104 @@
           }
         ]
       ]
+    },
+    "STAGE_008": {
+      "id": "STAGE_008",
+      "name": "鍛冶",
+      "category": "normal",
+      "info": "1 WAVE / ハンマー Lv1",
+      "waves": [
+        [
+          {
+            "id": "M_HAMMER",
+            "level": 1
+          }
+        ]
+      ]
+    },
+    "STAGE_009": {
+      "id": "STAGE_009",
+      "name": "工房",
+      "category": "normal",
+      "info": "2 WAVES / ハンマー Lv2-3",
+      "waves": [
+        [
+          {
+            "id": "M_HAMMER",
+            "level": 2
+          },
+          {
+            "id": "M_HAMMER",
+            "level": 2
+          }
+        ],
+        [
+          {
+            "id": "M_HAMMER",
+            "level": 3
+          },
+          {
+            "id": "M_HAMMER",
+            "level": 3
+          },
+          {
+            "id": "M_HAMMER",
+            "level": 3
+          }
+        ]
+      ]
+    },
+    "STAGE_010": {
+      "id": "STAGE_010",
+      "name": "工業廃水",
+      "category": "normal",
+      "info": "1 WAVE / ポズ Lv1",
+      "waves": [
+        [
+          {
+            "id": "M_POZ",
+            "level": 1
+          }
+        ]
+      ]
+    },
+    "STAGE_011": {
+      "id": "STAGE_011",
+      "name": "毒沼",
+      "category": "normal",
+      "info": "3 WAVES / ポズ Lv2-3",
+      "waves": [
+        [
+          {
+            "id": "M_POZ",
+            "level": 2
+          },
+          {
+            "id": "M_POZ",
+            "level": 2
+          }
+        ],
+        [
+          {
+            "id": "M_POZ",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_POZ",
+            "level": 3
+          },
+          {
+            "id": "M_POZ",
+            "level": 3
+          },
+          {
+            "id": "M_POZ",
+            "level": 3
+          }
+        ]
+      ]
     }
   },
   "recipes": {
@@ -626,108 +809,227 @@
   "drops": [
     {
       "source_monster_id": "M_BLACKCIRCLE",
-      "min_level": 1,
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_BLACKCIRCLE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_BLACKCIRCLE",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_BLACKCIRCLE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_BLACKCIRCLE",
+      "source_level": 3,
       "drop_type": "monster",
       "drop_id": "M_BLACKCIRCLE",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_BLACKSQUARE",
-      "min_level": 1,
+      "source_level": 1,
       "drop_type": "monster",
       "drop_id": "M_BLACKSQUARE",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_BLACKSQUARE",
-      "min_level": 3,
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_BLACKSQUARE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_BLACKSQUARE",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_BLACKSQUARE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_BLACKSQUARE",
+      "source_level": 3,
       "drop_type": "skill",
       "drop_id": "SK_BLACKSQUARE",
       "rate": 0.1
     },
     {
       "source_monster_id": "M_HIDER",
-      "min_level": 1,
+      "source_level": 1,
       "drop_type": "monster",
       "drop_id": "M_HIDER",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_HIDER",
-      "min_level": 3,
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_HIDER",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_HIDER",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_HIDER",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_HIDER",
+      "source_level": 3,
       "drop_type": "skill",
       "drop_id": "SK_HIDE",
       "rate": 0.1
     },
     {
       "source_monster_id": "M_BLACKTRIANGLE",
-      "min_level": 1,
+      "source_level": 1,
       "drop_type": "monster",
       "drop_id": "M_BLACKTRIANGLE",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_BLACKTRIANGLE",
-      "min_level": 3,
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_BLACKTRIANGLE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_BLACKTRIANGLE",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_BLACKTRIANGLE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_BLACKTRIANGLE",
+      "source_level": 3,
       "drop_type": "skill",
       "drop_id": "SK_RAPID",
       "rate": 0.1
     },
     {
       "source_monster_id": "M_SPEEDER",
-      "min_level": 1,
+      "source_level": 1,
       "drop_type": "monster",
       "drop_id": "M_SPEEDER",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_SPEEDER",
-      "min_level": 3,
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_SPEEDER",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_SPEEDER",
+      "source_level": 3,
       "drop_type": "skill",
       "drop_id": "SK_DASH",
       "rate": 0.1
     },
     {
       "source_monster_id": "M_OUMUAMUA",
-      "min_level": 1,
+      "source_level": 1,
       "drop_type": "recipe",
       "drop_id": "R_SK_BARRAGE",
       "rate": 0.1
     },
     {
       "source_monster_id": "M_OUMUAMUA",
-      "min_level": 2,
+      "source_level": 2,
       "drop_type": "recipe",
       "drop_id": "R_SK_BARRAGE",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_OUMUAMUA",
-      "min_level": 2,
+      "source_level": 2,
       "drop_type": "recipe",
       "drop_id": "R_SK_OUMUAMUA",
       "rate": 0.1
     },
     {
       "source_monster_id": "M_OUMUAMUA",
-      "min_level": 3,
+      "source_level": 3,
       "drop_type": "recipe",
       "drop_id": "R_SK_BARRAGE",
       "rate": 0.3
     },
     {
       "source_monster_id": "M_OUMUAMUA",
-      "min_level": 3,
+      "source_level": 3,
       "drop_type": "recipe",
       "drop_id": "R_SK_OUMUAMUA",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_OUMUAMUA",
-      "min_level": 3,
+      "source_level": 3,
       "drop_type": "recipe",
       "drop_id": "R_M_OUMUAMUA",
       "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_HAMMER",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_HAMMER",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_HAMMER",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_HAMMER",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_HAMMER",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_HAMMER",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_HAMMER",
+      "source_level": 3,
+      "drop_type": "skill",
+      "drop_id": "SK_HEAVY_STRIKE",
+      "rate": 0.1
+    },
+    {
+      "source_monster_id": "M_POZ",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_POZ",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_POZ",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_POZ",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_POZ",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_POZ",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_POZ",
+      "source_level": 3,
+      "drop_type": "skill",
+      "drop_id": "SK_POISON_SECRETION",
+      "rate": 0.1
     }
   ],
   "systemRules": {
