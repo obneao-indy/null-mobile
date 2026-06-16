@@ -1,28 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-13T01:09:58",
+  "generatedAt": "2026-06-15T01:36:04",
   "monsters": {
-    "M_BLACKSQUARE": {
-      "id": "M_BLACKSQUARE",
-      "name": "Blacksquare",
-      "glyph": "■",
-      "hp": 20,
-      "speed": 10,
-      "slots": 2,
-      "trait": null,
-      "levels": {
-        "2": {
-          "hp": 10,
-          "speed": 5
-        },
-        "3": {
-          "hp": 20,
-          "speed": 5,
-          "trait": "wideGuard"
-        }
-      },
-      "desc": "Level3でワイドガードを獲得する基礎個体。"
-    },
     "M_BLACKCIRCLE": {
       "id": "M_BLACKCIRCLE",
       "name": "BlackCircle",
@@ -44,26 +23,26 @@
       },
       "desc": "Level3で通常攻撃が2体対象になる高速個体。"
     },
-    "M_HIDER": {
-      "id": "M_HIDER",
-      "name": "hider",
-      "glyph": "◎",
-      "hp": 10,
-      "speed": 15,
+    "M_BLACKSQUARE": {
+      "id": "M_BLACKSQUARE",
+      "name": "Blacksquare",
+      "glyph": "■",
+      "hp": 20,
+      "speed": 10,
       "slots": 2,
       "trait": null,
       "levels": {
         "2": {
           "hp": 10,
-          "speed": 10
+          "speed": 5
         },
         "3": {
-          "hp": 10,
-          "speed": 15,
-          "trait": "hide"
+          "hp": 20,
+          "speed": 5,
+          "trait": "wideGuard"
         }
       },
-      "desc": "Level3で毎ターン30%の確率で潜伏する。"
+      "desc": "Level3でワイドガードを獲得する基礎個体。"
     },
     "M_BLACKTRIANGLE": {
       "id": "M_BLACKTRIANGLE",
@@ -86,6 +65,109 @@
       },
       "desc": "Level3で通常攻撃が同じ敵への3連射になる。"
     },
+    "M_HAMMER": {
+      "id": "M_HAMMER",
+      "name": "ハンマー",
+      "glyph": "T",
+      "hp": 10,
+      "speed": 5,
+      "slots": 1,
+      "trait": null,
+      "visual": {
+        "src": "assets/characters/hammer.png",
+        "w": 46,
+        "h": 68,
+        "y": -6
+      },
+      "levels": {
+        "2": {
+          "hp": 10,
+          "speed": 5
+        },
+        "3": {
+          "hp": 15,
+          "speed": 5,
+          "trait": "heavyStrike"
+        }
+      },
+      "desc": "1ターン溜めて強打を行う低速個体。"
+    },
+    "M_HIDER": {
+      "id": "M_HIDER",
+      "name": "hider",
+      "glyph": "◎",
+      "hp": 10,
+      "speed": 15,
+      "slots": 2,
+      "trait": null,
+      "levels": {
+        "2": {
+          "hp": 10,
+          "speed": 10
+        },
+        "3": {
+          "hp": 10,
+          "speed": 15,
+          "trait": "hide"
+        }
+      },
+      "desc": "Level3で毎ターン30%の確率で潜伏する。"
+    },
+    "M_OUMUAMUA": {
+      "id": "M_OUMUAMUA",
+      "name": "オウムアムア",
+      "glyph": "◉",
+      "hp": 30,
+      "speed": 50,
+      "slots": 3,
+      "trait": null,
+      "visual": {
+        "src": "assets/characters/oumuamua.png",
+        "w": 22,
+        "h": 86,
+        "y": -15,
+        "orientation": "sphere-trail-up"
+      },
+      "levels": {
+        "2": {
+          "hp": 20,
+          "speed": 30,
+          "trait": "barrage"
+        },
+        "3": {
+          "hp": 20,
+          "speed": 40,
+          "trait": "lightRush"
+        }
+      },
+      "desc": "高速で突入する異形。Level3で光速突進を行う。"
+    },
+    "M_POZ": {
+      "id": "M_POZ",
+      "name": "ポズ",
+      "glyph": "♟",
+      "hp": 10,
+      "speed": 10,
+      "slots": 1,
+      "trait": "poisonSecretion",
+      "visual": {
+        "src": "assets/characters/poz.png",
+        "w": 66,
+        "h": 58,
+        "y": -5
+      },
+      "levels": {
+        "2": {
+          "hp": 6,
+          "speed": 15
+        },
+        "3": {
+          "hp": 7,
+          "speed": 15
+        }
+      },
+      "desc": "通常攻撃で毒を分泌する状態異常型個体。"
+    },
     "M_SPEEDER": {
       "id": "M_SPEEDER",
       "name": "speeder",
@@ -106,127 +188,74 @@
         }
       },
       "desc": "Level3でスピードが20%上昇する。"
-    },
-    "M_OUMUAMUA": {
-      "id": "M_OUMUAMUA",
-      "name": "オウムアムア",
-      "glyph": "◉",
-      "hp": 30,
-      "speed": 50,
-      "slots": 3,
-      "trait": null,
-      "levels": {
-        "2": {
-          "hp": 20,
-          "speed": 30,
-          "trait": "barrage"
-        },
-        "3": {
-          "hp": 20,
-          "speed": 40,
-          "trait": "lightRush"
-        }
-      },
-      "desc": "高速で突入する異形。Level3で光速突進を行う。"
-    },
-    "M_HAMMER": {
-      "id": "M_HAMMER",
-      "name": "ハンマー",
-      "glyph": "T",
-      "hp": 10,
-      "speed": 5,
-      "slots": 1,
-      "trait": null,
-      "levels": {
-        "2": {
-          "hp": 10,
-          "speed": 5
-        },
-        "3": {
-          "hp": 15,
-          "speed": 5,
-          "trait": "heavyStrike"
-        }
-      },
-      "desc": "1ターン溜めて強打を行う低速個体。"
-    },
-    "M_POZ": {
-      "id": "M_POZ",
-      "name": "ポズ",
-      "glyph": "♟",
-      "hp": 10,
-      "speed": 10,
-      "slots": 1,
-      "trait": "poisonSecretion",
-      "levels": {
-        "2": {
-          "hp": 6,
-          "speed": 15
-        },
-        "3": {
-          "hp": 7,
-          "speed": 15
-        }
-      },
-      "desc": "通常攻撃で毒を分泌する状態異常型個体。"
     }
   },
   "traits": {
-    "wideGuard": {
-      "name": "ワイドガード",
-      "desc": "パーティー全体の受けるダメージを軽減。重複は2体まで。"
-    },
-    "scatter": {
-      "name": "散弾",
-      "desc": "通常攻撃が敵2体を自動対象にする。"
-    },
-    "hide": {
-      "name": "ハイド",
-      "desc": "毎ターン30%の確率で潜伏する。"
-    },
-    "rapid": {
-      "name": "連射",
-      "desc": "通常攻撃が選んだ敵へ3ヒットする。"
-    },
-    "dash": {
-      "name": "ダッシュ",
-      "desc": "このキャラクターのスピードが20%上昇する。"
-    },
     "barrage": {
+      "id": "barrage",
       "name": "弾幕",
       "desc": "通常攻撃が敵3体を自動対象にする。"
     },
-    "lightRush": {
-      "name": "光速突進",
-      "desc": "ターン最初の行動時、通常攻撃がSの0.5倍ダメージになる。"
+    "dash": {
+      "id": "dash",
+      "name": "ダッシュ",
+      "desc": "このキャラクターのスピードが20%上昇する。"
     },
     "heavyStrike": {
+      "id": "heavyStrike",
       "name": "強打",
       "desc": "通常攻撃を選ぶと1ターン溜め、次ターンに現在HPと同じダメージを与える。"
     },
+    "hide": {
+      "id": "hide",
+      "name": "ハイド",
+      "desc": "毎ターン30%の確率で潜伏する。"
+    },
+    "lightRush": {
+      "id": "lightRush",
+      "name": "光速突進",
+      "desc": "ターン最初の行動時、通常攻撃がSの0.5倍ダメージになる。"
+    },
     "poisonSecretion": {
+      "id": "poisonSecretion",
       "name": "毒分泌",
       "desc": "通常攻撃命中時、30%で対象を2ターン毒状態にする。"
+    },
+    "rapid": {
+      "id": "rapid",
+      "name": "連射",
+      "desc": "通常攻撃が選んだ敵へ3ヒットする。"
+    },
+    "scatter": {
+      "id": "scatter",
+      "name": "散弾",
+      "desc": "通常攻撃が敵2体を自動対象にする。"
+    },
+    "wideGuard": {
+      "id": "wideGuard",
+      "name": "ワイドガード",
+      "desc": "パーティー全体の受けるダメージを軽減。重複は2体まで。"
     }
   },
   "skills": {
-    "SK_BLACKSQUARE": {
-      "id": "SK_BLACKSQUARE",
-      "name": "ワイドガード",
-      "glyph": "■",
-      "desc": "味方全体の被ダメージを軽減。",
-      "target": "self",
-      "guardPct": [
+    "SK_BARRAGE": {
+      "id": "SK_BARRAGE",
+      "name": "弾幕",
+      "glyph": "⋯",
+      "desc": "敵3体へダメージ。",
+      "target": "enemy",
+      "targets": 3,
+      "power": [
         0,
-        0.2,
-        0.2,
-        0.3
+        8,
+        10,
+        10
       ],
       "ct": [
         0,
-        4,
-        3,
-        2
+        7,
+        6,
+        5
       ]
     },
     "SK_BLACKCIRCLE": {
@@ -249,39 +278,23 @@
         0
       ]
     },
-    "SK_HIDE": {
-      "id": "SK_HIDE",
-      "name": "ハイド",
-      "glyph": "◎",
-      "desc": "このターン使用者が潜伏。",
+    "SK_BLACKSQUARE": {
+      "id": "SK_BLACKSQUARE",
+      "name": "ワイドガード",
+      "glyph": "■",
+      "desc": "味方全体の被ダメージを軽減。",
       "target": "self",
-      "hide": true,
-      "ct": [
+      "guardPct": [
         0,
-        5,
-        4,
-        3
-      ]
-    },
-    "SK_RAPID": {
-      "id": "SK_RAPID",
-      "name": "連射",
-      "glyph": "▲",
-      "desc": "敵1体へ3回ダメージ。",
-      "target": "enemy",
-      "targets": 1,
-      "rapid": [
-        0,
-        0.7,
-        0.7,
-        0.8
+        0.2,
+        0.2,
+        0.3
       ],
-      "hits": 3,
       "ct": [
         0,
-        6,
-        5,
-        4
+        4,
+        3,
+        2
       ]
     },
     "SK_DASH": {
@@ -304,24 +317,33 @@
         6
       ]
     },
-    "SK_BARRAGE": {
-      "id": "SK_BARRAGE",
-      "name": "弾幕",
-      "glyph": "⋯",
-      "desc": "敵3体へダメージ。",
+    "SK_HEAVY_STRIKE": {
+      "id": "SK_HEAVY_STRIKE",
+      "name": "強打",
+      "glyph": "T",
+      "desc": "1ターン溜め、次ターンに現在HPと同じダメージ。",
       "target": "enemy",
-      "targets": 3,
-      "power": [
-        0,
-        8,
-        10,
-        10
-      ],
+      "targets": 1,
+      "hpStrike": true,
       "ct": [
         0,
+        8,
         7,
-        6,
-        5
+        6
+      ]
+    },
+    "SK_HIDE": {
+      "id": "SK_HIDE",
+      "name": "ハイド",
+      "glyph": "◎",
+      "desc": "このターン使用者が潜伏。",
+      "target": "self",
+      "hide": true,
+      "ct": [
+        0,
+        5,
+        4,
+        3
       ]
     },
     "SK_OUMUAMUA": {
@@ -344,21 +366,6 @@
         8
       ]
     },
-    "SK_HEAVY_STRIKE": {
-      "id": "SK_HEAVY_STRIKE",
-      "name": "強打",
-      "glyph": "T",
-      "desc": "1ターン溜め、次ターンに現在HPと同じダメージ。",
-      "target": "enemy",
-      "targets": 1,
-      "hpStrike": true,
-      "ct": [
-        0,
-        8,
-        7,
-        6
-      ]
-    },
     "SK_POISON_SECRETION": {
       "id": "SK_POISON_SECRETION",
       "name": "分泌毒",
@@ -379,14 +386,81 @@
         5,
         4
       ]
+    },
+    "SK_RAPID": {
+      "id": "SK_RAPID",
+      "name": "連射",
+      "glyph": "▲",
+      "desc": "敵1体へ3回ダメージ。",
+      "target": "enemy",
+      "targets": 1,
+      "rapid": [
+        0,
+        0.7,
+        0.7,
+        0.8
+      ],
+      "hits": 3,
+      "ct": [
+        0,
+        6,
+        5,
+        4
+      ]
     }
   },
   "stages": {
+    "SP_OUMUAMUA": {
+      "id": "SP_OUMUAMUA",
+      "name": "オウムアムア",
+      "category": "special",
+      "info": "3 WAVES / オウムアムア",
+      "unlockType": "kills",
+      "unlockValue": "M_SPEEDER:30;M_BLACKCIRCLE:30",
+      "waves": [
+        [
+          {
+            "id": "M_OUMUAMUA",
+            "level": 1
+          },
+          {
+            "id": "M_BLACKCIRCLE",
+            "level": 3
+          },
+          {
+            "id": "M_BLACKCIRCLE",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_OUMUAMUA",
+            "level": 2
+          },
+          {
+            "id": "M_SPEEDER",
+            "level": 3
+          },
+          {
+            "id": "M_SPEEDER",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_OUMUAMUA",
+            "level": 3
+          }
+        ]
+      ]
+    },
     "STAGE_001": {
       "id": "STAGE_001",
       "name": "BlackCircle",
       "category": "normal",
       "info": "1 WAVE / BlackCircle x1",
+      "unlockType": "always",
+      "unlockValue": null,
       "waves": [
         [
           {
@@ -401,6 +475,8 @@
       "name": "Blacksquare",
       "category": "normal",
       "info": "2 WAVES / BlackCircle x2 / Blacksquare Lv3",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_001",
       "waves": [
         [
           {
@@ -425,6 +501,8 @@
       "name": "Blacksquare＆BlackCircle",
       "category": "normal",
       "info": "3 WAVES / Lv2-3 MIX",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_002",
       "waves": [
         [
           {
@@ -479,6 +557,8 @@
       "name": "hide",
       "category": "normal",
       "info": "1 WAVE / hider x1",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_001",
       "waves": [
         [
           {
@@ -493,6 +573,8 @@
       "name": "hide!!!",
       "category": "normal",
       "info": "3 WAVES / hider + Blacktriangle",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_004",
       "waves": [
         [
           {
@@ -547,6 +629,8 @@
       "name": "dash",
       "category": "normal",
       "info": "1 WAVE / speeder x1",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_001",
       "waves": [
         [
           {
@@ -561,6 +645,8 @@
       "name": "triangles",
       "category": "normal",
       "info": "3 WAVES / speeder + Blacktriangle",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_006",
       "waves": [
         [
           {
@@ -605,48 +691,6 @@
           },
           {
             "id": "M_BLACKTRIANGLE",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "SP_OUMUAMUA": {
-      "id": "SP_OUMUAMUA",
-      "name": "オウムアムア",
-      "category": "special",
-      "info": "3 WAVES / オウムアムア",
-      "waves": [
-        [
-          {
-            "id": "M_OUMUAMUA",
-            "level": 1
-          },
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 3
-          },
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 3
-          }
-        ],
-        [
-          {
-            "id": "M_OUMUAMUA",
-            "level": 2
-          },
-          {
-            "id": "M_SPEEDER",
-            "level": 3
-          },
-          {
-            "id": "M_SPEEDER",
-            "level": 3
-          }
-        ],
-        [
-          {
-            "id": "M_OUMUAMUA",
             "level": 3
           }
         ]
@@ -657,6 +701,8 @@
       "name": "鍛冶",
       "category": "normal",
       "info": "1 WAVE / ハンマー Lv1",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_004",
       "waves": [
         [
           {
@@ -671,6 +717,8 @@
       "name": "工房",
       "category": "normal",
       "info": "2 WAVES / ハンマー Lv2-3",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_008",
       "waves": [
         [
           {
@@ -703,6 +751,8 @@
       "name": "工業廃水",
       "category": "normal",
       "info": "1 WAVE / ポズ Lv1",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_006",
       "waves": [
         [
           {
@@ -717,6 +767,8 @@
       "name": "毒沼",
       "category": "normal",
       "info": "3 WAVES / ポズ Lv2-3",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_010",
       "waves": [
         [
           {
@@ -752,6 +804,25 @@
     }
   },
   "recipes": {
+    "R_M_OUMUAMUA": {
+      "id": "R_M_OUMUAMUA",
+      "name": "オウムアムア",
+      "kind": "monster",
+      "result": {
+        "type": "monster",
+        "id": "M_OUMUAMUA"
+      },
+      "requires": [
+        {
+          "id": "M_BLACKCIRCLE",
+          "count": 10
+        },
+        {
+          "id": "M_SPEEDER",
+          "count": 15
+        }
+      ]
+    },
     "R_SK_BARRAGE": {
       "id": "R_SK_BARRAGE",
       "name": "弾幕",
@@ -783,25 +854,6 @@
         {
           "id": "M_SPEEDER",
           "count": 8
-        }
-      ]
-    },
-    "R_M_OUMUAMUA": {
-      "id": "R_M_OUMUAMUA",
-      "name": "オウムアムア",
-      "kind": "monster",
-      "result": {
-        "type": "monster",
-        "id": "M_OUMUAMUA"
-      },
-      "requires": [
-        {
-          "id": "M_BLACKCIRCLE",
-          "count": 10
-        },
-        {
-          "id": "M_SPEEDER",
-          "count": 15
         }
       ]
     }
