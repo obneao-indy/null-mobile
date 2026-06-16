@@ -14,7 +14,15 @@ node server.mjs
 
 ## External game database
 
-`NULL_game_db.xlsx` is the editable master database. Export it after editing:
+`NULL_GAME_DB` is the editable master database. Open that folder as an Obsidian Vault, edit the Markdown notes, then export:
+
+```powershell
+python tools/markdown_game_db.py export --vault NULL_GAME_DB --output game_db.json
+```
+
+Each character, trait, skill, stage, and recipe has its own note. Human-readable descriptions and the machine-readable JSON block live in the same Markdown file.
+
+`NULL_game_db.xlsx` remains as a compatibility backup. To regenerate JSON from Excel:
 
 ```powershell
 python tools/export_game_db.py --workbook NULL_game_db.xlsx --output game_db.json --export-only
@@ -22,7 +30,7 @@ python tools/export_game_db.py --workbook NULL_game_db.xlsx --output game_db.jso
 
 The game loads `game_db.json` on startup and falls back to the inline definitions if the file cannot be loaded.
 
-New content can be drafted in the yellow cells of these sheets:
+Excel draft sheets:
 
 - `TEMPLATE_CHARACTER`
 - `TEMPLATE_SKILL`

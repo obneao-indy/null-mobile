@@ -121,14 +121,14 @@ DATA = {
         ["STAGE_001", "BlackCircle", "normal", "1 WAVE / BlackCircle x1", "always", ""],
         ["STAGE_002", "Blacksquare", "normal", "2 WAVES / BlackCircle x2 / Blacksquare Lv3", "clear", "STAGE_001"],
         ["STAGE_003", "Blacksquare＆BlackCircle", "normal", "3 WAVES / Lv2-3 MIX", "clear", "STAGE_002"],
-        ["STAGE_004", "hide", "normal", "1 WAVE / hider x1", "clear", "STAGE_002"],
+        ["STAGE_004", "hide", "normal", "1 WAVE / hider x1", "clear", "STAGE_001"],
         ["STAGE_005", "hide!!!", "normal", "3 WAVES / hider + Blacktriangle", "clear", "STAGE_004"],
-        ["STAGE_006", "dash", "normal", "1 WAVE / speeder x1", "clear", "STAGE_002"],
+        ["STAGE_006", "dash", "normal", "1 WAVE / speeder x1", "clear", "STAGE_001"],
         ["STAGE_007", "triangles", "normal", "3 WAVES / speeder + Blacktriangle", "clear", "STAGE_006"],
         ["SP_OUMUAMUA", "オウムアムア", "special", "3 WAVES / オウムアムア", "kills", "M_SPEEDER:30;M_BLACKCIRCLE:30"],
-        ["STAGE_008", "鍛冶", "normal", "1 WAVE / ハンマー Lv1", "always", ""],
+        ["STAGE_008", "鍛冶", "normal", "1 WAVE / ハンマー Lv1", "clear", "STAGE_004"],
         ["STAGE_009", "工房", "normal", "2 WAVES / ハンマー Lv2-3", "clear", "STAGE_008"],
-        ["STAGE_010", "工業廃水", "normal", "1 WAVE / ポズ Lv1", "always", ""],
+        ["STAGE_010", "工業廃水", "normal", "1 WAVE / ポズ Lv1", "clear", "STAGE_006"],
         ["STAGE_011", "毒沼", "normal", "3 WAVES / ポズ Lv2-3", "clear", "STAGE_010"],
     ],
     "stage_waves": [
@@ -549,7 +549,8 @@ def export_json(workbook, output):
             ])
         stages[r["stage_id"]] = {
             "id": r["stage_id"], "name": r["name"], "category": r["category"],
-            "info": r["info"], "waves": waves,
+            "info": r["info"], "unlockType": r["unlock_type"],
+            "unlockValue": r["unlock_value"], "waves": waves,
         }
     recipes = {}
     for r in data["recipes"]:
