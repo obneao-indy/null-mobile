@@ -258,6 +258,76 @@ name: Drops
     "drop_type": "skill",
     "drop_id": "SK_GARDNER",
     "rate": 0.1
+  },
+  {
+    "source_monster_id": "M_HELME",
+    "source_level": 1,
+    "drop_type": "monster",
+    "drop_id": "M_HELME",
+    "rate": 0.2
+  },
+  {
+    "source_monster_id": "M_HELME",
+    "source_level": 2,
+    "drop_type": "monster",
+    "drop_id": "M_HELME",
+    "rate": 0.3
+  },
+  {
+    "source_monster_id": "M_HELME",
+    "source_level": 3,
+    "drop_type": "monster",
+    "drop_id": "M_HELME",
+    "rate": 0.3
+  },
+  {
+    "source_monster_id": "M_HELME",
+    "source_level": 3,
+    "drop_type": "skill",
+    "drop_id": "SK_COUNTER",
+    "rate": 0.1
+  },
+  {
+    "source_monster_id": "M_SPARTIATAI",
+    "source_level": 1,
+    "drop_type": "recipe",
+    "drop_id": "R_SK_SPARTAN_RAGE",
+    "rate": 0.1
+  },
+  {
+    "source_monster_id": "M_SPARTIATAI",
+    "source_level": 1,
+    "drop_type": "skill",
+    "drop_id": "SK_GARDNER",
+    "rate": 0.1
+  },
+  {
+    "source_monster_id": "M_SPARTIATAI",
+    "source_level": 2,
+    "drop_type": "recipe",
+    "drop_id": "R_SK_SPARTAN_RAGE",
+    "rate": 0.2
+  },
+  {
+    "source_monster_id": "M_SPARTIATAI",
+    "source_level": 2,
+    "drop_type": "skill",
+    "drop_id": "SK_COUNTER",
+    "rate": 0.1
+  },
+  {
+    "source_monster_id": "M_SPARTIATAI",
+    "source_level": 3,
+    "drop_type": "recipe",
+    "drop_id": "R_M_SPARTIATAI",
+    "rate": 0.3
+  },
+  {
+    "source_monster_id": "M_SPARTIATAI",
+    "source_level": 3,
+    "drop_type": "recipe",
+    "drop_id": "R_SK_SPARTAN_RAGE",
+    "rate": 0.3
   }
 ]
 ```

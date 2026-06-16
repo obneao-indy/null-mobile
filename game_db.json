@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-16T14:36:14",
+  "generatedAt": "2026-06-16T17:41:46",
   "monsters": {
     "M_BLACKCIRCLE": {
       "id": "M_BLACKCIRCLE",
@@ -219,6 +219,63 @@
         }
       },
       "desc": "Level3でスピードが20%上昇する。"
+    },
+    "M_HELME": {
+      "id": "M_HELME",
+      "name": "ヘルメ",
+      "glyph": "兜",
+      "hp": 20,
+      "speed": 10,
+      "slots": 2,
+      "trait": null,
+      "visual": {
+        "src": "assets/characters/helme.png",
+        "vaultSrc": "Assets/Characters/helme.png",
+        "w": 42,
+        "h": 66,
+        "y": -7
+      },
+      "levels": {
+        "2": {
+          "hp": 15,
+          "speed": 15
+        },
+        "3": {
+          "hp": 10,
+          "speed": 15,
+          "trait": "counter"
+        }
+      },
+      "desc": "兜をモチーフとしたキャラクター。攻撃を受けると反撃する。"
+    },
+    "M_SPARTIATAI": {
+      "id": "M_SPARTIATAI",
+      "name": "スパルティアタイ",
+      "glyph": "Σ",
+      "hp": 40,
+      "speed": 20,
+      "slots": 0,
+      "trait": "gather",
+      "visual": {
+        "src": "assets/characters/spartiatai.png",
+        "vaultSrc": "Assets/Characters/spartiatai.png",
+        "w": 66,
+        "h": 74,
+        "y": -6
+      },
+      "levels": {
+        "2": {
+          "hp": 30,
+          "speed": 20,
+          "trait": "counter"
+        },
+        "3": {
+          "hp": 30,
+          "speed": 20,
+          "trait": "spartanRage"
+        }
+      },
+      "desc": "盾と兜が特徴のスパルタの戦士。防御と反撃、怒りの一撃を備える。"
     }
   },
   "traits": {
@@ -271,6 +328,16 @@
       "id": "wideGuard",
       "name": "ワイドガード",
       "desc": "パーティー全体の受けるダメージを軽減。重複は2体まで。"
+    },
+    "counter": {
+      "id": "counter",
+      "name": "反撃",
+      "desc": "反撃状態のキャラクターがエネミーからダメージを受けると、ダメージを与えた相手へ即時通常攻撃を行う。"
+    },
+    "spartanRage": {
+      "id": "spartanRage",
+      "name": "スパルタの怒り",
+      "desc": "減ったHPの数値分、通常攻撃にダメージを上乗せする。"
     }
   },
   "skills": {
@@ -464,6 +531,41 @@
         5,
         4
       ]
+    },
+    "SK_COUNTER": {
+      "id": "SK_COUNTER",
+      "name": "カウンター",
+      "glyph": "↩",
+      "desc": "効果中、このキャラクターは反撃状態になる。",
+      "counter": true,
+      "counterTurns": [
+        0,
+        2,
+        2,
+        3
+      ],
+      "ct": [
+        0,
+        8,
+        6,
+        4
+      ],
+      "target": "self"
+    },
+    "SK_SPARTAN_RAGE": {
+      "id": "SK_SPARTAN_RAGE",
+      "name": "スパルタの怒り",
+      "glyph": "Σ",
+      "desc": "減っているHPの数値分のダメージを敵1体に与える。",
+      "lostHpStrike": true,
+      "ct": [
+        0,
+        10,
+        9,
+        7
+      ],
+      "target": "enemy",
+      "targets": 1
     }
   },
   "stages": {
@@ -473,7 +575,7 @@
       "category": "special",
       "info": "3 WAVES / オウムアムア",
       "unlockType": "kills",
-      "unlockValue": "M_SPEEDER:30;M_BLACKCIRCLE:30",
+      "unlockValue": "M_SPEEDER:20;M_BLACKCIRCLE:20",
       "waves": [
         [
           {
@@ -938,6 +1040,122 @@
           }
         ]
       ]
+    },
+    "STAGE_014": {
+      "id": "STAGE_014",
+      "name": "helmet",
+      "category": "normal",
+      "info": "1 WAVE / ヘルメ x2",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_013",
+      "waves": [
+        [
+          {
+            "id": "M_HELME",
+            "level": 1
+          },
+          {
+            "id": "M_HELME",
+            "level": 1
+          }
+        ]
+      ]
+    },
+    "STAGE_015": {
+      "id": "STAGE_015",
+      "name": "兜割り",
+      "category": "normal",
+      "info": "3 WAVES / ヘルメ",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_014",
+      "waves": [
+        [
+          {
+            "id": "M_HELME",
+            "level": 1
+          },
+          {
+            "id": "M_HELME",
+            "level": 1
+          },
+          {
+            "id": "M_HELME",
+            "level": 1
+          }
+        ],
+        [
+          {
+            "id": "M_HELME",
+            "level": 2
+          },
+          {
+            "id": "M_HELME",
+            "level": 2
+          },
+          {
+            "id": "M_HELME",
+            "level": 2
+          }
+        ],
+        [
+          {
+            "id": "M_HELME",
+            "level": 3
+          },
+          {
+            "id": "M_HELME",
+            "level": 3
+          },
+          {
+            "id": "M_HELME",
+            "level": 3
+          }
+        ]
+      ]
+    },
+    "SP_SPARTA": {
+      "id": "SP_SPARTA",
+      "name": "Sparta",
+      "category": "special",
+      "info": "3 WAVES / スパルティアタイ",
+      "unlockType": "kills",
+      "unlockValue": "M_GARDNER:20;M_HELME:20",
+      "waves": [
+        [
+          {
+            "id": "M_GARDNER",
+            "level": 3
+          },
+          {
+            "id": "M_SPARTIATAI",
+            "level": 1
+          },
+          {
+            "id": "M_GARDNER",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_HELME",
+            "level": 3
+          },
+          {
+            "id": "M_SPARTIATAI",
+            "level": 2
+          },
+          {
+            "id": "M_GARDNER",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_SPARTIATAI",
+            "level": 3
+          }
+        ]
+      ]
     }
   },
   "recipes": {
@@ -991,6 +1209,58 @@
         {
           "id": "M_SPEEDER",
           "count": 8
+        }
+      ]
+    },
+    "R_M_SPARTIATAI": {
+      "id": "R_M_SPARTIATAI",
+      "name": "スパルティアタイ",
+      "kind": "monster",
+      "result": {
+        "type": "monster",
+        "id": "M_SPARTIATAI"
+      },
+      "requires": [
+        {
+          "id": "M_GARDNER",
+          "level": 3,
+          "count": 3
+        },
+        {
+          "id": "M_HELME",
+          "level": 3,
+          "count": 3
+        },
+        {
+          "id": "M_GARDNER",
+          "level": 1,
+          "count": 2
+        },
+        {
+          "id": "M_HELME",
+          "level": 1,
+          "count": 2
+        }
+      ]
+    },
+    "R_SK_SPARTAN_RAGE": {
+      "id": "R_SK_SPARTAN_RAGE",
+      "name": "スパルタの怒り",
+      "kind": "skill",
+      "result": {
+        "type": "skill",
+        "id": "SK_SPARTAN_RAGE"
+      },
+      "requires": [
+        {
+          "id": "M_GARDNER",
+          "level": 1,
+          "count": 5
+        },
+        {
+          "id": "M_HELME",
+          "level": 1,
+          "count": 5
         }
       ]
     }
@@ -1247,6 +1517,76 @@
       "drop_type": "skill",
       "drop_id": "SK_GARDNER",
       "rate": 0.1
+    },
+    {
+      "source_monster_id": "M_HELME",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_HELME",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_HELME",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_HELME",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_HELME",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_HELME",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_HELME",
+      "source_level": 3,
+      "drop_type": "skill",
+      "drop_id": "SK_COUNTER",
+      "rate": 0.1
+    },
+    {
+      "source_monster_id": "M_SPARTIATAI",
+      "source_level": 1,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_SPARTAN_RAGE",
+      "rate": 0.1
+    },
+    {
+      "source_monster_id": "M_SPARTIATAI",
+      "source_level": 1,
+      "drop_type": "skill",
+      "drop_id": "SK_GARDNER",
+      "rate": 0.1
+    },
+    {
+      "source_monster_id": "M_SPARTIATAI",
+      "source_level": 2,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_SPARTAN_RAGE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_SPARTIATAI",
+      "source_level": 2,
+      "drop_type": "skill",
+      "drop_id": "SK_COUNTER",
+      "rate": 0.1
+    },
+    {
+      "source_monster_id": "M_SPARTIATAI",
+      "source_level": 3,
+      "drop_type": "recipe",
+      "drop_id": "R_M_SPARTIATAI",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_SPARTIATAI",
+      "source_level": 3,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_SPARTAN_RAGE",
+      "rate": 0.3
     }
   ],
   "systemRules": {

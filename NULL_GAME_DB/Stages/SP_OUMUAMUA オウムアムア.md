@@ -17,7 +17,7 @@ name: オウムアムア
   "category": "special",
   "info": "3 WAVES / オウムアムア",
   "unlockType": "kills",
-  "unlockValue": "M_SPEEDER:30;M_BLACKCIRCLE:30",
+  "unlockValue": "M_SPEEDER:20;M_BLACKCIRCLE:20",
   "waves": [
     [
       {
