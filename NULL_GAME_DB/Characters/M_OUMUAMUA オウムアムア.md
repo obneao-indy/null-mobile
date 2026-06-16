@@ -8,6 +8,10 @@ name: オウムアムア
 
 高速で突入する異形。Level3で光速突進を行う。
 
+## Visual
+
+![[Assets/Characters/oumuamua.png]]
+
 ## Data
 
 このJSONブロックがゲームDBへ出力されます。キー名は変更せず、値を編集してください。
@@ -26,7 +30,8 @@ name: オウムアムア
     "w": 22,
     "h": 86,
     "y": -15,
-    "orientation": "sphere-trail-up"
+    "orientation": "sphere-trail-up",
+    "vaultSrc": "Assets/Characters/oumuamua.png"
   },
   "levels": {
     "2": {

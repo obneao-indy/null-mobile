@@ -8,6 +8,10 @@ name: ポズ
 
 通常攻撃で毒を分泌する状態異常型個体。
 
+## Visual
+
+![[Assets/Characters/poz.png]]
+
 ## Data
 
 このJSONブロックがゲームDBへ出力されます。キー名は変更せず、値を編集してください。
@@ -25,7 +29,8 @@ name: ポズ
     "src": "assets/characters/poz.png",
     "w": 66,
     "h": 58,
-    "y": -5
+    "y": -5,
+    "vaultSrc": "Assets/Characters/poz.png"
   },
   "levels": {
     "2": {

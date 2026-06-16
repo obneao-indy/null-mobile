@@ -230,6 +230,34 @@ name: Drops
     "drop_type": "skill",
     "drop_id": "SK_POISON_SECRETION",
     "rate": 0.1
+  },
+  {
+    "source_monster_id": "M_GARDNER",
+    "source_level": 1,
+    "drop_type": "monster",
+    "drop_id": "M_GARDNER",
+    "rate": 0.2
+  },
+  {
+    "source_monster_id": "M_GARDNER",
+    "source_level": 2,
+    "drop_type": "monster",
+    "drop_id": "M_GARDNER",
+    "rate": 0.3
+  },
+  {
+    "source_monster_id": "M_GARDNER",
+    "source_level": 3,
+    "drop_type": "monster",
+    "drop_id": "M_GARDNER",
+    "rate": 0.3
+  },
+  {
+    "source_monster_id": "M_GARDNER",
+    "source_level": 3,
+    "drop_type": "skill",
+    "drop_id": "SK_GARDNER",
+    "rate": 0.1
   }
 ]
 ```

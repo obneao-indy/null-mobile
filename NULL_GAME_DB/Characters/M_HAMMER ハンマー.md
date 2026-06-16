@@ -8,6 +8,10 @@ name: ハンマー
 
 1ターン溜めて強打を行う低速個体。
 
+## Visual
+
+![[Assets/Characters/hammer.png]]
+
 ## Data
 
 このJSONブロックがゲームDBへ出力されます。キー名は変更せず、値を編集してください。
@@ -25,7 +29,8 @@ name: ハンマー
     "src": "assets/characters/hammer.png",
     "w": 46,
     "h": 68,
-    "y": -6
+    "y": -6,
+    "vaultSrc": "Assets/Characters/hammer.png"
   },
   "levels": {
     "2": {

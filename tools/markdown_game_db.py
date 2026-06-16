@@ -32,6 +32,10 @@ def note_text(kind, item):
     ]
     if item.get("desc"):
         lines.extend([item["desc"], ""])
+    visual = item.get("visual", {})
+    vault_src = visual.get("vaultSrc")
+    if vault_src:
+        lines.extend(["## Visual", "", f"![[{vault_src}]]", ""])
     lines.extend([
         "## Data",
         "",
