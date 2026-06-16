@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-15T01:36:04",
+  "generatedAt": "2026-06-16T14:36:14",
   "monsters": {
     "M_BLACKCIRCLE": {
       "id": "M_BLACKCIRCLE",
@@ -65,6 +65,34 @@
       },
       "desc": "Level3で通常攻撃が同じ敵への3連射になる。"
     },
+    "M_GARDNER": {
+      "id": "M_GARDNER",
+      "name": "ガードナー",
+      "glyph": "◆",
+      "hp": 20,
+      "speed": 3,
+      "slots": 1,
+      "trait": null,
+      "visual": {
+        "src": "assets/characters/gardner.png",
+        "vaultSrc": "Assets/Characters/gardner.png",
+        "w": 50,
+        "h": 58,
+        "y": -5
+      },
+      "levels": {
+        "2": {
+          "hp": 20,
+          "speed": 3
+        },
+        "3": {
+          "hp": 30,
+          "speed": 3,
+          "trait": "gather"
+        }
+      },
+      "desc": "敵の攻撃を引き付けて味方を守る盾型キャラクター。"
+    },
     "M_HAMMER": {
       "id": "M_HAMMER",
       "name": "ハンマー",
@@ -77,7 +105,8 @@
         "src": "assets/characters/hammer.png",
         "w": 46,
         "h": 68,
-        "y": -6
+        "y": -6,
+        "vaultSrc": "Assets/Characters/hammer.png"
       },
       "levels": {
         "2": {
@@ -126,7 +155,8 @@
         "w": 22,
         "h": 86,
         "y": -15,
-        "orientation": "sphere-trail-up"
+        "orientation": "sphere-trail-up",
+        "vaultSrc": "Assets/Characters/oumuamua.png"
       },
       "levels": {
         "2": {
@@ -154,7 +184,8 @@
         "src": "assets/characters/poz.png",
         "w": 66,
         "h": 58,
-        "y": -5
+        "y": -5,
+        "vaultSrc": "Assets/Characters/poz.png"
       },
       "levels": {
         "2": {
@@ -200,6 +231,11 @@
       "id": "dash",
       "name": "ダッシュ",
       "desc": "このキャラクターのスピードが20%上昇する。"
+    },
+    "gather": {
+      "id": "gather",
+      "name": "集約",
+      "desc": "エネミーの優先ターゲットになる。発光する。"
     },
     "heavyStrike": {
       "id": "heavyStrike",
@@ -315,6 +351,27 @@
         8,
         7,
         6
+      ]
+    },
+    "SK_GARDNER": {
+      "id": "SK_GARDNER",
+      "name": "ガードナー",
+      "glyph": "◆",
+      "desc": "発動中、エネミーの攻撃がこのキャラクターに集まる。",
+      "target": "self",
+      "targets": 0,
+      "taunt": true,
+      "tauntTurns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "ct": [
+        0,
+        8,
+        6,
+        4
       ]
     },
     "SK_HEAVY_STRIKE": {
@@ -801,6 +858,86 @@
           }
         ]
       ]
+    },
+    "STAGE_012": {
+      "id": "STAGE_012",
+      "name": "小さな盾",
+      "category": "normal",
+      "info": "1 WAVE / ガードナー Lv1 x3",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_002",
+      "waves": [
+        [
+          {
+            "id": "M_GARDNER",
+            "level": 1
+          },
+          {
+            "id": "M_GARDNER",
+            "level": 1
+          },
+          {
+            "id": "M_GARDNER",
+            "level": 1
+          }
+        ]
+      ]
+    },
+    "STAGE_013": {
+      "id": "STAGE_013",
+      "name": "盾、盾、盾",
+      "category": "normal",
+      "info": "3 WAVES / ガードナー",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_012",
+      "waves": [
+        [
+          {
+            "id": "M_GARDNER",
+            "level": 1
+          },
+          {
+            "id": "M_GARDNER",
+            "level": 1
+          },
+          {
+            "id": "M_GARDNER",
+            "level": 1
+          }
+        ],
+        [
+          {
+            "id": "M_GARDNER",
+            "level": 2
+          },
+          {
+            "id": "M_GARDNER",
+            "level": 2
+          },
+          {
+            "id": "M_GARDNER",
+            "level": 2
+          }
+        ],
+        [
+          {
+            "id": "M_GARDNER",
+            "level": 3
+          },
+          {
+            "id": "M_GARDNER",
+            "level": 3
+          },
+          {
+            "id": "M_GARDNER",
+            "level": 3
+          },
+          {
+            "id": "M_GARDNER",
+            "level": 3
+          }
+        ]
+      ]
     }
   },
   "recipes": {
@@ -1081,6 +1218,34 @@
       "source_level": 3,
       "drop_type": "skill",
       "drop_id": "SK_POISON_SECRETION",
+      "rate": 0.1
+    },
+    {
+      "source_monster_id": "M_GARDNER",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_GARDNER",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_GARDNER",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_GARDNER",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_GARDNER",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_GARDNER",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_GARDNER",
+      "source_level": 3,
+      "drop_type": "skill",
+      "drop_id": "SK_GARDNER",
       "rate": 0.1
     }
   ],
