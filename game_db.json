@@ -276,6 +276,117 @@
         }
       },
       "desc": "盾と兜が特徴のスパルタの戦士。防御と反撃、怒りの一撃を備える。"
+    },
+    "M_OCTAGON": {
+      "id": "M_OCTAGON",
+      "name": "Octagon",
+      "glyph": "八",
+      "hp": 40,
+      "speed": 15,
+      "slots": 4,
+      "trait": null,
+      "visual": {
+        "src": "assets/characters/octagon.png",
+        "vaultSrc": "Assets/Characters/octagon.png",
+        "w": 58,
+        "h": 58,
+        "y": -4
+      },
+      "levels": {
+        "2": {
+          "hp": 20,
+          "speed": 15
+        },
+        "3": {
+          "hp": 30,
+          "speed": 15,
+          "trait": "shield"
+        }
+      },
+      "desc": "Blacksquareの上位種。場に出た時、全員へシールドを付与する。"
+    },
+    "M_POZILULU": {
+      "id": "M_POZILULU",
+      "name": "ポズィルル",
+      "glyph": "毒",
+      "hp": 20,
+      "speed": 10,
+      "slots": 3,
+      "trait": "lethalToxin",
+      "visual": {
+        "src": "assets/characters/pozilulu.png",
+        "vaultSrc": "Assets/Characters/pozilulu.png",
+        "w": 66,
+        "h": 72,
+        "y": -9
+      },
+      "levels": {
+        "2": {
+          "hp": 30,
+          "speed": 20
+        },
+        "3": {
+          "hp": 30,
+          "speed": 30,
+          "trait": "overSecretion"
+        }
+      },
+      "desc": "ポズの上位種。猛毒と死亡時の過剰分泌で戦場を汚染する。"
+    },
+    "M_AGENT": {
+      "id": "M_AGENT",
+      "name": "agent",
+      "glyph": "人",
+      "hp": 8,
+      "speed": 15,
+      "slots": 3,
+      "trait": null,
+      "visual": {
+        "src": "assets/characters/agent.png",
+        "vaultSrc": "Assets/Characters/agent.png",
+        "w": 38,
+        "h": 70,
+        "y": -8
+      },
+      "levels": {
+        "2": {
+          "hp": 8,
+          "speed": 10
+        },
+        "3": {
+          "hp": 8,
+          "speed": 15
+        }
+      },
+      "desc": "新しい基本キャラ。低耐久で扱いやすい高速型。"
+    },
+    "M_ADMIN_TRI": {
+      "id": "M_ADMIN_TRI",
+      "name": "Administrator-Tri-",
+      "glyph": "A",
+      "hp": 30,
+      "speed": 20,
+      "slots": 4,
+      "trait": "analyze",
+      "visual": {
+        "src": "assets/characters/administrator_tri.png",
+        "vaultSrc": "Assets/Characters/administrator_tri.png",
+        "w": 64,
+        "h": 70,
+        "y": -6
+      },
+      "levels": {
+        "2": {
+          "hp": 30,
+          "speed": 20
+        },
+        "3": {
+          "hp": 20,
+          "speed": 20,
+          "trait": "adminTri"
+        }
+      },
+      "desc": "triangleシリーズの上位種。アナライズで敵の被ダメージを増やす。"
     }
   },
   "traits": {
@@ -338,6 +449,31 @@
       "id": "spartanRage",
       "name": "スパルタの怒り",
       "desc": "減ったHPの数値分、通常攻撃にダメージを上乗せする。"
+    },
+    "shield": {
+      "id": "shield",
+      "name": "シールド",
+      "desc": "場に出た時、場に出ている全キャラクターへシールドを1つ付与する。シールドは1ヒットのダメージを無効化して1つ消費される。"
+    },
+    "lethalToxin": {
+      "id": "lethalToxin",
+      "name": "致命的毒素",
+      "desc": "通常攻撃命中時、30%で対象を3ターン猛毒状態にする。猛毒は毒の倍のダメージ。"
+    },
+    "overSecretion": {
+      "id": "overSecretion",
+      "name": "過剰分泌",
+      "desc": "死亡時、ランダムな敵2体を3ターン猛毒状態にし、敵全体に通常攻撃の1.2倍ダメージ。"
+    },
+    "analyze": {
+      "id": "analyze",
+      "name": "analyze",
+      "desc": "攻撃系スキルでダメージを与えた対象をアナライズ状態にする。アナライズ中は受けるダメージが1.5倍。"
+    },
+    "adminTri": {
+      "id": "adminTri",
+      "name": "Administrator-Tri-",
+      "desc": "戦闘開始から6ターン経過で、敵全体をアナライズ状態にして通常攻撃の2倍ダメージを与える。"
     }
   },
   "skills": {
@@ -566,6 +702,116 @@
       ],
       "target": "enemy",
       "targets": 1
+    },
+    "SK_SHIELD": {
+      "id": "SK_SHIELD",
+      "name": "シールド",
+      "glyph": "▣",
+      "desc": "味方全体にシールドを1つ付与する。",
+      "target": "self",
+      "targets": 0,
+      "shieldAll": 1,
+      "ct": [
+        0,
+        12,
+        10,
+        8
+      ]
+    },
+    "SK_LETHAL_TOXIN": {
+      "id": "SK_LETHAL_TOXIN",
+      "name": "致命的毒素",
+      "glyph": "毒",
+      "desc": "通常攻撃ダメージ後、対象を猛毒状態にする。",
+      "target": "enemy",
+      "targets": 1,
+      "venomAttack": true,
+      "venomTurns": [
+        0,
+        2,
+        2,
+        3
+      ],
+      "ct": [
+        0,
+        10,
+        8,
+        6
+      ]
+    },
+    "SK_OVER_SECRETION": {
+      "id": "SK_OVER_SECRETION",
+      "name": "過剰分泌",
+      "glyph": "爆",
+      "desc": "敵全体に通常攻撃の1.2倍ダメージと猛毒を与え、使用者は死亡する。Lv3は1.5倍。",
+      "target": "enemy",
+      "targets": 5,
+      "overSecretionSkill": [
+        0,
+        1.2,
+        1.2,
+        1.5
+      ],
+      "venomTurns": [
+        0,
+        3,
+        3,
+        4
+      ],
+      "ct": [
+        0,
+        13,
+        11,
+        10
+      ]
+    },
+    "SK_ANALYZE": {
+      "id": "SK_ANALYZE",
+      "name": "analyze",
+      "glyph": "目",
+      "desc": "対象に通常攻撃し、アナライズ状態を付与する。",
+      "target": "enemy",
+      "targets": 1,
+      "analyzeAttack": true,
+      "analyzeTurns": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "ct": [
+        0,
+        10,
+        8,
+        6
+      ]
+    },
+    "SK_ADMIN_TRI": {
+      "id": "SK_ADMIN_TRI",
+      "name": "Administrator-Tri-",
+      "glyph": "A",
+      "desc": "敵全体に2ターンのアナライズを付与し、通常攻撃の2倍ダメージ。",
+      "target": "enemy",
+      "targets": 5,
+      "adminTriSkill": true,
+      "analyzeTurns": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "mult": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "ct": [
+        0,
+        13,
+        11,
+        9
+      ]
     }
   },
   "stages": {
@@ -1156,6 +1402,222 @@
           }
         ]
       ]
+    },
+    "STAGE_016": {
+      "id": "STAGE_016",
+      "name": "センター",
+      "category": "normal",
+      "info": "3 WAVES / agent Lv1-3",
+      "unlockType": "clear",
+      "unlockValue": "STAGE_001",
+      "waves": [
+        [
+          {
+            "id": "M_AGENT",
+            "level": 1
+          }
+        ],
+        [
+          {
+            "id": "M_AGENT",
+            "level": 2
+          }
+        ],
+        [
+          {
+            "id": "M_AGENT",
+            "level": 3
+          }
+        ]
+      ]
+    },
+    "SP_OCTAGON": {
+      "id": "SP_OCTAGON",
+      "name": "八角形",
+      "category": "special",
+      "info": "3 WAVES / Octagon",
+      "unlockType": "kills",
+      "unlockValue": "M_BLACKSQUARE:20",
+      "waves": [
+        [
+          {
+            "id": "M_OCTAGON",
+            "level": 1
+          }
+        ],
+        [
+          {
+            "id": "M_OCTAGON",
+            "level": 2
+          },
+          {
+            "id": "M_OCTAGON",
+            "level": 1
+          },
+          {
+            "id": "M_OCTAGON",
+            "level": 1
+          }
+        ],
+        [
+          {
+            "id": "M_OCTAGON",
+            "level": 3
+          },
+          {
+            "id": "M_OCTAGON",
+            "level": 2
+          },
+          {
+            "id": "M_OCTAGON",
+            "level": 2
+          }
+        ]
+      ]
+    },
+    "SP_POZILULU": {
+      "id": "SP_POZILULU",
+      "name": "猛毒の大地",
+      "category": "special",
+      "info": "3 WAVES / ポズィルル + ポズ",
+      "unlockType": "kills",
+      "unlockValue": "M_POZ:20",
+      "waves": [
+        [
+          {
+            "id": "M_POZ",
+            "level": 2
+          },
+          {
+            "id": "M_POZ",
+            "level": 2
+          },
+          {
+            "id": "M_POZ",
+            "level": 2
+          },
+          {
+            "id": "M_POZ",
+            "level": 2
+          },
+          {
+            "id": "M_POZ",
+            "level": 2
+          }
+        ],
+        [
+          {
+            "id": "M_POZ",
+            "level": 3
+          },
+          {
+            "id": "M_POZILULU",
+            "level": 2
+          },
+          {
+            "id": "M_POZ",
+            "level": 3
+          },
+          {
+            "id": "M_POZ",
+            "level": 3
+          },
+          {
+            "id": "M_POZ",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_POZILULU",
+            "level": 3
+          },
+          {
+            "id": "M_POZILULU",
+            "level": 3
+          },
+          {
+            "id": "M_POZILULU",
+            "level": 3
+          }
+        ]
+      ]
+    },
+    "SP_ADMIN_TRI": {
+      "id": "SP_ADMIN_TRI",
+      "name": "Administrator-Tri-",
+      "category": "special",
+      "info": "3 WAVES / Administrator-Tri-",
+      "unlockType": "kills",
+      "unlockValue": "M_BLACKTRIANGLE:20;M_SPEEDER:20",
+      "waves": [
+        [
+          {
+            "id": "M_BLACKTRIANGLE",
+            "level": 3
+          },
+          {
+            "id": "M_ADMIN_TRI",
+            "level": 2
+          },
+          {
+            "id": "M_BLACKTRIANGLE",
+            "level": 3
+          },
+          {
+            "id": "M_SPEEDER",
+            "level": 3
+          },
+          {
+            "id": "M_SPEEDER",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_BLACKTRIANGLE",
+            "level": 3
+          },
+          {
+            "id": "M_BLACKTRIANGLE",
+            "level": 3
+          },
+          {
+            "id": "M_BLACKTRIANGLE",
+            "level": 3
+          },
+          {
+            "id": "M_SPEEDER",
+            "level": 3
+          },
+          {
+            "id": "M_SPEEDER",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_ADMIN_TRI",
+            "level": 1
+          },
+          {
+            "id": "M_ADMIN_TRI",
+            "level": 3
+          },
+          {
+            "id": "M_ADMIN_TRI",
+            "level": 1
+          },
+          {
+            "id": "M_ADMIN_TRI",
+            "level": 3
+          },
+          {
+            "id": "M_ADMIN_TRI",
+            "level": 1
+          }
+        ]
+      ]
     }
   },
   "recipes": {
@@ -1261,6 +1723,139 @@
           "id": "M_HELME",
           "level": 1,
           "count": 5
+        }
+      ]
+    },
+    "R_SK_SHIELD": {
+      "id": "R_SK_SHIELD",
+      "name": "シールド",
+      "kind": "skill",
+      "result": {
+        "type": "skill",
+        "id": "SK_SHIELD"
+      },
+      "requires": [
+        {
+          "id": "M_BLACKSQUARE",
+          "count": 10
+        }
+      ]
+    },
+    "R_M_OCTAGON": {
+      "id": "R_M_OCTAGON",
+      "name": "Octagon",
+      "kind": "monster",
+      "result": {
+        "type": "monster",
+        "id": "M_OCTAGON"
+      },
+      "requires": [
+        {
+          "id": "M_BLACKSQUARE",
+          "count": 30
+        }
+      ]
+    },
+    "R_SK_LETHAL_TOXIN": {
+      "id": "R_SK_LETHAL_TOXIN",
+      "name": "致命的毒素",
+      "kind": "skill",
+      "result": {
+        "type": "skill",
+        "id": "SK_LETHAL_TOXIN"
+      },
+      "requires": [
+        {
+          "id": "M_POZ",
+          "count": 10
+        }
+      ]
+    },
+    "R_SK_OVER_SECRETION": {
+      "id": "R_SK_OVER_SECRETION",
+      "name": "過剰分泌",
+      "kind": "skill",
+      "result": {
+        "type": "skill",
+        "id": "SK_OVER_SECRETION"
+      },
+      "requires": [
+        {
+          "id": "M_POZ",
+          "count": 20
+        }
+      ]
+    },
+    "R_M_POZILULU": {
+      "id": "R_M_POZILULU",
+      "name": "ポズィルル",
+      "kind": "monster",
+      "result": {
+        "type": "monster",
+        "id": "M_POZILULU"
+      },
+      "requires": [
+        {
+          "id": "M_POZ",
+          "level": 3,
+          "count": 10
+        }
+      ]
+    },
+    "R_M_ADMIN_TRI": {
+      "id": "R_M_ADMIN_TRI",
+      "name": "Administrator-Tri-",
+      "kind": "monster",
+      "result": {
+        "type": "monster",
+        "id": "M_ADMIN_TRI"
+      },
+      "requires": [
+        {
+          "id": "M_BLACKTRIANGLE",
+          "count": 10
+        },
+        {
+          "id": "M_SPEEDER",
+          "count": 10
+        }
+      ]
+    },
+    "R_SK_ADMIN_TRI": {
+      "id": "R_SK_ADMIN_TRI",
+      "name": "Administrator-Tri-",
+      "kind": "skill",
+      "result": {
+        "type": "skill",
+        "id": "SK_ADMIN_TRI"
+      },
+      "requires": [
+        {
+          "id": "M_BLACKTRIANGLE",
+          "count": 12
+        },
+        {
+          "id": "M_SPEEDER",
+          "count": 12
+        }
+      ]
+    },
+    "R_SK_ANALYZE": {
+      "id": "R_SK_ANALYZE",
+      "name": "analyze",
+      "kind": "skill",
+      "result": {
+        "type": "skill",
+        "id": "SK_ANALYZE"
+      },
+      "requires": [
+        {
+          "id": "M_BLACKTRIANGLE",
+          "count": 8
+        },
+        {
+          "id": "M_SPEEDER",
+          "count": 3
         }
       ]
     }
@@ -1587,6 +2182,146 @@
       "drop_type": "recipe",
       "drop_id": "R_SK_SPARTAN_RAGE",
       "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_OCTAGON",
+      "source_level": 1,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_SHIELD",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_OCTAGON",
+      "source_level": 2,
+      "drop_type": "recipe",
+      "drop_id": "R_M_OCTAGON",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_OCTAGON",
+      "source_level": 2,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_SHIELD",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_OCTAGON",
+      "source_level": 3,
+      "drop_type": "recipe",
+      "drop_id": "R_M_OCTAGON",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_OCTAGON",
+      "source_level": 3,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_SHIELD",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_POZILULU",
+      "source_level": 1,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_LETHAL_TOXIN",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_POZILULU",
+      "source_level": 2,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_LETHAL_TOXIN",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_POZILULU",
+      "source_level": 2,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_OVER_SECRETION",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_POZILULU",
+      "source_level": 3,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_LETHAL_TOXIN",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_POZILULU",
+      "source_level": 3,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_OVER_SECRETION",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_POZILULU",
+      "source_level": 3,
+      "drop_type": "recipe",
+      "drop_id": "R_M_POZILULU",
+      "rate": 0.4
+    },
+    {
+      "source_monster_id": "M_AGENT",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_AGENT",
+      "rate": 0.1
+    },
+    {
+      "source_monster_id": "M_AGENT",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_AGENT",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_AGENT",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_AGENT",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_ADMIN_TRI",
+      "source_level": 1,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_ANALYZE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_ADMIN_TRI",
+      "source_level": 2,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_ADMIN_TRI",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_ADMIN_TRI",
+      "source_level": 2,
+      "drop_type": "recipe",
+      "drop_id": "R_M_ADMIN_TRI",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_ADMIN_TRI",
+      "source_level": 3,
+      "drop_type": "recipe",
+      "drop_id": "R_M_ADMIN_TRI",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_ADMIN_TRI",
+      "source_level": 3,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_ADMIN_TRI",
+      "rate": 0.3
+    },
+    {
+      "source_monster_id": "M_ADMIN_TRI",
+      "source_level": 3,
+      "drop_type": "recipe",
+      "drop_id": "R_SK_ANALYZE",
+      "rate": 0.3
     }
   ],
   "systemRules": {
@@ -1595,5 +2330,46 @@
     "FRONT_SIZE": 4,
     "MAX_LEVEL": 3,
     "RESERVE_TIMING": "turn_end"
+  },
+  "glossary": {
+    "poison": {
+      "name": "毒状態",
+      "desc": "ターンの攻撃処理終了後、状態異常処理で1スタックにつき5ダメージを受ける。持続ターンが0になると解除。",
+      "related": [
+        "毒分泌",
+        "分泌毒"
+      ]
+    },
+    "venom": {
+      "name": "猛毒状態",
+      "desc": "毒状態と同じ処理だが、1スタックにつき10ダメージを受ける。赤紫色の状態異常。",
+      "related": [
+        "致命的毒素",
+        "過剰分泌"
+      ]
+    },
+    "shieldStatus": {
+      "name": "シールド",
+      "desc": "ダメージを受ける時、HPの代わりにシールドを1つ消費して1ヒットを無効化する。",
+      "related": [
+        "Octagon",
+        "シールド"
+      ]
+    },
+    "analyzeStatus": {
+      "name": "アナライズ状態",
+      "desc": "受けるダメージが1.5倍になる。右上に目のマークが表示される。",
+      "related": [
+        "analyze",
+        "Administrator-Tri-"
+      ]
+    },
+    "recipe": {
+      "name": "レシピ",
+      "desc": "必要キャラクターを素材としてセットし、レシピと素材を消費してキャラクターやスキルを獲得するアイテム。",
+      "related": [
+        "合成"
+      ]
+    }
   }
 }

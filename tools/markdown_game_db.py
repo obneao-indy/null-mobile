@@ -93,10 +93,12 @@ def init_vault(source, vault):
     (data_dir / "System Rules.md").write_text(
         data_note("System Rules", payload.get("systemRules", {})), encoding="utf-8"
     )
+    (data_dir / "Glossary.md").write_text(data_note("Glossary", payload.get("glossary", {})), encoding="utf-8")
     links.extend([
         "## Data",
         "",
         "- [[Data/Drops]]",
+        "- [[Data/Glossary]]",
         "- [[Data/System Rules]]",
         "",
         "## Export",
@@ -121,6 +123,9 @@ def export_vault(vault, output):
             entries[item["id"]] = item
         payload[json_key] = entries
     payload["drops"] = extract_json(vault / "Data" / "Drops.md")
+    glossary_path = vault / "Data" / "Glossary.md"
+    if glossary_path.exists():
+        payload["glossary"] = extract_json(glossary_path)
     payload["systemRules"] = extract_json(vault / "Data" / "System Rules.md")
     output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
