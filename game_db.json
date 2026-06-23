@@ -768,7 +768,7 @@
     "SK_ANALYZE": {
       "id": "SK_ANALYZE",
       "name": "analyze",
-      "glyph": "目",
+      "glyph": "◉",
       "desc": "対象に通常攻撃し、アナライズ状態を付与する。",
       "target": "enemy",
       "targets": 1,
@@ -2358,7 +2358,7 @@
     },
     "analyzeStatus": {
       "name": "アナライズ状態",
-      "desc": "受けるダメージが1.5倍になる。右上に目のマークが表示される。",
+      "desc": "受けるダメージが1.5倍になる。右上に目のピクトグラムが表示される。",
       "related": [
         "analyze",
         "Administrator-Tri-"
