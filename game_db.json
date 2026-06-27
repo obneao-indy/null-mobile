@@ -1,2375 +1,1735 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-06-16T17:41:46",
+  "schemaVersion": 2,
+  "replace": true,
+  "generatedAt": "2026-06-28T04:30:00+09:00",
   "monsters": {
-    "M_BLACKCIRCLE": {
-      "id": "M_BLACKCIRCLE",
-      "name": "BlackCircle",
+    "M_NULL": {
+      "id": "M_NULL",
+      "name": "ヌル",
       "glyph": "●",
-      "hp": 10,
+      "hp": 50,
+      "attack": 10,
       "speed": 10,
-      "slots": 3,
-      "trait": null,
-      "levels": {
-        "2": {
-          "hp": 10,
-          "speed": 5
-        },
-        "3": {
-          "hp": 10,
-          "speed": 5,
-          "trait": "scatter"
-        }
-      },
-      "desc": "Level3で通常攻撃が2体対象になる高速個体。"
-    },
-    "M_BLACKSQUARE": {
-      "id": "M_BLACKSQUARE",
-      "name": "Blacksquare",
-      "glyph": "■",
-      "hp": 20,
-      "speed": 10,
-      "slots": 2,
-      "trait": null,
-      "levels": {
-        "2": {
-          "hp": 10,
-          "speed": 5
-        },
-        "3": {
-          "hp": 20,
-          "speed": 5,
-          "trait": "wideGuard"
-        }
-      },
-      "desc": "Level3でワイドガードを獲得する基礎個体。"
-    },
-    "M_BLACKTRIANGLE": {
-      "id": "M_BLACKTRIANGLE",
-      "name": "Blacktriangle",
-      "glyph": "▲",
-      "hp": 15,
-      "speed": 10,
-      "slots": 2,
-      "trait": null,
-      "levels": {
-        "2": {
-          "hp": 10,
-          "speed": 10
-        },
-        "3": {
-          "hp": 20,
-          "speed": 5,
-          "trait": "rapid"
-        }
-      },
-      "desc": "Level3で通常攻撃が同じ敵への3連射になる。"
-    },
-    "M_GARDNER": {
-      "id": "M_GARDNER",
-      "name": "ガードナー",
-      "glyph": "◆",
-      "hp": 20,
-      "speed": 3,
+      "mp": 20,
       "slots": 1,
       "trait": null,
-      "visual": {
-        "src": "assets/characters/gardner.png",
-        "vaultSrc": "Assets/Characters/gardner.png",
-        "w": 50,
-        "h": 58,
-        "y": -5
-      },
       "levels": {
         "2": {
           "hp": 20,
-          "speed": 3
+          "attack": 15,
+          "speed": 10,
+          "mp": 30
         },
         "3": {
-          "hp": 30,
-          "speed": 3,
-          "trait": "gather"
-        }
-      },
-      "desc": "敵の攻撃を引き付けて味方を守る盾型キャラクター。"
-    },
-    "M_HAMMER": {
-      "id": "M_HAMMER",
-      "name": "ハンマー",
-      "glyph": "T",
-      "hp": 10,
-      "speed": 5,
-      "slots": 1,
-      "trait": null,
-      "visual": {
-        "src": "assets/characters/hammer.png",
-        "w": 46,
-        "h": 68,
-        "y": -6,
-        "vaultSrc": "Assets/Characters/hammer.png"
-      },
-      "levels": {
-        "2": {
-          "hp": 10,
-          "speed": 5
-        },
-        "3": {
-          "hp": 15,
-          "speed": 5,
-          "trait": "heavyStrike"
-        }
-      },
-      "desc": "1ターン溜めて強打を行う低速個体。"
-    },
-    "M_HIDER": {
-      "id": "M_HIDER",
-      "name": "hider",
-      "glyph": "◎",
-      "hp": 10,
-      "speed": 15,
-      "slots": 2,
-      "trait": null,
-      "levels": {
-        "2": {
-          "hp": 10,
-          "speed": 10
-        },
-        "3": {
-          "hp": 10,
+          "hp": 20,
+          "attack": 15,
           "speed": 15,
-          "trait": "hide"
-        }
-      },
-      "desc": "Level3で毎ターン30%の確率で潜伏する。"
-    },
-    "M_OUMUAMUA": {
-      "id": "M_OUMUAMUA",
-      "name": "オウムアムア",
-      "glyph": "◉",
-      "hp": 30,
-      "speed": 50,
-      "slots": 3,
-      "trait": null,
-      "visual": {
-        "src": "assets/characters/oumuamua.png",
-        "w": 22,
-        "h": 86,
-        "y": -15,
-        "orientation": "sphere-trail-up",
-        "vaultSrc": "Assets/Characters/oumuamua.png"
-      },
-      "levels": {
-        "2": {
-          "hp": 20,
-          "speed": 30,
-          "trait": "barrage"
+          "mp": 20
         },
-        "3": {
-          "hp": 20,
-          "speed": 40,
-          "trait": "lightRush"
+        "4": {
+          "hp": 10,
+          "attack": 10,
+          "speed": 15,
+          "mp": 30,
+          "skills": [
+            "SK_BEAT"
+          ]
         }
       },
-      "desc": "高速で突入する異形。Level3で光速突進を行う。"
+      "desc": "最初の一体。癖が少なく、Lv4でビートを覚える。",
+      "role": "normal",
+      "visual": {
+        "src": "assets/characters/null.png",
+        "w": 64,
+        "h": 56,
+        "y": -2
+      }
     },
     "M_POZ": {
       "id": "M_POZ",
       "name": "ポズ",
       "glyph": "♟",
-      "hp": 10,
-      "speed": 10,
+      "hp": 50,
+      "attack": 10,
+      "speed": 20,
+      "mp": 30,
       "slots": 1,
-      "trait": "poisonSecretion",
+      "trait": null,
+      "levels": {
+        "2": {
+          "hp": 15,
+          "attack": 10,
+          "speed": 15,
+          "mp": 25,
+          "skills": [
+            "SK_MINOR_POISON"
+          ]
+        },
+        "3": {
+          "hp": 15,
+          "attack": 10,
+          "speed": 15,
+          "mp": 25,
+          "skills": [
+            "SK_GUARD"
+          ]
+        },
+        "4": {
+          "hp": 20,
+          "attack": 20,
+          "speed": 20,
+          "mp": 40
+        }
+      },
+      "desc": "毒を扱うヌル派生。微毒とガードを覚える。",
+      "role": "normal",
       "visual": {
         "src": "assets/characters/poz.png",
         "w": 66,
         "h": 58,
-        "y": -5,
-        "vaultSrc": "Assets/Characters/poz.png"
-      },
-      "levels": {
-        "2": {
-          "hp": 6,
-          "speed": 15
-        },
-        "3": {
-          "hp": 7,
-          "speed": 15
-        }
-      },
-      "desc": "通常攻撃で毒を分泌する状態異常型個体。"
+        "y": -5
+      }
     },
-    "M_SPEEDER": {
-      "id": "M_SPEEDER",
-      "name": "speeder",
-      "glyph": "▲",
-      "hp": 10,
+    "M_POSHE": {
+      "id": "M_POSHE",
+      "name": "ポシェ",
+      "glyph": "○",
+      "hp": 60,
+      "attack": 10,
       "speed": 20,
-      "slots": 2,
+      "mp": 30,
+      "slots": 1,
       "trait": null,
-      "levels": {
-        "2": {
-          "hp": 10,
-          "speed": 15
-        },
-        "3": {
-          "hp": 10,
-          "speed": 15,
-          "trait": "dash"
-        }
-      },
-      "desc": "Level3でスピードが20%上昇する。"
-    },
-    "M_HELME": {
-      "id": "M_HELME",
-      "name": "ヘルメ",
-      "glyph": "兜",
-      "hp": 20,
-      "speed": 10,
-      "slots": 2,
-      "trait": null,
-      "visual": {
-        "src": "assets/characters/helme.png",
-        "vaultSrc": "Assets/Characters/helme.png",
-        "w": 42,
-        "h": 66,
-        "y": -7
-      },
       "levels": {
         "2": {
           "hp": 15,
-          "speed": 15
+          "attack": 10,
+          "speed": 15,
+          "mp": 25,
+          "skills": [
+            "SK_MINOR_HEAL"
+          ]
         },
         "3": {
-          "hp": 10,
+          "hp": 15,
+          "attack": 10,
           "speed": 15,
-          "trait": "counter"
+          "mp": 25,
+          "skills": [
+            "SK_GUARD"
+          ]
+        },
+        "4": {
+          "hp": 20,
+          "attack": 20,
+          "speed": 20,
+          "mp": 40
         }
       },
-      "desc": "兜をモチーフとしたキャラクター。攻撃を受けると反撃する。"
-    },
-    "M_SPARTIATAI": {
-      "id": "M_SPARTIATAI",
-      "name": "スパルティアタイ",
-      "glyph": "Σ",
-      "hp": 40,
-      "speed": 20,
-      "slots": 0,
-      "trait": "gather",
+      "desc": "回復を覚えるヌル派生。微回復で味方を立て直す。",
+      "role": "normal",
       "visual": {
-        "src": "assets/characters/spartiatai.png",
-        "vaultSrc": "Assets/Characters/spartiatai.png",
-        "w": 66,
-        "h": 74,
-        "y": -6
+        "src": "assets/characters/null.png",
+        "w": 60,
+        "h": 54,
+        "y": -2
+      }
+    },
+    "M_SODD": {
+      "id": "M_SODD",
+      "name": "ソッド",
+      "glyph": "†",
+      "hp": 40,
+      "attack": 50,
+      "speed": 20,
+      "mp": 40,
+      "slots": 1,
+      "trait": null,
+      "levels": {
+        "1": {
+          "skills": [
+            "SK_BEAT"
+          ]
+        },
+        "2": {
+          "hp": 10,
+          "attack": 20,
+          "speed": 5,
+          "mp": 10
+        },
+        "3": {
+          "hp": 15,
+          "attack": 25,
+          "speed": 10,
+          "mp": 15,
+          "skills": [
+            "SK_SMASH"
+          ]
+        },
+        "4": {
+          "hp": 15,
+          "attack": 25,
+          "speed": 15,
+          "mp": 15
+        }
       },
+      "desc": "Aが高い攻撃型。ビートとスマッシュで単体を削る。",
+      "role": "normal",
+      "visual": {
+        "src": "assets/characters/sodd.png",
+        "w": 30,
+        "h": 86,
+        "y": -10
+      }
+    },
+    "M_RAPID": {
+      "id": "M_RAPID",
+      "name": "ラピッド",
+      "glyph": "›",
+      "hp": 30,
+      "attack": 30,
+      "speed": 50,
+      "mp": 40,
+      "slots": 2,
+      "trait": null,
       "levels": {
         "2": {
-          "hp": 30,
-          "speed": 20,
-          "trait": "counter"
+          "hp": 10,
+          "attack": 10,
+          "speed": 15,
+          "mp": 15
         },
         "3": {
-          "hp": 30,
-          "speed": 20,
-          "trait": "spartanRage"
+          "hp": 15,
+          "attack": 10,
+          "speed": 10,
+          "mp": 10,
+          "skills": [
+            "SK_BEAT"
+          ]
+        },
+        "4": {
+          "hp": 15,
+          "attack": 10,
+          "speed": 15,
+          "mp": 15
         }
       },
-      "desc": "盾と兜が特徴のスパルタの戦士。防御と反撃、怒りの一撃を備える。"
-    },
-    "M_OCTAGON": {
-      "id": "M_OCTAGON",
-      "name": "Octagon",
-      "glyph": "八",
-      "hp": 40,
-      "speed": 15,
-      "slots": 4,
-      "trait": null,
+      "desc": "Sが高い高速型。先に動いて敵を減らす。",
+      "role": "normal",
       "visual": {
-        "src": "assets/characters/octagon.png",
-        "vaultSrc": "Assets/Characters/octagon.png",
-        "w": 58,
-        "h": 58,
-        "y": -4
-      },
+        "src": "assets/characters/rapid.png",
+        "w": 68,
+        "h": 52,
+        "y": -1
+      }
+    },
+    "M_SHIELD": {
+      "id": "M_SHIELD",
+      "name": "シルド",
+      "glyph": "⬟",
+      "hp": 100,
+      "attack": 20,
+      "speed": 20,
+      "mp": 10,
+      "slots": 1,
+      "trait": null,
       "levels": {
+        "1": {
+          "skills": [
+            "SK_GUARD"
+          ]
+        },
         "2": {
           "hp": 20,
-          "speed": 15
+          "attack": 10,
+          "speed": 10,
+          "mp": 15
         },
         "3": {
           "hp": 30,
-          "speed": 15,
-          "trait": "shield"
+          "attack": 10,
+          "speed": 10,
+          "mp": 15,
+          "skills": [
+            "SK_PROTECT"
+          ]
+        },
+        "4": {
+          "hp": 30,
+          "attack": 10,
+          "speed": 10,
+          "mp": 10
         }
       },
-      "desc": "Blacksquareの上位種。場に出た時、全員へシールドを付与する。"
-    },
-    "M_POZILULU": {
-      "id": "M_POZILULU",
-      "name": "ポズィルル",
-      "glyph": "毒",
-      "hp": 20,
-      "speed": 10,
-      "slots": 3,
-      "trait": "lethalToxin",
+      "desc": "HPが高い防御型。ガードとプロテクトで被害を抑える。",
+      "role": "normal",
       "visual": {
-        "src": "assets/characters/pozilulu.png",
-        "vaultSrc": "Assets/Characters/pozilulu.png",
-        "w": 66,
-        "h": 72,
-        "y": -9
-      },
+        "src": "assets/characters/shield.png",
+        "w": 62,
+        "h": 64,
+        "y": -4
+      }
+    },
+    "M_HUME": {
+      "id": "M_HUME",
+      "name": "ヒューム",
+      "glyph": "人",
+      "hp": 60,
+      "attack": 30,
+      "speed": 20,
+      "mp": 50,
+      "slots": 1,
+      "trait": null,
       "levels": {
         "2": {
-          "hp": 30,
-          "speed": 20
+          "hp": 15,
+          "attack": 5,
+          "speed": 10,
+          "mp": 10
         },
         "3": {
-          "hp": 30,
-          "speed": 30,
-          "trait": "overSecretion"
+          "hp": 15,
+          "attack": 10,
+          "speed": 10,
+          "mp": 20
+        },
+        "4": {
+          "hp": 20,
+          "attack": 15,
+          "speed": 0,
+          "mp": 10
         }
       },
-      "desc": "ポズの上位種。猛毒と死亡時の過剰分泌で戦場を汚染する。"
-    },
-    "M_AGENT": {
-      "id": "M_AGENT",
-      "name": "agent",
-      "glyph": "人",
-      "hp": 8,
-      "speed": 15,
-      "slots": 3,
-      "trait": null,
+      "desc": "第二の基本キャラ。配合や上位キャラの土台になる。",
+      "role": "normal",
       "visual": {
-        "src": "assets/characters/agent.png",
-        "vaultSrc": "Assets/Characters/agent.png",
-        "w": 38,
+        "src": "assets/characters/hume.png",
+        "w": 42,
+        "h": 82,
+        "y": -8
+      }
+    },
+    "M_SIDE": {
+      "id": "M_SIDE",
+      "name": "サイド",
+      "glyph": "☽",
+      "hp": 60,
+      "attack": 50,
+      "speed": 25,
+      "mp": 60,
+      "slots": 1,
+      "trait": null,
+      "levels": {
+        "1": {
+          "skills": [
+            "SK_MINOR_HEAL"
+          ]
+        },
+        "2": {
+          "hp": 10,
+          "attack": 15,
+          "speed": 10,
+          "mp": 20,
+          "skills": [
+            "SK_SIZE"
+          ]
+        },
+        "3": {
+          "hp": 15,
+          "attack": 20,
+          "speed": 5,
+          "mp": 10
+        },
+        "4": {
+          "hp": 15,
+          "attack": 15,
+          "speed": 10,
+          "mp": 10,
+          "skills": [
+            "SK_SLASH"
+          ]
+        }
+      },
+      "desc": "大鎌型。サイズとスラッシュで攻撃範囲を広げる。",
+      "role": "normal",
+      "visual": {
+        "src": "assets/characters/side.png",
+        "w": 76,
         "h": 70,
         "y": -8
-      },
-      "levels": {
-        "2": {
-          "hp": 8,
-          "speed": 10
-        },
-        "3": {
-          "hp": 8,
-          "speed": 15
-        }
-      },
-      "desc": "新しい基本キャラ。低耐久で扱いやすい高速型。"
+      }
     },
-    "M_ADMIN_TRI": {
-      "id": "M_ADMIN_TRI",
-      "name": "Administrator-Tri-",
-      "glyph": "A",
-      "hp": 30,
-      "speed": 20,
-      "slots": 4,
-      "trait": "analyze",
-      "visual": {
-        "src": "assets/characters/administrator_tri.png",
-        "vaultSrc": "Assets/Characters/administrator_tri.png",
-        "w": 64,
-        "h": 70,
-        "y": -6
-      },
+    "M_UFO": {
+      "id": "M_UFO",
+      "name": "UFO",
+      "glyph": "◉",
+      "hp": 80,
+      "attack": 50,
+      "speed": 60,
+      "mp": 80,
+      "slots": 1,
+      "trait": "float",
       "levels": {
+        "1": {
+          "skills": [
+            "SK_ANALYZE"
+          ]
+        },
         "2": {
-          "hp": 30,
-          "speed": 20
+          "hp": 10,
+          "attack": 10,
+          "speed": 5,
+          "mp": 20,
+          "skills": [
+            "SK_PROTECT"
+          ]
         },
         "3": {
           "hp": 20,
-          "speed": 20,
-          "trait": "adminTri"
+          "attack": 10,
+          "speed": 10,
+          "mp": 10,
+          "skills": [
+            "SK_MINOR_HEAL"
+          ]
+        },
+        "4": {
+          "hp": 10,
+          "attack": 10,
+          "speed": 5,
+          "mp": 10,
+          "skills": [
+            "SK_BOLTE"
+          ]
         }
       },
-      "desc": "triangleシリーズの上位種。アナライズで敵の被ダメージを増やす。"
+      "desc": "通常攻撃の被ダメージを抑えるBoss。アナライズとボルテを扱う。",
+      "role": "boss",
+      "visual": {
+        "src": "assets/characters/ufo.png",
+        "w": 92,
+        "h": 58,
+        "y": -6
+      }
+    },
+    "M_SHIPKNIGHT": {
+      "id": "M_SHIPKNIGHT",
+      "name": "シプナイト",
+      "glyph": "♞",
+      "hp": 100,
+      "attack": 80,
+      "speed": 40,
+      "mp": 20,
+      "slots": 2,
+      "trait": "battleStance",
+      "levels": {
+        "1": {
+          "skills": [
+            "SK_BEAT"
+          ]
+        },
+        "2": {
+          "hp": 25,
+          "attack": 15,
+          "speed": 20,
+          "mp": 15,
+          "skills": [
+            "SK_GUARD"
+          ]
+        },
+        "3": {
+          "hp": 50,
+          "attack": 20,
+          "speed": 10,
+          "mp": 10,
+          "skills": [
+            "SK_SLASH"
+          ]
+        },
+        "4": {
+          "hp": 25,
+          "attack": 15,
+          "speed": 10,
+          "mp": 5,
+          "skills": [
+            "SK_RANDA"
+          ]
+        }
+      },
+      "desc": "HPが半分以下になるとAが上がるBoss候補。",
+      "role": "boss",
+      "visual": {
+        "src": "assets/characters/shipknight.png",
+        "w": 58,
+        "h": 94,
+        "y": -10
+      }
     }
   },
   "traits": {
-    "barrage": {
-      "id": "barrage",
-      "name": "弾幕",
-      "desc": "通常攻撃が敵3体を自動対象にする。"
+    "float": {
+      "name": "浮遊",
+      "desc": "通常攻撃で受けるダメージを0.8倍にする。"
     },
-    "dash": {
-      "id": "dash",
-      "name": "ダッシュ",
-      "desc": "このキャラクターのスピードが20%上昇する。"
-    },
-    "gather": {
-      "id": "gather",
-      "name": "集約",
-      "desc": "エネミーの優先ターゲットになる。発光する。"
-    },
-    "heavyStrike": {
-      "id": "heavyStrike",
-      "name": "強打",
-      "desc": "通常攻撃を選ぶと1ターン溜め、次ターンに現在HPと同じダメージを与える。"
-    },
-    "hide": {
-      "id": "hide",
-      "name": "ハイド",
-      "desc": "毎ターン30%の確率で潜伏する。"
-    },
-    "lightRush": {
-      "id": "lightRush",
-      "name": "光速突進",
-      "desc": "ターン最初の行動時、通常攻撃がSの0.5倍ダメージになる。"
-    },
-    "poisonSecretion": {
-      "id": "poisonSecretion",
-      "name": "毒分泌",
-      "desc": "通常攻撃命中時、30%で対象を2ターン毒状態にする。"
-    },
-    "rapid": {
-      "id": "rapid",
-      "name": "連射",
-      "desc": "通常攻撃が選んだ敵へ3ヒットする。"
-    },
-    "scatter": {
-      "id": "scatter",
-      "name": "散弾",
-      "desc": "通常攻撃が敵2体を自動対象にする。"
-    },
-    "wideGuard": {
-      "id": "wideGuard",
-      "name": "ワイドガード",
-      "desc": "パーティー全体の受けるダメージを軽減。重複は2体まで。"
-    },
-    "counter": {
-      "id": "counter",
-      "name": "反撃",
-      "desc": "反撃状態のキャラクターがエネミーからダメージを受けると、ダメージを与えた相手へ即時通常攻撃を行う。"
-    },
-    "spartanRage": {
-      "id": "spartanRage",
-      "name": "スパルタの怒り",
-      "desc": "減ったHPの数値分、通常攻撃にダメージを上乗せする。"
-    },
-    "shield": {
-      "id": "shield",
-      "name": "シールド",
-      "desc": "場に出た時、場に出ている全キャラクターへシールドを1つ付与する。シールドは1ヒットのダメージを無効化して1つ消費される。"
-    },
-    "lethalToxin": {
-      "id": "lethalToxin",
-      "name": "致命的毒素",
-      "desc": "通常攻撃命中時、30%で対象を3ターン猛毒状態にする。猛毒は毒の倍のダメージ。"
-    },
-    "overSecretion": {
-      "id": "overSecretion",
-      "name": "過剰分泌",
-      "desc": "死亡時、ランダムな敵2体を3ターン猛毒状態にし、敵全体に通常攻撃の1.2倍ダメージ。"
-    },
-    "analyze": {
-      "id": "analyze",
-      "name": "analyze",
-      "desc": "攻撃系スキルでダメージを与えた対象をアナライズ状態にする。アナライズ中は受けるダメージが1.5倍。"
-    },
-    "adminTri": {
-      "id": "adminTri",
-      "name": "Administrator-Tri-",
-      "desc": "戦闘開始から6ターン経過で、敵全体をアナライズ状態にして通常攻撃の2倍ダメージを与える。"
+    "battleStance": {
+      "name": "戦闘体制",
+      "desc": "HPが50%以下の時、Aが1.3倍になる。"
     }
   },
   "skills": {
-    "SK_BARRAGE": {
-      "id": "SK_BARRAGE",
-      "name": "弾幕",
-      "glyph": "⋯",
-      "desc": "敵3体へダメージ。",
+    "SK_MINOR_POISON": {
+      "id": "SK_MINOR_POISON",
+      "name": "微毒",
+      "glyph": "☣",
+      "desc": "エネミー一体を30%で毒にする。",
       "target": "enemy",
-      "targets": 3,
-      "power": [
-        0,
-        8,
-        10,
-        10
-      ],
-      "ct": [
-        0,
-        7,
-        6,
-        5
-      ]
+      "targets": 1,
+      "cost": 20,
+      "poisonChance": 0.3,
+      "poisonTurns": 3
     },
-    "SK_BLACKCIRCLE": {
-      "id": "SK_BLACKCIRCLE",
-      "name": "BlackCircle",
-      "glyph": "●",
-      "desc": "敵2体へダメージ。",
-      "target": "enemy",
-      "targets": 2,
-      "power": [
-        0,
-        7,
-        10,
-        14
-      ],
-      "ct": [
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    "SK_BLACKSQUARE": {
-      "id": "SK_BLACKSQUARE",
-      "name": "ワイドガード",
-      "glyph": "■",
-      "desc": "味方全体の被ダメージを軽減。",
-      "target": "self",
-      "guardPct": [
-        0,
-        0.2,
-        0.2,
-        0.3
-      ],
-      "ct": [
-        0,
-        4,
-        3,
-        2
-      ]
-    },
-    "SK_DASH": {
-      "id": "SK_DASH",
-      "name": "ダッシュ",
-      "glyph": "△",
-      "desc": "味方1体のSを3ターン上昇。",
+    "SK_MINOR_HEAL": {
+      "id": "SK_MINOR_HEAL",
+      "name": "微回復",
+      "glyph": "+",
+      "desc": "味方一体のHPを40回復する。",
       "target": "ally",
       "targets": 1,
-      "speedPct": [
-        0,
-        0.2,
-        0.2,
-        0.3
-      ],
-      "ct": [
-        0,
-        8,
-        7,
-        6
-      ]
+      "cost": 20,
+      "heal": 40
     },
-    "SK_GARDNER": {
-      "id": "SK_GARDNER",
-      "name": "ガードナー",
-      "glyph": "◆",
-      "desc": "発動中、エネミーの攻撃がこのキャラクターに集まる。",
+    "SK_BEAT": {
+      "id": "SK_BEAT",
+      "name": "ビート",
+      "glyph": "!",
+      "desc": "エネミー一体にAの1.5倍ダメージ。",
+      "target": "enemy",
+      "targets": 1,
+      "cost": 0,
+      "attackMult": 1.5
+    },
+    "SK_SMASH": {
+      "id": "SK_SMASH",
+      "name": "スマッシュ",
+      "glyph": "!!",
+      "desc": "エネミー一体にAの2倍ダメージ。",
+      "target": "enemy",
+      "targets": 1,
+      "cost": 20,
+      "attackMult": 2
+    },
+    "SK_SLASH": {
+      "id": "SK_SLASH",
+      "name": "スラッシュ",
+      "glyph": "/",
+      "desc": "敵全体にAの1.2倍ダメージ。",
+      "target": "enemy",
+      "targets": 99,
+      "cost": 30,
+      "attackMult": 1.2,
+      "allEnemies": true
+    },
+    "SK_GUARD": {
+      "id": "SK_GUARD",
+      "name": "ガード",
+      "glyph": "□",
+      "desc": "このターン、自分が受けるダメージを30%軽減する。",
       "target": "self",
-      "targets": 0,
-      "taunt": true,
-      "tauntTurns": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "ct": [
-        0,
-        8,
-        6,
-        4
-      ]
-    },
-    "SK_HEAVY_STRIKE": {
-      "id": "SK_HEAVY_STRIKE",
-      "name": "強打",
-      "glyph": "T",
-      "desc": "1ターン溜め、次ターンに現在HPと同じダメージ。",
-      "target": "enemy",
       "targets": 1,
-      "hpStrike": true,
-      "ct": [
-        0,
-        8,
-        7,
-        6
-      ]
+      "cost": 0,
+      "guardSelfPct": 0.3
     },
-    "SK_HIDE": {
-      "id": "SK_HIDE",
-      "name": "ハイド",
-      "glyph": "◎",
-      "desc": "このターン使用者が潜伏。",
-      "target": "self",
-      "hide": true,
-      "ct": [
-        0,
-        5,
-        4,
-        3
-      ]
-    },
-    "SK_OUMUAMUA": {
-      "id": "SK_OUMUAMUA",
-      "name": "オウムアムア",
-      "glyph": "◉",
-      "desc": "自分のSに応じた光速突進。",
-      "target": "enemy",
+    "SK_PROTECT": {
+      "id": "SK_PROTECT",
+      "name": "プロテクト",
+      "glyph": "◇",
+      "desc": "3ターン、味方一体が受けるダメージを20%軽減する。",
+      "target": "ally",
       "targets": 1,
-      "speedStrike": [
-        0,
-        0.5,
-        0.5,
-        0.7
-      ],
-      "ct": [
-        0,
-        10,
-        9,
-        8
-      ]
-    },
-    "SK_POISON_SECRETION": {
-      "id": "SK_POISON_SECRETION",
-      "name": "分泌毒",
-      "glyph": "♟",
-      "desc": "通常攻撃後、対象へ毒を確定付与。",
-      "target": "enemy",
-      "targets": 1,
-      "poisonAttack": true,
-      "poisonTurns": [
-        0,
-        2,
-        2,
-        3
-      ],
-      "ct": [
-        0,
-        6,
-        5,
-        4
-      ]
-    },
-    "SK_RAPID": {
-      "id": "SK_RAPID",
-      "name": "連射",
-      "glyph": "▲",
-      "desc": "敵1体へ3回ダメージ。",
-      "target": "enemy",
-      "targets": 1,
-      "rapid": [
-        0,
-        0.7,
-        0.7,
-        0.8
-      ],
-      "hits": 3,
-      "ct": [
-        0,
-        6,
-        5,
-        4
-      ]
-    },
-    "SK_COUNTER": {
-      "id": "SK_COUNTER",
-      "name": "カウンター",
-      "glyph": "↩",
-      "desc": "効果中、このキャラクターは反撃状態になる。",
-      "counter": true,
-      "counterTurns": [
-        0,
-        2,
-        2,
-        3
-      ],
-      "ct": [
-        0,
-        8,
-        6,
-        4
-      ],
-      "target": "self"
-    },
-    "SK_SPARTAN_RAGE": {
-      "id": "SK_SPARTAN_RAGE",
-      "name": "スパルタの怒り",
-      "glyph": "Σ",
-      "desc": "減っているHPの数値分のダメージを敵1体に与える。",
-      "lostHpStrike": true,
-      "ct": [
-        0,
-        10,
-        9,
-        7
-      ],
-      "target": "enemy",
-      "targets": 1
-    },
-    "SK_SHIELD": {
-      "id": "SK_SHIELD",
-      "name": "シールド",
-      "glyph": "▣",
-      "desc": "味方全体にシールドを1つ付与する。",
-      "target": "self",
-      "targets": 0,
-      "shieldAll": 1,
-      "ct": [
-        0,
-        12,
-        10,
-        8
-      ]
-    },
-    "SK_LETHAL_TOXIN": {
-      "id": "SK_LETHAL_TOXIN",
-      "name": "致命的毒素",
-      "glyph": "毒",
-      "desc": "通常攻撃ダメージ後、対象を猛毒状態にする。",
-      "target": "enemy",
-      "targets": 1,
-      "venomAttack": true,
-      "venomTurns": [
-        0,
-        2,
-        2,
-        3
-      ],
-      "ct": [
-        0,
-        10,
-        8,
-        6
-      ]
-    },
-    "SK_OVER_SECRETION": {
-      "id": "SK_OVER_SECRETION",
-      "name": "過剰分泌",
-      "glyph": "爆",
-      "desc": "敵全体に通常攻撃の1.2倍ダメージと猛毒を与え、使用者は死亡する。Lv3は1.5倍。",
-      "target": "enemy",
-      "targets": 5,
-      "overSecretionSkill": [
-        0,
-        1.2,
-        1.2,
-        1.5
-      ],
-      "venomTurns": [
-        0,
-        3,
-        3,
-        4
-      ],
-      "ct": [
-        0,
-        13,
-        11,
-        10
-      ]
+      "cost": 20,
+      "protectPct": 0.2,
+      "protectTurns": 3
     },
     "SK_ANALYZE": {
       "id": "SK_ANALYZE",
-      "name": "analyze",
-      "glyph": "◉",
-      "desc": "対象に通常攻撃し、アナライズ状態を付与する。",
+      "name": "アナライズ",
+      "glyph": "◌",
+      "desc": "エネミー一体に30%でアナライズを付与する。",
       "target": "enemy",
       "targets": 1,
-      "analyzeAttack": true,
-      "analyzeTurns": [
-        0,
-        1,
-        1,
-        1
-      ],
-      "ct": [
-        0,
-        10,
-        8,
-        6
-      ]
+      "cost": 20,
+      "analyzeChance": 0.3,
+      "analyzeTurns": 3
     },
-    "SK_ADMIN_TRI": {
-      "id": "SK_ADMIN_TRI",
-      "name": "Administrator-Tri-",
-      "glyph": "A",
-      "desc": "敵全体に2ターンのアナライズを付与し、通常攻撃の2倍ダメージ。",
+    "SK_SIZE": {
+      "id": "SK_SIZE",
+      "name": "サイズ",
+      "glyph": "☾",
+      "desc": "通常攻撃を行い、5%でBoss以外を即死させる。",
       "target": "enemy",
-      "targets": 5,
-      "adminTriSkill": true,
-      "analyzeTurns": [
-        0,
-        2,
-        2,
-        2
-      ],
-      "mult": [
-        0,
-        2,
-        2,
-        2
-      ],
-      "ct": [
-        0,
-        13,
-        11,
-        9
-      ]
-    }
-  },
-  "stages": {
-    "SP_OUMUAMUA": {
-      "id": "SP_OUMUAMUA",
-      "name": "オウムアムア",
-      "category": "special",
-      "info": "3 WAVES / オウムアムア",
-      "unlockType": "kills",
-      "unlockValue": "M_SPEEDER:20;M_BLACKCIRCLE:20",
-      "waves": [
-        [
-          {
-            "id": "M_OUMUAMUA",
-            "level": 1
-          },
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 3
-          },
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 3
-          }
-        ],
-        [
-          {
-            "id": "M_OUMUAMUA",
-            "level": 2
-          },
-          {
-            "id": "M_SPEEDER",
-            "level": 3
-          },
-          {
-            "id": "M_SPEEDER",
-            "level": 3
-          }
-        ],
-        [
-          {
-            "id": "M_OUMUAMUA",
-            "level": 3
-          }
-        ]
-      ]
+      "targets": 1,
+      "cost": 20,
+      "normalAttack": true,
+      "instantDeathChance": 0.05
     },
-    "STAGE_001": {
-      "id": "STAGE_001",
-      "name": "BlackCircle",
-      "category": "normal",
-      "info": "1 WAVE / BlackCircle x1",
-      "unlockType": "always",
-      "unlockValue": null,
-      "waves": [
-        [
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 1
-          }
-        ]
-      ]
+    "SK_BOLTE": {
+      "id": "SK_BOLTE",
+      "name": "ボルテ",
+      "glyph": "≡",
+      "desc": "エネミー一体にAの1.7倍ダメージを与え、アナライズを付与する。",
+      "target": "enemy",
+      "targets": 1,
+      "cost": 50,
+      "attackMult": 1.7,
+      "analyzeChance": 1,
+      "analyzeTurns": 3
     },
-    "STAGE_002": {
-      "id": "STAGE_002",
-      "name": "Blacksquare",
-      "category": "normal",
-      "info": "2 WAVES / BlackCircle x2 / Blacksquare Lv3",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_001",
-      "waves": [
-        [
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 1
-          },
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 1
-          }
-        ],
-        [
-          {
-            "id": "M_BLACKSQUARE",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "STAGE_003": {
-      "id": "STAGE_003",
-      "name": "Blacksquare＆BlackCircle",
-      "category": "normal",
-      "info": "3 WAVES / Lv2-3 MIX",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_002",
-      "waves": [
-        [
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 2
-          },
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 2
-          },
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_BLACKSQUARE",
-            "level": 2
-          },
-          {
-            "id": "M_BLACKSQUARE",
-            "level": 2
-          },
-          {
-            "id": "M_BLACKSQUARE",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_BLACKSQUARE",
-            "level": 3
-          },
-          {
-            "id": "M_BLACKSQUARE",
-            "level": 3
-          },
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 3
-          },
-          {
-            "id": "M_BLACKCIRCLE",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "STAGE_004": {
-      "id": "STAGE_004",
-      "name": "hide",
-      "category": "normal",
-      "info": "1 WAVE / hider x1",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_001",
-      "waves": [
-        [
-          {
-            "id": "M_HIDER",
-            "level": 1
-          }
-        ]
-      ]
-    },
-    "STAGE_005": {
-      "id": "STAGE_005",
-      "name": "hide!!!",
-      "category": "normal",
-      "info": "3 WAVES / hider + Blacktriangle",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_004",
-      "waves": [
-        [
-          {
-            "id": "M_HIDER",
-            "level": 2
-          },
-          {
-            "id": "M_HIDER",
-            "level": 2
-          },
-          {
-            "id": "M_HIDER",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 2
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 2
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_HIDER",
-            "level": 3
-          },
-          {
-            "id": "M_HIDER",
-            "level": 3
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 3
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "STAGE_006": {
-      "id": "STAGE_006",
-      "name": "dash",
-      "category": "normal",
-      "info": "1 WAVE / speeder x1",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_001",
-      "waves": [
-        [
-          {
-            "id": "M_SPEEDER",
-            "level": 1
-          }
-        ]
-      ]
-    },
-    "STAGE_007": {
-      "id": "STAGE_007",
-      "name": "triangles",
-      "category": "normal",
-      "info": "3 WAVES / speeder + Blacktriangle",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_006",
-      "waves": [
-        [
-          {
-            "id": "M_SPEEDER",
-            "level": 2
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_SPEEDER",
-            "level": 2
-          },
-          {
-            "id": "M_SPEEDER",
-            "level": 2
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 2
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_SPEEDER",
-            "level": 3
-          },
-          {
-            "id": "M_SPEEDER",
-            "level": 3
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 3
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "STAGE_008": {
-      "id": "STAGE_008",
-      "name": "鍛冶",
-      "category": "normal",
-      "info": "1 WAVE / ハンマー Lv1",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_004",
-      "waves": [
-        [
-          {
-            "id": "M_HAMMER",
-            "level": 1
-          }
-        ]
-      ]
-    },
-    "STAGE_009": {
-      "id": "STAGE_009",
-      "name": "工房",
-      "category": "normal",
-      "info": "2 WAVES / ハンマー Lv2-3",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_008",
-      "waves": [
-        [
-          {
-            "id": "M_HAMMER",
-            "level": 2
-          },
-          {
-            "id": "M_HAMMER",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_HAMMER",
-            "level": 3
-          },
-          {
-            "id": "M_HAMMER",
-            "level": 3
-          },
-          {
-            "id": "M_HAMMER",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "STAGE_010": {
-      "id": "STAGE_010",
-      "name": "工業廃水",
-      "category": "normal",
-      "info": "1 WAVE / ポズ Lv1",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_006",
-      "waves": [
-        [
-          {
-            "id": "M_POZ",
-            "level": 1
-          }
-        ]
-      ]
-    },
-    "STAGE_011": {
-      "id": "STAGE_011",
-      "name": "毒沼",
-      "category": "normal",
-      "info": "3 WAVES / ポズ Lv2-3",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_010",
-      "waves": [
-        [
-          {
-            "id": "M_POZ",
-            "level": 2
-          },
-          {
-            "id": "M_POZ",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_POZ",
-            "level": 3
-          }
-        ],
-        [
-          {
-            "id": "M_POZ",
-            "level": 3
-          },
-          {
-            "id": "M_POZ",
-            "level": 3
-          },
-          {
-            "id": "M_POZ",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "STAGE_012": {
-      "id": "STAGE_012",
-      "name": "小さな盾",
-      "category": "normal",
-      "info": "1 WAVE / ガードナー Lv1 x3",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_002",
-      "waves": [
-        [
-          {
-            "id": "M_GARDNER",
-            "level": 1
-          },
-          {
-            "id": "M_GARDNER",
-            "level": 1
-          },
-          {
-            "id": "M_GARDNER",
-            "level": 1
-          }
-        ]
-      ]
-    },
-    "STAGE_013": {
-      "id": "STAGE_013",
-      "name": "盾、盾、盾",
-      "category": "normal",
-      "info": "3 WAVES / ガードナー",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_012",
-      "waves": [
-        [
-          {
-            "id": "M_GARDNER",
-            "level": 1
-          },
-          {
-            "id": "M_GARDNER",
-            "level": 1
-          },
-          {
-            "id": "M_GARDNER",
-            "level": 1
-          }
-        ],
-        [
-          {
-            "id": "M_GARDNER",
-            "level": 2
-          },
-          {
-            "id": "M_GARDNER",
-            "level": 2
-          },
-          {
-            "id": "M_GARDNER",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_GARDNER",
-            "level": 3
-          },
-          {
-            "id": "M_GARDNER",
-            "level": 3
-          },
-          {
-            "id": "M_GARDNER",
-            "level": 3
-          },
-          {
-            "id": "M_GARDNER",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "STAGE_014": {
-      "id": "STAGE_014",
-      "name": "helmet",
-      "category": "normal",
-      "info": "1 WAVE / ヘルメ x2",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_013",
-      "waves": [
-        [
-          {
-            "id": "M_HELME",
-            "level": 1
-          },
-          {
-            "id": "M_HELME",
-            "level": 1
-          }
-        ]
-      ]
-    },
-    "STAGE_015": {
-      "id": "STAGE_015",
-      "name": "兜割り",
-      "category": "normal",
-      "info": "3 WAVES / ヘルメ",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_014",
-      "waves": [
-        [
-          {
-            "id": "M_HELME",
-            "level": 1
-          },
-          {
-            "id": "M_HELME",
-            "level": 1
-          },
-          {
-            "id": "M_HELME",
-            "level": 1
-          }
-        ],
-        [
-          {
-            "id": "M_HELME",
-            "level": 2
-          },
-          {
-            "id": "M_HELME",
-            "level": 2
-          },
-          {
-            "id": "M_HELME",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_HELME",
-            "level": 3
-          },
-          {
-            "id": "M_HELME",
-            "level": 3
-          },
-          {
-            "id": "M_HELME",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "SP_SPARTA": {
-      "id": "SP_SPARTA",
-      "name": "Sparta",
-      "category": "special",
-      "info": "3 WAVES / スパルティアタイ",
-      "unlockType": "kills",
-      "unlockValue": "M_GARDNER:20;M_HELME:20",
-      "waves": [
-        [
-          {
-            "id": "M_GARDNER",
-            "level": 3
-          },
-          {
-            "id": "M_SPARTIATAI",
-            "level": 1
-          },
-          {
-            "id": "M_GARDNER",
-            "level": 3
-          }
-        ],
-        [
-          {
-            "id": "M_HELME",
-            "level": 3
-          },
-          {
-            "id": "M_SPARTIATAI",
-            "level": 2
-          },
-          {
-            "id": "M_GARDNER",
-            "level": 3
-          }
-        ],
-        [
-          {
-            "id": "M_SPARTIATAI",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "STAGE_016": {
-      "id": "STAGE_016",
-      "name": "センター",
-      "category": "normal",
-      "info": "3 WAVES / agent Lv1-3",
-      "unlockType": "clear",
-      "unlockValue": "STAGE_001",
-      "waves": [
-        [
-          {
-            "id": "M_AGENT",
-            "level": 1
-          }
-        ],
-        [
-          {
-            "id": "M_AGENT",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_AGENT",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "SP_OCTAGON": {
-      "id": "SP_OCTAGON",
-      "name": "八角形",
-      "category": "special",
-      "info": "3 WAVES / Octagon",
-      "unlockType": "kills",
-      "unlockValue": "M_BLACKSQUARE:20",
-      "waves": [
-        [
-          {
-            "id": "M_OCTAGON",
-            "level": 1
-          }
-        ],
-        [
-          {
-            "id": "M_OCTAGON",
-            "level": 2
-          },
-          {
-            "id": "M_OCTAGON",
-            "level": 1
-          },
-          {
-            "id": "M_OCTAGON",
-            "level": 1
-          }
-        ],
-        [
-          {
-            "id": "M_OCTAGON",
-            "level": 3
-          },
-          {
-            "id": "M_OCTAGON",
-            "level": 2
-          },
-          {
-            "id": "M_OCTAGON",
-            "level": 2
-          }
-        ]
-      ]
-    },
-    "SP_POZILULU": {
-      "id": "SP_POZILULU",
-      "name": "猛毒の大地",
-      "category": "special",
-      "info": "3 WAVES / ポズィルル + ポズ",
-      "unlockType": "kills",
-      "unlockValue": "M_POZ:20",
-      "waves": [
-        [
-          {
-            "id": "M_POZ",
-            "level": 2
-          },
-          {
-            "id": "M_POZ",
-            "level": 2
-          },
-          {
-            "id": "M_POZ",
-            "level": 2
-          },
-          {
-            "id": "M_POZ",
-            "level": 2
-          },
-          {
-            "id": "M_POZ",
-            "level": 2
-          }
-        ],
-        [
-          {
-            "id": "M_POZ",
-            "level": 3
-          },
-          {
-            "id": "M_POZILULU",
-            "level": 2
-          },
-          {
-            "id": "M_POZ",
-            "level": 3
-          },
-          {
-            "id": "M_POZ",
-            "level": 3
-          },
-          {
-            "id": "M_POZ",
-            "level": 3
-          }
-        ],
-        [
-          {
-            "id": "M_POZILULU",
-            "level": 3
-          },
-          {
-            "id": "M_POZILULU",
-            "level": 3
-          },
-          {
-            "id": "M_POZILULU",
-            "level": 3
-          }
-        ]
-      ]
-    },
-    "SP_ADMIN_TRI": {
-      "id": "SP_ADMIN_TRI",
-      "name": "Administrator-Tri-",
-      "category": "special",
-      "info": "3 WAVES / Administrator-Tri-",
-      "unlockType": "kills",
-      "unlockValue": "M_BLACKTRIANGLE:20;M_SPEEDER:20",
-      "waves": [
-        [
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 3
-          },
-          {
-            "id": "M_ADMIN_TRI",
-            "level": 2
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 3
-          },
-          {
-            "id": "M_SPEEDER",
-            "level": 3
-          },
-          {
-            "id": "M_SPEEDER",
-            "level": 3
-          }
-        ],
-        [
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 3
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 3
-          },
-          {
-            "id": "M_BLACKTRIANGLE",
-            "level": 3
-          },
-          {
-            "id": "M_SPEEDER",
-            "level": 3
-          },
-          {
-            "id": "M_SPEEDER",
-            "level": 3
-          }
-        ],
-        [
-          {
-            "id": "M_ADMIN_TRI",
-            "level": 1
-          },
-          {
-            "id": "M_ADMIN_TRI",
-            "level": 3
-          },
-          {
-            "id": "M_ADMIN_TRI",
-            "level": 1
-          },
-          {
-            "id": "M_ADMIN_TRI",
-            "level": 3
-          },
-          {
-            "id": "M_ADMIN_TRI",
-            "level": 1
-          }
-        ]
-      ]
+    "SK_RANDA": {
+      "id": "SK_RANDA",
+      "name": "乱打",
+      "glyph": "x3",
+      "desc": "エネミー一体にAの1.3倍ダメージを3回与える。",
+      "target": "enemy",
+      "targets": 1,
+      "cost": 50,
+      "attackMult": 1.3,
+      "hits": 3
     }
   },
   "recipes": {
-    "R_M_OUMUAMUA": {
-      "id": "R_M_OUMUAMUA",
-      "name": "オウムアムア",
-      "kind": "monster",
-      "result": {
-        "type": "monster",
-        "id": "M_OUMUAMUA"
-      },
-      "requires": [
-        {
-          "id": "M_BLACKCIRCLE",
-          "count": 10
-        },
-        {
-          "id": "M_SPEEDER",
-          "count": 15
-        }
-      ]
-    },
-    "R_SK_BARRAGE": {
-      "id": "R_SK_BARRAGE",
-      "name": "弾幕",
+    "R_SK_PROTECT": {
+      "id": "R_SK_PROTECT",
+      "name": "プロテクトのすすめ",
       "kind": "skill",
       "result": {
         "type": "skill",
-        "id": "SK_BARRAGE"
+        "id": "SK_PROTECT"
       },
       "requires": [
         {
-          "id": "M_BLACKCIRCLE",
-          "count": 5
+          "id": "M_SHIELD",
+          "count": 3
         }
-      ]
+      ],
+      "mode": "all"
     },
-    "R_SK_OUMUAMUA": {
-      "id": "R_SK_OUMUAMUA",
-      "name": "オウムアムア",
+    "R_SK_MINOR_HEAL": {
+      "id": "R_SK_MINOR_HEAL",
+      "name": "微回復のすすめ",
       "kind": "skill",
       "result": {
         "type": "skill",
-        "id": "SK_OUMUAMUA"
+        "id": "SK_MINOR_HEAL"
       },
       "requires": [
         {
-          "id": "M_BLACKCIRCLE",
-          "count": 5
-        },
-        {
-          "id": "M_SPEEDER",
-          "count": 8
+          "id": "M_POSHE",
+          "count": 3
         }
-      ]
+      ],
+      "mode": "all"
     },
-    "R_M_SPARTIATAI": {
-      "id": "R_M_SPARTIATAI",
-      "name": "スパルティアタイ",
-      "kind": "monster",
+    "R_SK_BEAT": {
+      "id": "R_SK_BEAT",
+      "name": "ビートのすすめ",
+      "kind": "skill",
       "result": {
-        "type": "monster",
-        "id": "M_SPARTIATAI"
+        "type": "skill",
+        "id": "SK_BEAT"
       },
       "requires": [
         {
-          "id": "M_GARDNER",
-          "level": 3,
+          "id": "M_NULL",
           "count": 3
         },
         {
-          "id": "M_HELME",
-          "level": 3,
-          "count": 3
+          "id": "M_SODD",
+          "count": 1
         },
         {
-          "id": "M_GARDNER",
-          "level": 1,
-          "count": 2
-        },
-        {
-          "id": "M_HELME",
-          "level": 1,
+          "id": "M_RAPID",
           "count": 2
         }
-      ]
+      ],
+      "mode": "any"
     },
-    "R_SK_SPARTAN_RAGE": {
-      "id": "R_SK_SPARTAN_RAGE",
-      "name": "スパルタの怒り",
+    "R_SK_GUARD": {
+      "id": "R_SK_GUARD",
+      "name": "ガードのすすめ",
       "kind": "skill",
       "result": {
         "type": "skill",
-        "id": "SK_SPARTAN_RAGE"
+        "id": "SK_GUARD"
       },
       "requires": [
         {
-          "id": "M_GARDNER",
-          "level": 1,
-          "count": 5
+          "id": "M_SHIELD",
+          "count": 1
         },
         {
-          "id": "M_HELME",
-          "level": 1,
-          "count": 5
-        }
-      ]
-    },
-    "R_SK_SHIELD": {
-      "id": "R_SK_SHIELD",
-      "name": "シールド",
-      "kind": "skill",
-      "result": {
-        "type": "skill",
-        "id": "SK_SHIELD"
-      },
-      "requires": [
-        {
-          "id": "M_BLACKSQUARE",
-          "count": 10
-        }
-      ]
-    },
-    "R_M_OCTAGON": {
-      "id": "R_M_OCTAGON",
-      "name": "Octagon",
-      "kind": "monster",
-      "result": {
-        "type": "monster",
-        "id": "M_OCTAGON"
-      },
-      "requires": [
-        {
-          "id": "M_BLACKSQUARE",
-          "count": 30
-        }
-      ]
-    },
-    "R_SK_LETHAL_TOXIN": {
-      "id": "R_SK_LETHAL_TOXIN",
-      "name": "致命的毒素",
-      "kind": "skill",
-      "result": {
-        "type": "skill",
-        "id": "SK_LETHAL_TOXIN"
-      },
-      "requires": [
-        {
-          "id": "M_POZ",
-          "count": 10
-        }
-      ]
-    },
-    "R_SK_OVER_SECRETION": {
-      "id": "R_SK_OVER_SECRETION",
-      "name": "過剰分泌",
-      "kind": "skill",
-      "result": {
-        "type": "skill",
-        "id": "SK_OVER_SECRETION"
-      },
-      "requires": [
-        {
-          "id": "M_POZ",
-          "count": 20
-        }
-      ]
-    },
-    "R_M_POZILULU": {
-      "id": "R_M_POZILULU",
-      "name": "ポズィルル",
-      "kind": "monster",
-      "result": {
-        "type": "monster",
-        "id": "M_POZILULU"
-      },
-      "requires": [
-        {
-          "id": "M_POZ",
-          "level": 3,
-          "count": 10
-        }
-      ]
-    },
-    "R_M_ADMIN_TRI": {
-      "id": "R_M_ADMIN_TRI",
-      "name": "Administrator-Tri-",
-      "kind": "monster",
-      "result": {
-        "type": "monster",
-        "id": "M_ADMIN_TRI"
-      },
-      "requires": [
-        {
-          "id": "M_BLACKTRIANGLE",
-          "count": 10
-        },
-        {
-          "id": "M_SPEEDER",
-          "count": 10
-        }
-      ]
-    },
-    "R_SK_ADMIN_TRI": {
-      "id": "R_SK_ADMIN_TRI",
-      "name": "Administrator-Tri-",
-      "kind": "skill",
-      "result": {
-        "type": "skill",
-        "id": "SK_ADMIN_TRI"
-      },
-      "requires": [
-        {
-          "id": "M_BLACKTRIANGLE",
-          "count": 12
-        },
-        {
-          "id": "M_SPEEDER",
-          "count": 12
-        }
-      ]
-    },
-    "R_SK_ANALYZE": {
-      "id": "R_SK_ANALYZE",
-      "name": "analyze",
-      "kind": "skill",
-      "result": {
-        "type": "skill",
-        "id": "SK_ANALYZE"
-      },
-      "requires": [
-        {
-          "id": "M_BLACKTRIANGLE",
-          "count": 8
-        },
-        {
-          "id": "M_SPEEDER",
+          "id": "M_POSHE",
           "count": 3
+        }
+      ],
+      "mode": "any"
+    },
+    "R_M_SHIPKNIGHT": {
+      "id": "R_M_SHIPKNIGHT",
+      "name": "シプナイト召喚",
+      "kind": "monster",
+      "result": {
+        "type": "monster",
+        "id": "M_SHIPKNIGHT"
+      },
+      "requires": [
+        {
+          "id": "M_SODD",
+          "count": 1
+        },
+        {
+          "id": "M_SHIELD",
+          "count": 1
+        },
+        {
+          "id": "M_HUME",
+          "count": 1,
+          "minLevel": 2
+        }
+      ],
+      "mode": "all"
+    }
+  },
+  "stages": {
+    "FB_01": {
+      "id": "FB_01",
+      "name": "エリア1",
+      "stageTab": "First battle",
+      "category": "normal",
+      "unlockType": "always",
+      "unlockValue": null,
+      "info": "ヌルと戦う最初のエリア。ヌルのHP-30%。",
+      "waves": [
+        [
+          {
+            "id": "M_NULL",
+            "level": 1
+          }
+        ]
+      ],
+      "modifiers": {
+        "M_NULL": {
+          "hp": 0.7
+        }
+      }
+    },
+    "FB_02": {
+      "id": "FB_02",
+      "name": "ステージ2",
+      "stageTab": "First battle",
+      "category": "normal",
+      "unlockType": "clear",
+      "unlockValue": "FB_01",
+      "info": "ヌルとラピッドが出現。",
+      "waves": [
+        [
+          {
+            "id": "M_NULL",
+            "level": 1
+          },
+          {
+            "id": "M_NULL",
+            "level": 1
+          }
+        ],
+        [
+          {
+            "id": "M_RAPID",
+            "level": 1
+          },
+          {
+            "id": "M_RAPID",
+            "level": 1
+          }
+        ]
+      ],
+      "modifiers": {
+        "M_NULL": {
+          "hp": 0.7
+        },
+        "M_RAPID": {
+          "hp": 0.8
+        }
+      }
+    },
+    "FB_03": {
+      "id": "FB_03",
+      "name": "ステージ3",
+      "stageTab": "First battle",
+      "category": "normal",
+      "unlockType": "clear",
+      "unlockValue": "FB_02",
+      "info": "毒と速度の基礎を試すエリア。",
+      "waves": [
+        [
+          {
+            "id": "M_NULL",
+            "level": 2
+          },
+          {
+            "id": "M_NULL",
+            "level": 2
+          },
+          {
+            "id": "M_NULL",
+            "level": 2
+          },
+          {
+            "id": "M_RAPID",
+            "level": 2
+          }
+        ],
+        [
+          {
+            "id": "M_POZ",
+            "level": 2
+          },
+          {
+            "id": "M_POZ",
+            "level": 2
+          },
+          {
+            "id": "M_NULL",
+            "level": 2
+          }
+        ],
+        [
+          {
+            "id": "M_RAPID",
+            "level": 3
+          },
+          {
+            "id": "M_RAPID",
+            "level": 3
+          },
+          {
+            "id": "M_NULL",
+            "level": 3
+          },
+          {
+            "id": "M_POZ",
+            "level": 3
+          }
+        ]
+      ],
+      "modifiers": {
+        "M_NULL": {
+          "hp": 0.7
+        },
+        "M_RAPID": {
+          "hp": 0.8
+        },
+        "M_POZ": {
+          "hp": 0.7
+        }
+      }
+    },
+    "FB_04": {
+      "id": "FB_04",
+      "name": "ステージ4",
+      "stageTab": "First battle",
+      "category": "normal",
+      "unlockType": "clear",
+      "unlockValue": "FB_03",
+      "info": "Lv4個体が並ぶ総合戦。",
+      "waves": [
+        [
+          {
+            "id": "M_NULL",
+            "level": 4
+          },
+          {
+            "id": "M_NULL",
+            "level": 4
+          },
+          {
+            "id": "M_RAPID",
+            "level": 4
+          },
+          {
+            "id": "M_POZ",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_POZ",
+            "level": 4
+          },
+          {
+            "id": "M_POZ",
+            "level": 4
+          },
+          {
+            "id": "M_RAPID",
+            "level": 4
+          },
+          {
+            "id": "M_RAPID",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_RAPID",
+            "level": 4
+          },
+          {
+            "id": "M_RAPID",
+            "level": 4
+          },
+          {
+            "id": "M_NULL",
+            "level": 4
+          },
+          {
+            "id": "M_NULL",
+            "level": 4
+          },
+          {
+            "id": "M_POZ",
+            "level": 4
+          },
+          {
+            "id": "M_POZ",
+            "level": 4
+          }
+        ]
+      ],
+      "modifiers": {
+        "M_NULL": {
+          "hp": 0.7
+        },
+        "M_RAPID": {
+          "hp": 0.8
+        },
+        "M_POZ": {
+          "hp": 0.7
+        }
+      }
+    },
+    "FB_05": {
+      "id": "FB_05",
+      "name": "ステージ5",
+      "stageTab": "First battle",
+      "category": "boss",
+      "unlockType": "clear",
+      "unlockValue": "FB_04",
+      "info": "UFOが待つBossステージ。",
+      "waves": [
+        [
+          {
+            "id": "M_NULL",
+            "level": 4
+          },
+          {
+            "id": "M_NULL",
+            "level": 4
+          },
+          {
+            "id": "M_NULL",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_RAPID",
+            "level": 4
+          },
+          {
+            "id": "M_RAPID",
+            "level": 4
+          },
+          {
+            "id": "M_RAPID",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_POZ",
+            "level": 4
+          },
+          {
+            "id": "M_POZ",
+            "level": 4
+          },
+          {
+            "id": "M_POZ",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_UFO",
+            "level": 4
+          }
+        ]
+      ],
+      "modifiers": {
+        "M_NULL": {
+          "hp": 0.7
+        },
+        "M_RAPID": {
+          "hp": 0.8
+        },
+        "M_POZ": {
+          "hp": 0.7
+        },
+        "M_UFO": {
+          "all": 1.8
+        }
+      }
+    },
+    "BF_01": {
+      "id": "BF_01",
+      "name": "ステージ1",
+      "stageTab": "戦場",
+      "category": "normal",
+      "unlockType": "always",
+      "unlockValue": null,
+      "info": "戦場タブの入口。",
+      "waves": [
+        [
+          {
+            "id": "M_NULL",
+            "level": 2
+          },
+          {
+            "id": "M_NULL",
+            "level": 2
+          },
+          {
+            "id": "M_NULL",
+            "level": 2
+          },
+          {
+            "id": "M_SODD",
+            "level": 2
+          }
+        ]
+      ],
+      "modifiers": {
+        "M_NULL": {
+          "hp": 0.8
+        },
+        "M_SODD": {
+          "hp": 0.8
+        }
+      }
+    },
+    "BF_02": {
+      "id": "BF_02",
+      "name": "ステージ2",
+      "stageTab": "戦場",
+      "category": "normal",
+      "unlockType": "clear",
+      "unlockValue": "BF_01",
+      "info": "ソッドとシルドの組み合わせ。",
+      "waves": [
+        [
+          {
+            "id": "M_SODD",
+            "level": 2
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 2
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 2
+          }
+        ],
+        [
+          {
+            "id": "M_POSHE",
+            "level": 3
+          },
+          {
+            "id": "M_POSHE",
+            "level": 3
+          },
+          {
+            "id": "M_SODD",
+            "level": 2
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 2
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 2
+          }
+        ]
+      ],
+      "modifiers": {
+        "M_SHIELD": {
+          "hp": 0.8
+        },
+        "M_SODD": {
+          "hp": 0.8
+        },
+        "M_POSHE": {
+          "hp": 0.7
+        }
+      }
+    },
+    "BF_03": {
+      "id": "BF_03",
+      "name": "ステージ3",
+      "stageTab": "戦場",
+      "category": "normal",
+      "unlockType": "clear",
+      "unlockValue": "BF_02",
+      "info": "ヒュームがまれに混じる。",
+      "waves": [
+        [
+          {
+            "id": "M_SODD",
+            "level": 3
+          },
+          {
+            "id": "M_SODD",
+            "level": 3
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_SHIELD",
+            "level": 3
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 3
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_SODD",
+            "level": 3
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          }
+        ]
+      ],
+      "modifiers": {
+        "M_SHIELD": {
+          "hp": 0.8
+        },
+        "M_SODD": {
+          "hp": 0.8
+        },
+        "M_POSHE": {
+          "hp": 0.7
+        }
+      },
+      "randomAdds": [
+        {
+          "chance": 0.2,
+          "waves": [
+            0,
+            1,
+            2
+          ],
+          "enemy": {
+            "id": "M_HUME",
+            "level": 1
+          }
+        }
+      ]
+    },
+    "BF_04": {
+      "id": "BF_04",
+      "name": "ステージ4",
+      "stageTab": "戦場",
+      "category": "normal",
+      "unlockType": "clear",
+      "unlockValue": "BF_03",
+      "info": "終盤素材集め向け。",
+      "waves": [
+        [
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          }
+        ]
+      ],
+      "modifiers": {
+        "M_SHIELD": {
+          "hp": 0.9
+        },
+        "M_SODD": {
+          "hp": 0.9
+        },
+        "M_POSHE": {
+          "hp": 0.7
+        }
+      },
+      "randomAdds": [
+        {
+          "chance": 0.3,
+          "waves": [
+            0,
+            1,
+            2
+          ],
+          "enemy": {
+            "id": "M_HUME",
+            "level": 1
+          }
+        }
+      ]
+    },
+    "BF_05": {
+      "id": "BF_05",
+      "name": "ステージ5",
+      "stageTab": "戦場",
+      "category": "boss",
+      "unlockType": "clear",
+      "unlockValue": "BF_04",
+      "info": "シプナイトが待つBossステージ。",
+      "waves": [
+        [
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_SHIPKNIGHT",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          }
+        ]
+      ],
+      "modifiers": {
+        "M_SHIELD": {
+          "hp": 0.9
+        },
+        "M_SODD": {
+          "hp": 0.9
+        },
+        "M_POSHE": {
+          "hp": 0.9
+        },
+        "M_SHIPKNIGHT": {
+          "all": 1.8
+        }
+      },
+      "randomAdds": [
+        {
+          "chance": 0.4,
+          "waves": [
+            0,
+            1,
+            2
+          ],
+          "enemy": {
+            "id": "M_HUME",
+            "level": 1
+          }
         }
       ]
     }
   },
   "drops": [
     {
-      "source_monster_id": "M_BLACKCIRCLE",
+      "source_monster_id": "M_NULL",
       "source_level": 1,
       "drop_type": "monster",
-      "drop_id": "M_BLACKCIRCLE",
-      "rate": 0.2
+      "drop_id": "M_NULL",
+      "rate": 0.25
     },
     {
-      "source_monster_id": "M_BLACKCIRCLE",
+      "source_monster_id": "M_NULL",
       "source_level": 2,
       "drop_type": "monster",
-      "drop_id": "M_BLACKCIRCLE",
-      "rate": 0.2
+      "drop_id": "M_NULL",
+      "rate": 0.25
     },
     {
-      "source_monster_id": "M_BLACKCIRCLE",
+      "source_monster_id": "M_NULL",
       "source_level": 3,
       "drop_type": "monster",
-      "drop_id": "M_BLACKCIRCLE",
-      "rate": 0.2
+      "drop_id": "M_NULL",
+      "rate": 0.25
     },
     {
-      "source_monster_id": "M_BLACKSQUARE",
-      "source_level": 1,
+      "source_monster_id": "M_NULL",
+      "source_level": 4,
       "drop_type": "monster",
-      "drop_id": "M_BLACKSQUARE",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_BLACKSQUARE",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_BLACKSQUARE",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_BLACKSQUARE",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_BLACKSQUARE",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_BLACKSQUARE",
-      "source_level": 3,
-      "drop_type": "skill",
-      "drop_id": "SK_BLACKSQUARE",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_HIDER",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_HIDER",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_HIDER",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_HIDER",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_HIDER",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_HIDER",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_HIDER",
-      "source_level": 3,
-      "drop_type": "skill",
-      "drop_id": "SK_HIDE",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_BLACKTRIANGLE",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_BLACKTRIANGLE",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_BLACKTRIANGLE",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_BLACKTRIANGLE",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_BLACKTRIANGLE",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_BLACKTRIANGLE",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_BLACKTRIANGLE",
-      "source_level": 3,
-      "drop_type": "skill",
-      "drop_id": "SK_RAPID",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_SPEEDER",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_SPEEDER",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_SPEEDER",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_SPEEDER",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_SPEEDER",
-      "source_level": 3,
-      "drop_type": "skill",
-      "drop_id": "SK_DASH",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_OUMUAMUA",
-      "source_level": 1,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_BARRAGE",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_OUMUAMUA",
-      "source_level": 2,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_BARRAGE",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_OUMUAMUA",
-      "source_level": 2,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_OUMUAMUA",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_OUMUAMUA",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_BARRAGE",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_OUMUAMUA",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_OUMUAMUA",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_OUMUAMUA",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_M_OUMUAMUA",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_HAMMER",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_HAMMER",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_HAMMER",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_HAMMER",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_HAMMER",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_HAMMER",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_HAMMER",
-      "source_level": 3,
-      "drop_type": "skill",
-      "drop_id": "SK_HEAVY_STRIKE",
-      "rate": 0.1
+      "drop_id": "M_NULL",
+      "rate": 0.25
     },
     {
       "source_monster_id": "M_POZ",
       "source_level": 1,
       "drop_type": "monster",
       "drop_id": "M_POZ",
-      "rate": 0.2
+      "rate": 0.25
     },
     {
       "source_monster_id": "M_POZ",
       "source_level": 2,
       "drop_type": "monster",
       "drop_id": "M_POZ",
-      "rate": 0.3
+      "rate": 0.25
     },
     {
       "source_monster_id": "M_POZ",
       "source_level": 3,
       "drop_type": "monster",
       "drop_id": "M_POZ",
-      "rate": 0.3
+      "rate": 0.25
     },
     {
       "source_monster_id": "M_POZ",
+      "source_level": 4,
+      "drop_type": "monster",
+      "drop_id": "M_POZ",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_POSHE",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_POSHE",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_POSHE",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_POSHE",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_POSHE",
       "source_level": 3,
-      "drop_type": "skill",
-      "drop_id": "SK_POISON_SECRETION",
+      "drop_type": "monster",
+      "drop_id": "M_POSHE",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_POSHE",
+      "source_level": 4,
+      "drop_type": "monster",
+      "drop_id": "M_POSHE",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_SODD",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_SODD",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_SODD",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_SODD",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_SODD",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_SODD",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_SODD",
+      "source_level": 4,
+      "drop_type": "monster",
+      "drop_id": "M_SODD",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_RAPID",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_RAPID",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_RAPID",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_RAPID",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_RAPID",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_RAPID",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_RAPID",
+      "source_level": 4,
+      "drop_type": "monster",
+      "drop_id": "M_RAPID",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_SHIELD",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_SHIELD",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_SHIELD",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_SHIELD",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_SHIELD",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_SHIELD",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_SHIELD",
+      "source_level": 4,
+      "drop_type": "monster",
+      "drop_id": "M_SHIELD",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_HUME",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_HUME",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_HUME",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_HUME",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_HUME",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_HUME",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_HUME",
+      "source_level": 4,
+      "drop_type": "monster",
+      "drop_id": "M_HUME",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_SIDE",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_SIDE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_SIDE",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_SIDE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_SIDE",
+      "source_level": 3,
+      "drop_type": "monster",
+      "drop_id": "M_SIDE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_SIDE",
+      "source_level": 4,
+      "drop_type": "monster",
+      "drop_id": "M_SIDE",
+      "rate": 0.2
+    },
+    {
+      "source_monster_id": "M_UFO",
+      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_UFO",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_UFO",
+      "source_level": 2,
+      "drop_type": "monster",
+      "drop_id": "M_UFO",
       "rate": 0.1
     },
     {
-      "source_monster_id": "M_GARDNER",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_GARDNER",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_GARDNER",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_GARDNER",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_GARDNER",
+      "source_monster_id": "M_UFO",
       "source_level": 3,
       "drop_type": "monster",
-      "drop_id": "M_GARDNER",
-      "rate": 0.3
+      "drop_id": "M_UFO",
+      "rate": 0
     },
     {
-      "source_monster_id": "M_GARDNER",
-      "source_level": 3,
-      "drop_type": "skill",
-      "drop_id": "SK_GARDNER",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_HELME",
-      "source_level": 1,
+      "source_monster_id": "M_UFO",
+      "source_level": 4,
       "drop_type": "monster",
-      "drop_id": "M_HELME",
-      "rate": 0.2
+      "drop_id": "M_UFO",
+      "rate": 0
     },
     {
-      "source_monster_id": "M_HELME",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_HELME",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_HELME",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_HELME",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_HELME",
-      "source_level": 3,
-      "drop_type": "skill",
-      "drop_id": "SK_COUNTER",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_SPARTIATAI",
+      "source_monster_id": "M_UFO",
       "source_level": 1,
       "drop_type": "recipe",
-      "drop_id": "R_SK_SPARTAN_RAGE",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_SPARTIATAI",
-      "source_level": 1,
-      "drop_type": "skill",
-      "drop_id": "SK_GARDNER",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_SPARTIATAI",
-      "source_level": 2,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_SPARTAN_RAGE",
+      "drop_id": "R_SK_MINOR_HEAL",
       "rate": 0.2
     },
     {
-      "source_monster_id": "M_SPARTIATAI",
-      "source_level": 2,
-      "drop_type": "skill",
-      "drop_id": "SK_COUNTER",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_SPARTIATAI",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_M_SPARTIATAI",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_SPARTIATAI",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_SPARTAN_RAGE",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_OCTAGON",
+      "source_monster_id": "M_UFO",
       "source_level": 1,
       "drop_type": "recipe",
-      "drop_id": "R_SK_SHIELD",
+      "drop_id": "R_SK_PROTECT",
       "rate": 0.2
     },
     {
-      "source_monster_id": "M_OCTAGON",
+      "source_monster_id": "M_UFO",
       "source_level": 2,
       "drop_type": "recipe",
-      "drop_id": "R_M_OCTAGON",
+      "drop_id": "R_SK_MINOR_HEAL",
       "rate": 0.2
     },
     {
-      "source_monster_id": "M_OCTAGON",
+      "source_monster_id": "M_UFO",
       "source_level": 2,
       "drop_type": "recipe",
-      "drop_id": "R_SK_SHIELD",
+      "drop_id": "R_SK_PROTECT",
       "rate": 0.2
     },
     {
-      "source_monster_id": "M_OCTAGON",
-      "source_level": 3,
+      "source_monster_id": "M_UFO",
+      "source_level": 4,
       "drop_type": "recipe",
-      "drop_id": "R_M_OCTAGON",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_OCTAGON",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_SHIELD",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_POZILULU",
-      "source_level": 1,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_LETHAL_TOXIN",
+      "drop_id": "R_SK_MINOR_HEAL",
       "rate": 0.2
     },
     {
-      "source_monster_id": "M_POZILULU",
-      "source_level": 2,
+      "source_monster_id": "M_UFO",
+      "source_level": 4,
       "drop_type": "recipe",
-      "drop_id": "R_SK_LETHAL_TOXIN",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_POZILULU",
-      "source_level": 2,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_OVER_SECRETION",
+      "drop_id": "R_SK_PROTECT",
       "rate": 0.2
     },
     {
-      "source_monster_id": "M_POZILULU",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_LETHAL_TOXIN",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_POZILULU",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_OVER_SECRETION",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_POZILULU",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_M_POZILULU",
-      "rate": 0.4
-    },
-    {
-      "source_monster_id": "M_AGENT",
+      "source_monster_id": "M_SHIPKNIGHT",
       "source_level": 1,
       "drop_type": "monster",
-      "drop_id": "M_AGENT",
-      "rate": 0.1
+      "drop_id": "M_SHIELD",
+      "rate": 0.25
     },
     {
-      "source_monster_id": "M_AGENT",
-      "source_level": 2,
+      "source_monster_id": "M_SHIPKNIGHT",
+      "source_level": 1,
       "drop_type": "monster",
-      "drop_id": "M_AGENT",
-      "rate": 0.2
+      "drop_id": "M_SODD",
+      "rate": 0.25
     },
     {
-      "source_monster_id": "M_AGENT",
-      "source_level": 3,
+      "source_monster_id": "M_SHIPKNIGHT",
+      "source_level": 1,
       "drop_type": "monster",
-      "drop_id": "M_AGENT",
-      "rate": 0.3
+      "drop_id": "M_HUME",
+      "rate": 0.25
     },
     {
-      "source_monster_id": "M_ADMIN_TRI",
+      "source_monster_id": "M_SHIPKNIGHT",
       "source_level": 1,
       "drop_type": "recipe",
-      "drop_id": "R_SK_ANALYZE",
+      "drop_id": "R_M_SHIPKNIGHT",
       "rate": 0.2
     },
     {
-      "source_monster_id": "M_ADMIN_TRI",
-      "source_level": 2,
+      "source_monster_id": "M_SHIPKNIGHT",
+      "source_level": 1,
       "drop_type": "recipe",
-      "drop_id": "R_SK_ADMIN_TRI",
+      "drop_id": "R_SK_BEAT",
       "rate": 0.2
     },
     {
-      "source_monster_id": "M_ADMIN_TRI",
-      "source_level": 2,
+      "source_monster_id": "M_SHIPKNIGHT",
+      "source_level": 1,
       "drop_type": "recipe",
-      "drop_id": "R_M_ADMIN_TRI",
+      "drop_id": "R_SK_GUARD",
       "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_ADMIN_TRI",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_M_ADMIN_TRI",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_ADMIN_TRI",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_ADMIN_TRI",
-      "rate": 0.3
-    },
-    {
-      "source_monster_id": "M_ADMIN_TRI",
-      "source_level": 3,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_ANALYZE",
-      "rate": 0.3
     }
   ],
-  "systemRules": {
-    "NORMAL_DAMAGE": 5,
-    "PARTY_SIZE": 8,
-    "FRONT_SIZE": 4,
-    "MAX_LEVEL": 3,
-    "RESERVE_TIMING": "turn_end"
-  },
   "glossary": {
     "poison": {
-      "name": "毒状態",
-      "desc": "ターンの攻撃処理終了後、状態異常処理で1スタックにつき5ダメージを受ける。持続ターンが0になると解除。",
+      "name": "毒",
+      "desc": "3ターンの間、ターン終了時に20ダメージを受ける状態。重ねがけはせず、新しく付与されると残りターンがリセットされる。",
       "related": [
-        "毒分泌",
-        "分泌毒"
+        "猛毒"
       ]
     },
     "venom": {
-      "name": "猛毒状態",
-      "desc": "毒状態と同じ処理だが、1スタックにつき10ダメージを受ける。赤紫色の状態異常。",
+      "name": "猛毒",
+      "desc": "毒とは別の強い状態異常。今後の上位毒スキルで使用する。毒とは別アイコンで表示する。",
       "related": [
-        "致命的毒素",
-        "過剰分泌"
-      ]
-    },
-    "shieldStatus": {
-      "name": "シールド",
-      "desc": "ダメージを受ける時、HPの代わりにシールドを1つ消費して1ヒットを無効化する。",
-      "related": [
-        "Octagon",
-        "シールド"
+        "毒"
       ]
     },
     "analyzeStatus": {
-      "name": "アナライズ状態",
-      "desc": "受けるダメージが1.5倍になる。右上に目のピクトグラムが表示される。",
-      "related": [
-        "analyze",
-        "Administrator-Tri-"
-      ]
+      "name": "アナライズ",
+      "desc": "効果中、受けるダメージが1.5倍になる状態。重ねがけはせず、再付与で残りターンがリセットされる。"
     },
-    "recipe": {
-      "name": "レシピ",
-      "desc": "必要キャラクターを素材としてセットし、レシピと素材を消費してキャラクターやスキルを獲得するアイテム。",
-      "related": [
-        "合成"
-      ]
+    "mp": {
+      "name": "MP",
+      "desc": "アクティブスキルを使うために消費するステータス。HPバーの下に青緑のバーで表示される。"
+    },
+    "attack": {
+      "name": "A",
+      "desc": "Attack。通常攻撃や多くの攻撃スキルの威力に使うステータス。"
     }
   }
 }
