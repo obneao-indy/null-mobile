@@ -721,7 +721,14 @@
         "M_NULL": {
           "hp": 0.7
         }
-      }
+      },
+      "firstClearRewards": [
+        {
+          "type": "monster",
+          "id": "M_RAPID",
+          "level": 1
+        }
+      ]
     },
     "FB_02": {
       "id": "FB_02",
@@ -760,7 +767,19 @@
         "M_RAPID": {
           "hp": 0.8
         }
-      }
+      },
+      "firstClearRewards": [
+        {
+          "type": "monster",
+          "id": "M_NULL",
+          "level": 2
+        },
+        {
+          "type": "monster",
+          "id": "M_RAPID",
+          "level": 1
+        }
+      ]
     },
     "FB_03": {
       "id": "FB_03",
@@ -832,7 +851,19 @@
         "M_POZ": {
           "hp": 0.7
         }
-      }
+      },
+      "firstClearRewards": [
+        {
+          "type": "monster",
+          "id": "M_NULL",
+          "level": 3
+        },
+        {
+          "type": "monster",
+          "id": "M_RAPID",
+          "level": 2
+        }
+      ]
     },
     "FB_04": {
       "id": "FB_04",
@@ -916,7 +947,14 @@
         "M_POZ": {
           "hp": 0.7
         }
-      }
+      },
+      "firstClearRewards": [
+        {
+          "type": "monster",
+          "id": "M_POZ",
+          "level": 1
+        }
+      ]
     },
     "FB_05": {
       "id": "FB_05",
@@ -989,7 +1027,17 @@
         "M_UFO": {
           "all": 1.8
         }
-      }
+      },
+      "firstClearRewards": [
+        {
+          "type": "monster",
+          "id": "M_POZ",
+          "level": 3
+        },
+        {
+          "type": "randomRecipe"
+        }
+      ]
     },
     "BF_01": {
       "id": "BF_01",
@@ -1026,7 +1074,14 @@
         "M_SODD": {
           "hp": 0.8
         }
-      }
+      },
+      "firstClearRewards": [
+        {
+          "type": "monster",
+          "id": "M_SODD",
+          "level": 1
+        }
+      ]
     },
     "BF_02": {
       "id": "BF_02",
@@ -1084,7 +1139,19 @@
         "M_POSHE": {
           "hp": 0.7
         }
-      }
+      },
+      "firstClearRewards": [
+        {
+          "type": "monster",
+          "id": "M_SODD",
+          "level": 1
+        },
+        {
+          "type": "monster",
+          "id": "M_SHIELD",
+          "level": 1
+        }
+      ]
     },
     "BF_03": {
       "id": "BF_03",
@@ -1165,6 +1232,18 @@
             "id": "M_HUME",
             "level": 1
           }
+        }
+      ],
+      "firstClearRewards": [
+        {
+          "type": "monster",
+          "id": "M_POSHE",
+          "level": 1
+        },
+        {
+          "type": "monster",
+          "id": "M_SHIELD",
+          "level": 3
         }
       ]
     },
@@ -1259,6 +1338,19 @@
             "id": "M_HUME",
             "level": 1
           }
+        }
+      ],
+      "firstClearRewards": [
+        {
+          "type": "monster",
+          "id": "M_POSHE",
+          "level": 2
+        },
+        {
+          "type": "monster",
+          "id": "M_SODD",
+          "level": 2,
+          "count": 2
         }
       ]
     },
@@ -1362,6 +1454,26 @@
             "id": "M_HUME",
             "level": 1
           }
+        }
+      ],
+      "firstClearRewards": [
+        {
+          "type": "monster",
+          "id": "M_HUME",
+          "level": 1
+        },
+        {
+          "type": "monster",
+          "id": "M_SODD",
+          "level": 1
+        },
+        {
+          "type": "monster",
+          "id": "M_SHIELD",
+          "level": 1
+        },
+        {
+          "type": "randomRecipe"
         }
       ]
     }
