@@ -1481,336 +1481,102 @@
   "drops": [
     {
       "source_monster_id": "M_NULL",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_NULL",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_NULL",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_NULL",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_NULL",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_NULL",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_NULL",
-      "source_level": 4,
       "drop_type": "monster",
       "drop_id": "M_NULL",
       "rate": 0.25
     },
     {
       "source_monster_id": "M_POZ",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_POZ",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_POZ",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_POZ",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_POZ",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_POZ",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_POZ",
-      "source_level": 4,
       "drop_type": "monster",
       "drop_id": "M_POZ",
       "rate": 0.25
     },
     {
       "source_monster_id": "M_POSHE",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_POSHE",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_POSHE",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_POSHE",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_POSHE",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_POSHE",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_POSHE",
-      "source_level": 4,
       "drop_type": "monster",
       "drop_id": "M_POSHE",
       "rate": 0.25
     },
     {
       "source_monster_id": "M_SODD",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_SODD",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_SODD",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_SODD",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_SODD",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_SODD",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_SODD",
-      "source_level": 4,
       "drop_type": "monster",
       "drop_id": "M_SODD",
       "rate": 0.25
     },
     {
       "source_monster_id": "M_RAPID",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_RAPID",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_RAPID",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_RAPID",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_RAPID",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_RAPID",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_RAPID",
-      "source_level": 4,
       "drop_type": "monster",
       "drop_id": "M_RAPID",
       "rate": 0.25
     },
     {
       "source_monster_id": "M_SHIELD",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_SHIELD",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_SHIELD",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_SHIELD",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_SHIELD",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_SHIELD",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_SHIELD",
-      "source_level": 4,
       "drop_type": "monster",
       "drop_id": "M_SHIELD",
       "rate": 0.25
     },
     {
       "source_monster_id": "M_HUME",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_HUME",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_HUME",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_HUME",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_HUME",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_HUME",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_HUME",
-      "source_level": 4,
       "drop_type": "monster",
       "drop_id": "M_HUME",
       "rate": 0.25
     },
     {
       "source_monster_id": "M_SIDE",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_SIDE",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_SIDE",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_SIDE",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_SIDE",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_SIDE",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_SIDE",
-      "source_level": 4,
       "drop_type": "monster",
       "drop_id": "M_SIDE",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_UFO",
-      "source_level": 1,
       "drop_type": "monster",
       "drop_id": "M_UFO",
       "rate": 0.25
     },
     {
       "source_monster_id": "M_UFO",
-      "source_level": 2,
-      "drop_type": "monster",
-      "drop_id": "M_UFO",
-      "rate": 0.1
-    },
-    {
-      "source_monster_id": "M_UFO",
-      "source_level": 3,
-      "drop_type": "monster",
-      "drop_id": "M_UFO",
-      "rate": 0
-    },
-    {
-      "source_monster_id": "M_UFO",
-      "source_level": 4,
-      "drop_type": "monster",
-      "drop_id": "M_UFO",
-      "rate": 0
-    },
-    {
-      "source_monster_id": "M_UFO",
-      "source_level": 1,
       "drop_type": "recipe",
       "drop_id": "R_SK_MINOR_HEAL",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_UFO",
-      "source_level": 1,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_PROTECT",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_UFO",
-      "source_level": 2,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_MINOR_HEAL",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_UFO",
-      "source_level": 2,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_PROTECT",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_UFO",
-      "source_level": 4,
-      "drop_type": "recipe",
-      "drop_id": "R_SK_MINOR_HEAL",
-      "rate": 0.2
-    },
-    {
-      "source_monster_id": "M_UFO",
-      "source_level": 4,
       "drop_type": "recipe",
       "drop_id": "R_SK_PROTECT",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_SHIPKNIGHT",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_SHIELD",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_SHIPKNIGHT",
-      "source_level": 1,
-      "drop_type": "monster",
-      "drop_id": "M_SODD",
-      "rate": 0.25
-    },
-    {
-      "source_monster_id": "M_SHIPKNIGHT",
-      "source_level": 1,
       "drop_type": "monster",
       "drop_id": "M_HUME",
       "rate": 0.25
     },
     {
       "source_monster_id": "M_SHIPKNIGHT",
-      "source_level": 1,
+      "drop_type": "monster",
+      "drop_id": "M_SHIELD",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_SHIPKNIGHT",
+      "drop_type": "monster",
+      "drop_id": "M_SODD",
+      "rate": 0.25
+    },
+    {
+      "source_monster_id": "M_SHIPKNIGHT",
       "drop_type": "recipe",
       "drop_id": "R_M_SHIPKNIGHT",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_SHIPKNIGHT",
-      "source_level": 1,
       "drop_type": "recipe",
       "drop_id": "R_SK_BEAT",
       "rate": 0.2
     },
     {
       "source_monster_id": "M_SHIPKNIGHT",
-      "source_level": 1,
       "drop_type": "recipe",
       "drop_id": "R_SK_GUARD",
       "rate": 0.2
