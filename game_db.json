@@ -129,10 +129,10 @@
       "desc": "回復を覚えるヌル派生。微回復で味方を立て直す。",
       "role": "normal",
       "visual": {
-        "src": "assets/characters/null.png",
+        "src": "assets/characters/poshe.png",
         "w": 60,
-        "h": 54,
-        "y": -2
+        "h": 58,
+        "y": -5
       }
     },
     "M_SODD": {
