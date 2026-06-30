@@ -131,8 +131,8 @@
       "visual": {
         "src": "assets/characters/poshe.png",
         "w": 60,
-        "h": 58,
-        "y": -5
+        "h": 62,
+        "y": -6
       }
     },
     "M_SODD": {
@@ -703,7 +703,7 @@
   "stages": {
     "FB_01": {
       "id": "FB_01",
-      "name": "エリア1",
+      "name": "ステージ1",
       "stageTab": "First battle",
       "category": "normal",
       "unlockType": "always",
