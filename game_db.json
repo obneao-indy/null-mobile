@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "replace": true,
-  "generatedAt": "2026-07-09T02:30:00+09:00",
+  "generatedAt": "2026-07-14T15:28:39.311Z",
   "monsters": {
     "M_NULL": {
       "id": "M_NULL",
@@ -824,6 +824,292 @@
         "h": 78,
         "y": -8
       }
+    },
+    "M_PISTA_GUN": {
+      "id": "M_PISTA_GUN",
+      "name": "ピスタ=ガン",
+      "glyph": "銃",
+      "hp": 50,
+      "attack": 60,
+      "speed": 40,
+      "mp": 50,
+      "slots": 2,
+      "trait": null,
+      "role": "normal",
+      "levels": {
+        "2": {
+          "hp": 15,
+          "attack": 20,
+          "speed": 10,
+          "mp": 8,
+          "skills": [
+            "SK_SHOT"
+          ]
+        },
+        "3": {
+          "hp": 15,
+          "attack": 5,
+          "speed": 5,
+          "mp": 12,
+          "skills": [
+            "SK_RELOAD"
+          ]
+        },
+        "4": {
+          "hp": 10,
+          "attack": 15,
+          "speed": 5,
+          "mp": 20
+        }
+      },
+      "desc": "Aが高い銃型アタッカー。ショットとリロードで単体火力を伸ばす。",
+      "visual": {
+        "src": "assets/characters/pista_gun.png",
+        "w": 72,
+        "h": 54,
+        "y": -4
+      }
+    },
+    "M_GRENEED": {
+      "id": "M_GRENEED",
+      "name": "グレネド",
+      "glyph": "爆",
+      "hp": 20,
+      "attack": 65,
+      "speed": 70,
+      "mp": 50,
+      "slots": 2,
+      "trait": null,
+      "role": "normal",
+      "levels": {
+        "2": {
+          "hp": 10,
+          "attack": 10,
+          "speed": 5,
+          "mp": 15,
+          "skills": [
+            "SK_SELF_DESTRUCT"
+          ]
+        },
+        "3": {
+          "hp": 5,
+          "attack": 5,
+          "speed": 5,
+          "mp": 15
+        },
+        "4": {
+          "hp": 5,
+          "attack": 15,
+          "speed": 0,
+          "mp": 15,
+          "skills": [
+            "SK_RELOAD"
+          ]
+        }
+      },
+      "desc": "高速高火力の手榴弾型。自爆で敵全体を巻き込む。",
+      "visual": {
+        "src": "assets/characters/grened.png",
+        "w": 46,
+        "h": 58,
+        "y": -8
+      }
+    },
+    "M_NIKOV_GUN": {
+      "id": "M_NIKOV_GUN",
+      "name": "ニクォフ=ガン",
+      "glyph": "銃",
+      "hp": 100,
+      "attack": 80,
+      "speed": 50,
+      "mp": 40,
+      "slots": 3,
+      "trait": "quickReload",
+      "role": "boss",
+      "levels": {
+        "1": {
+          "skills": [
+            "SK_SHOT"
+          ]
+        },
+        "2": {
+          "hp": 35,
+          "attack": 15,
+          "speed": 10,
+          "mp": 5
+        },
+        "3": {
+          "hp": 15,
+          "attack": 15,
+          "speed": 5,
+          "mp": 5,
+          "skills": [
+            "SK_HEAL"
+          ]
+        },
+        "4": {
+          "hp": 30,
+          "attack": 10,
+          "speed": 15,
+          "mp": 30,
+          "skills": [
+            "SK_HEADSHOT"
+          ]
+        }
+      },
+      "desc": "毎ターンリロード状態になるBoss候補。ショットとヘッドショットで単体を撃ち抜く。",
+      "visual": {
+        "src": "assets/characters/nikov_gun.png",
+        "w": 104,
+        "h": 49,
+        "y": -2
+      }
+    },
+    "M_MINI_GUN": {
+      "id": "M_MINI_GUN",
+      "name": "ミニ=ガン",
+      "glyph": "銃",
+      "hp": 100,
+      "attack": 110,
+      "speed": 10,
+      "mp": 30,
+      "slots": 4,
+      "trait": "machineGun",
+      "role": "boss",
+      "levels": {
+        "1": {
+          "skills": [
+            "SK_SHOT"
+          ]
+        },
+        "2": {
+          "hp": 30,
+          "attack": 20,
+          "speed": 0,
+          "mp": 20,
+          "skills": [
+            "SK_RELOAD"
+          ]
+        },
+        "3": {
+          "hp": 40,
+          "attack": 50,
+          "speed": 0,
+          "mp": 20
+        },
+        "4": {
+          "hp": 30,
+          "attack": 30,
+          "speed": 0,
+          "mp": 20,
+          "skills": [
+            "SK_MACHINE_GUN_BARRAGE"
+          ]
+        }
+      },
+      "desc": "通常攻撃が全体攻撃になる重火器Boss候補。機銃掃射で敵全体を押し潰す。",
+      "visual": {
+        "src": "assets/characters/mini_gun.png",
+        "w": 108,
+        "h": 90,
+        "y": -8
+      }
+    },
+    "M_SOUL_GUN": {
+      "id": "M_SOUL_GUN",
+      "name": "ソウル=ガン",
+      "glyph": "魂",
+      "hp": 50,
+      "attack": 5,
+      "speed": 70,
+      "mp": 60,
+      "slots": 3,
+      "trait": "gunLore",
+      "role": "normal",
+      "levels": {
+        "2": {
+          "hp": 0,
+          "attack": 5,
+          "speed": 0,
+          "mp": 15
+        },
+        "3": {
+          "hp": 15,
+          "attack": 10,
+          "speed": 0,
+          "mp": 25,
+          "skills": [
+            "SK_QUICK_DRAW"
+          ]
+        },
+        "4": {
+          "hp": 25,
+          "attack": 0,
+          "speed": 10,
+          "mp": 10,
+          "skills": [
+            "SK_TRIGGER_HAPPY"
+          ]
+        }
+      },
+      "desc": "銃系のMPとリロードを支えるサポート。=ガンの味方に自動MP回復を付与する。",
+      "visual": {
+        "src": "assets/characters/soul_gun.png",
+        "w": 56,
+        "h": 76,
+        "y": -12
+      }
+    },
+    "M_BIG_SHIELDER": {
+      "id": "M_BIG_SHIELDER",
+      "name": "ビッグシールダー",
+      "glyph": "盾",
+      "hp": 100,
+      "attack": 30,
+      "speed": 30,
+      "mp": 80,
+      "slots": 2,
+      "trait": null,
+      "role": "gacha",
+      "levels": {
+        "1": {
+          "skills": [
+            "SK_GUARD",
+            "SK_PROTECT"
+          ]
+        },
+        "2": {
+          "hp": 50,
+          "attack": 0,
+          "speed": 0,
+          "mp": 40,
+          "skills": [
+            "SK_NIOH_STAND"
+          ]
+        },
+        "3": {
+          "hp": 25,
+          "attack": 0,
+          "speed": 0,
+          "mp": 10
+        },
+        "4": {
+          "hp": 25,
+          "attack": 0,
+          "speed": 0,
+          "mp": 10,
+          "skills": [
+            "SK_PALADIN_GUARD"
+          ]
+        }
+      },
+      "desc": "ガチャレシピ限定の守護キャラ。シールドと注目で味方を守る。",
+      "visual": {
+        "src": "assets/characters/big_shielder.png",
+        "w": 56,
+        "h": 90,
+        "y": -10
+      }
     }
   },
   "traits": {
@@ -850,6 +1136,21 @@
     "fightingVeil": {
       "name": "闘魚のヴェール",
       "desc": "このキャラクターが戦闘画面にいる間、味方全体が与えるダメージを1.3倍にする。"
+    },
+    "quickReload": {
+      "id": "quickReload",
+      "name": "クイックリロード",
+      "desc": "毎ターン開始時、自身にリロード状態を付与する。"
+    },
+    "machineGun": {
+      "id": "machineGun",
+      "name": "機関銃",
+      "desc": "通常攻撃が敵全体対象になる。通常攻撃時にMPを10消費する。"
+    },
+    "gunLore": {
+      "id": "gunLore",
+      "name": "銃の心得",
+      "desc": "場にいる限り、名前に「=ガン」と付く味方に自動MP回復を付与する。"
     }
   },
   "skills": {
@@ -1048,6 +1349,116 @@
       "cost": 50,
       "attackMult": 1.2,
       "poisonDrain": true
+    },
+    "SK_SHOT": {
+      "id": "SK_SHOT",
+      "name": "ショット",
+      "glyph": "•",
+      "desc": "エネミー一体にAの1.3倍ダメージ。20%で2倍ダメージになる。",
+      "target": "enemy",
+      "targets": 1,
+      "cost": 20,
+      "attackMult": 1.3,
+      "critChance": 0.2,
+      "critMult": 2,
+      "projectile": true
+    },
+    "SK_RELOAD": {
+      "id": "SK_RELOAD",
+      "name": "リロード",
+      "glyph": "↻",
+      "desc": "自身にリロード状態を付与する。リロード中、次に使うダメージスキルのヒット数が倍になる。",
+      "target": "self",
+      "targets": 1,
+      "cost": 45,
+      "reload": true,
+      "reloadTurns": 3
+    },
+    "SK_HEADSHOT": {
+      "id": "SK_HEADSHOT",
+      "name": "ヘッドショット",
+      "glyph": "◎",
+      "desc": "エネミー一体にAの3倍ダメージ。シールド以外の軽減を無視する。",
+      "target": "enemy",
+      "targets": 1,
+      "cost": 80,
+      "attackMult": 3,
+      "ignoreReduction": true,
+      "projectile": true
+    },
+    "SK_MACHINE_GUN_BARRAGE": {
+      "id": "SK_MACHINE_GUN_BARRAGE",
+      "name": "機銃掃射",
+      "glyph": "▦",
+      "desc": "敵全体にAの4.5倍ダメージ。シールドを貫通する。使用後3ターン行動不能になる。",
+      "target": "enemy",
+      "targets": 99,
+      "cost": 60,
+      "attackMult": 4.5,
+      "allEnemies": true,
+      "pierceShield": true,
+      "stunSelfTurns": 3,
+      "projectile": true
+    },
+    "SK_QUICK_DRAW": {
+      "id": "SK_QUICK_DRAW",
+      "name": "クイックドロー",
+      "glyph": "↻",
+      "desc": "味方キャラクター一体にリロード状態を付与する。",
+      "target": "ally",
+      "targets": 1,
+      "cost": 30,
+      "reloadTarget": true,
+      "reloadTurns": 3
+    },
+    "SK_TRIGGER_HAPPY": {
+      "id": "SK_TRIGGER_HAPPY",
+      "name": "トリガーハッピー",
+      "glyph": "↑↻",
+      "desc": "味方全体にリロード状態を付与し、3ターンAを1.3倍にする。",
+      "target": "ally",
+      "targets": 99,
+      "cost": 90,
+      "allAllies": true,
+      "reloadTarget": true,
+      "reloadTurns": 3,
+      "attackBuffPct": 0.3,
+      "attackBuffTurns": 3
+    },
+    "SK_SELF_DESTRUCT": {
+      "id": "SK_SELF_DESTRUCT",
+      "name": "自爆",
+      "glyph": "爆",
+      "desc": "敵全体にAの2.5倍ダメージを与え、自身も戦闘不能になる。",
+      "target": "enemy",
+      "targets": 99,
+      "cost": 0,
+      "attackMult": 2.5,
+      "allEnemies": true,
+      "selfKO": true
+    },
+    "SK_NIOH_STAND": {
+      "id": "SK_NIOH_STAND",
+      "name": "仁王立ち",
+      "glyph": "盾",
+      "desc": "自身に3ターンの注目状態を付与し、シールドを2つ付与する。",
+      "target": "self",
+      "targets": 1,
+      "cost": 60,
+      "tauntTurns": 3,
+      "shieldSelf": 2
+    },
+    "SK_PALADIN_GUARD": {
+      "id": "SK_PALADIN_GUARD",
+      "name": "パラディンガード",
+      "glyph": "聖",
+      "desc": "味方全体にシールドを3つ付与し、HPを50回復する。",
+      "target": "ally",
+      "targets": 99,
+      "cost": 80,
+      "allAllies": true,
+      "shieldTarget": 3,
+      "heal": 50
     }
   },
   "recipes": {
@@ -1217,6 +1628,97 @@
         }
       ],
       "mode": "all",
+      "gacha": true,
+      "gachaRate": 10
+    },
+    "R_SK_SHOT": {
+      "id": "R_SK_SHOT",
+      "name": "ショットのすすめ",
+      "kind": "skill",
+      "result": {
+        "type": "skill",
+        "id": "SK_SHOT"
+      },
+      "requires": [
+        {
+          "id": "M_PISTA_GUN",
+          "count": 5,
+          "minLevel": 2
+        }
+      ]
+    },
+    "R_SK_RELOAD": {
+      "id": "R_SK_RELOAD",
+      "name": "リロードのすすめ",
+      "kind": "skill",
+      "result": {
+        "type": "skill",
+        "id": "SK_RELOAD"
+      },
+      "mode": "any",
+      "requires": [
+        {
+          "id": "M_PISTA_GUN",
+          "count": 3,
+          "minLevel": 3
+        },
+        {
+          "id": "M_NIKOV_GUN",
+          "count": 1,
+          "minLevel": 2
+        }
+      ]
+    },
+    "R_M_MINI_GUN": {
+      "id": "R_M_MINI_GUN",
+      "name": "ミニ=ガン召喚",
+      "kind": "monster",
+      "result": {
+        "type": "monster",
+        "id": "M_MINI_GUN",
+        "level": 1
+      },
+      "mode": "all",
+      "requires": [
+        {
+          "id": "M_PISTA_GUN",
+          "count": 3,
+          "minLevel": 1
+        },
+        {
+          "id": "M_NIKOV_GUN",
+          "count": 2,
+          "minLevel": 1
+        },
+        {
+          "id": "M_SOUL_GUN",
+          "count": 1,
+          "level": 4
+        }
+      ]
+    },
+    "R_M_BIG_SHIELDER": {
+      "id": "R_M_BIG_SHIELDER",
+      "name": "ビッグシールダーの合成指南",
+      "kind": "monster",
+      "result": {
+        "type": "monster",
+        "id": "M_BIG_SHIELDER",
+        "level": 1
+      },
+      "mode": "all",
+      "requires": [
+        {
+          "id": "M_SHIELD",
+          "count": 3,
+          "level": 4
+        },
+        {
+          "id": "M_HUME",
+          "count": 1,
+          "level": 4
+        }
+      ],
       "gacha": true,
       "gachaRate": 10
     }
@@ -2235,7 +2737,7 @@
       "id": "AQ_BOSS_01",
       "name": "水槽のヌシ1",
       "stageTab": "アクアリウム",
-      "category": "normal",
+      "category": "boss",
       "unlockType": "clear",
       "unlockValue": "AQ_03",
       "info": "スプレンデンス・カエルムが待つBossステージ。",
@@ -2291,15 +2793,19 @@
       ],
       "bossModifiers": {
         "M_SPLENDENS_CAELUM": {
-          "all": 2
+          "hp": 4,
+          "attack": 2,
+          "speed": 2,
+          "mp": 2
         }
-      }
+      },
+      "nonBossHpMult": 2
     },
     "AQ_BOSS_02": {
       "id": "AQ_BOSS_02",
       "name": "水槽のヌシ2",
       "stageTab": "アクアリウム",
-      "category": "normal",
+      "category": "boss",
       "unlockType": "clear",
       "unlockValue": "AQ_BOSS_01",
       "info": "アドニス・オルキヌスが待つBossステージ。",
@@ -2355,9 +2861,13 @@
       ],
       "bossModifiers": {
         "M_ADONIS_ORCINUS": {
-          "all": 2
+          "hp": 4,
+          "attack": 2,
+          "speed": 2,
+          "mp": 2
         }
-      }
+      },
+      "nonBossHpMult": 2
     },
     "EX_UFO": {
       "id": "EX_UFO",
@@ -2407,17 +2917,17 @@
         {
           "type": "recipe",
           "id": "R_SK_MINOR_HEAL",
-          "rate": 0.25
+          "rate": 0.1
         },
         {
           "type": "recipe",
           "id": "R_SK_PROTECT",
-          "rate": 0.25
+          "rate": 0.1
         },
         {
           "type": "stone",
           "count": 1,
-          "rate": 0.45
+          "rate": 0.03
         }
       ]
     },
@@ -2460,17 +2970,17 @@
         {
           "type": "recipe",
           "id": "R_SK_BEAT",
-          "rate": 0.25
+          "rate": 0.1
         },
         {
           "type": "recipe",
           "id": "R_SK_GUARD",
-          "rate": 0.25
+          "rate": 0.1
         },
         {
           "type": "stone",
           "count": 1,
-          "rate": 0.55
+          "rate": 0.03
         }
       ]
     },
@@ -2533,27 +3043,462 @@
         {
           "type": "recipe",
           "id": "R_SK_SWIM",
-          "rate": 0.25
+          "rate": 0.1
         },
         {
           "type": "recipe",
           "id": "R_SK_GUARD",
-          "rate": 0.25
+          "rate": 0.1
         },
         {
           "type": "recipe",
           "id": "R_SK_PROTECT",
-          "rate": 0.25
+          "rate": 0.1
         },
         {
           "type": "recipe",
           "id": "R_SK_SIZE",
-          "rate": 0.25
+          "rate": 0.1
         },
         {
           "type": "stone",
           "count": 1,
-          "rate": 0.6
+          "rate": 0.03
+        }
+      ]
+    },
+    "CF_01": {
+      "id": "CF_01",
+      "name": "ステージ1",
+      "stageTab": "コンフリクト・ゾーン",
+      "category": "normal",
+      "unlockType": "clear",
+      "unlockValue": "BF_05",
+      "info": "銃火器型の基本個体が出現する。",
+      "waves": [
+        [
+          {
+            "id": "M_PISTA_GUN",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_GRENEED",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_PISTA_GUN",
+            "level": 3
+          },
+          {
+            "id": "M_PISTA_GUN",
+            "level": 3
+          },
+          {
+            "id": "M_GRENEED",
+            "level": 3
+          }
+        ]
+      ],
+      "firstClearRewards": [
+        {
+          "type": "stone",
+          "count": 1
+        }
+      ]
+    },
+    "CF_02": {
+      "id": "CF_02",
+      "name": "ステージ2",
+      "stageTab": "コンフリクト・ゾーン",
+      "category": "normal",
+      "unlockType": "clear",
+      "unlockValue": "CF_01",
+      "info": "火力型と防御型が混ざる。",
+      "waves": [
+        [
+          {
+            "id": "M_PISTA_GUN",
+            "level": 3
+          },
+          {
+            "id": "M_PISTA_GUN",
+            "level": 3
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_GRENEED",
+            "level": 3
+          },
+          {
+            "id": "M_GRENEED",
+            "level": 3
+          },
+          {
+            "id": "M_GRENEED",
+            "level": 3
+          }
+        ],
+        [
+          {
+            "id": "M_PISTA_GUN",
+            "level": 3
+          },
+          {
+            "id": "M_SODD",
+            "level": 3
+          },
+          {
+            "id": "M_SODD",
+            "level": 3
+          }
+        ]
+      ],
+      "firstClearRewards": [
+        {
+          "type": "stone",
+          "count": 1
+        }
+      ]
+    },
+    "CF_03": {
+      "id": "CF_03",
+      "name": "ステージ3",
+      "stageTab": "コンフリクト・ゾーン",
+      "category": "normal",
+      "unlockType": "clear",
+      "unlockValue": "CF_02",
+      "info": "銃撃戦前の最終通常ステージ。",
+      "waves": [
+        [
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_SIDE",
+            "level": 4
+          },
+          {
+            "id": "M_SIDE",
+            "level": 4
+          },
+          {
+            "id": "M_SIDE",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_PISTA_GUN",
+            "level": 4
+          },
+          {
+            "id": "M_PISTA_GUN",
+            "level": 4
+          },
+          {
+            "id": "M_PISTA_GUN",
+            "level": 4
+          },
+          {
+            "id": "M_PISTA_GUN",
+            "level": 4
+          }
+        ]
+      ],
+      "randomAdds": [
+        {
+          "waves": [
+            2
+          ],
+          "chance": 0.2,
+          "enemy": {
+            "id": "M_SOUL_GUN",
+            "level": 3
+          }
+        }
+      ],
+      "firstClearRewards": [
+        {
+          "type": "stone",
+          "count": 1
+        }
+      ]
+    },
+    "CF_RAID": {
+      "id": "CF_RAID",
+      "name": "乱入",
+      "stageTab": "コンフリクト・ゾーン",
+      "category": "boss",
+      "unlockType": "clear",
+      "unlockValue": "CF_03",
+      "info": "シプナイトが前線に割り込むBossステージ。",
+      "waves": [
+        [
+          {
+            "id": "M_PISTA_GUN",
+            "level": 4
+          },
+          {
+            "id": "M_PISTA_GUN",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_SODD",
+            "level": 4
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_SHIELD",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          },
+          {
+            "id": "M_POSHE",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_SHIPKNIGHT",
+            "level": 4
+          },
+          {
+            "id": "M_SHIPKNIGHT",
+            "level": 4
+          }
+        ]
+      ],
+      "randomAdds": [
+        {
+          "waves": [
+            0
+          ],
+          "chance": 0.25,
+          "enemy": {
+            "id": "M_SOUL_GUN",
+            "level": 4
+          }
+        }
+      ],
+      "firstClearRewards": [
+        {
+          "type": "stone",
+          "count": 3
+        }
+      ],
+      "bossModifiers": {
+        "M_SHIPKNIGHT": {
+          "all": 2
+        }
+      }
+    },
+    "CF_FRONT": {
+      "id": "CF_FRONT",
+      "name": "最前線",
+      "stageTab": "コンフリクト・ゾーン",
+      "category": "boss",
+      "unlockType": "clear",
+      "unlockValue": "CF_RAID",
+      "info": "ニクォフ=ガンが陣取るBossステージ。",
+      "waves": [
+        [
+          {
+            "id": "M_GRENEED",
+            "level": 4
+          },
+          {
+            "id": "M_GRENEED",
+            "level": 4
+          },
+          {
+            "id": "M_GRENEED",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_PISTA_GUN",
+            "level": 4
+          },
+          {
+            "id": "M_PISTA_GUN",
+            "level": 4
+          },
+          {
+            "id": "M_PISTA_GUN",
+            "level": 4
+          },
+          {
+            "id": "M_SOUL_GUN",
+            "level": 4
+          },
+          {
+            "id": "M_SOUL_GUN",
+            "level": 4
+          }
+        ],
+        [
+          {
+            "id": "M_NIKOV_GUN",
+            "level": 4
+          }
+        ]
+      ],
+      "firstClearRewards": [
+        {
+          "type": "stone",
+          "count": 3
+        }
+      ],
+      "bossModifiers": {
+        "M_NIKOV_GUN": {
+          "all": 3
+        }
+      }
+    },
+    "EX_FRONT_SP": {
+      "id": "EX_FRONT_SP",
+      "name": "最前線SP",
+      "stageTab": "エクストラ",
+      "category": "extra",
+      "unlockType": "clear",
+      "unlockValue": "CF_FRONT",
+      "info": "ニクォフ=ガンが複数出現する高難易度ステージ。",
+      "waves": [
+        [
+          {
+            "id": "M_NIKOV_GUN",
+            "level": 4
+          },
+          {
+            "id": "M_NIKOV_GUN",
+            "level": 4
+          },
+          {
+            "id": "M_NIKOV_GUN",
+            "level": 4
+          }
+        ]
+      ],
+      "firstClearRewards": [
+        {
+          "type": "stone",
+          "count": 5
+        }
+      ],
+      "bossModifiers": {
+        "M_NIKOV_GUN": {
+          "hp": 10,
+          "attack": 1,
+          "speed": 2.5,
+          "mp": 2.5
+        }
+      },
+      "extraDrops": [
+        {
+          "type": "monster",
+          "id": "M_NIKOV_GUN",
+          "level": 1,
+          "rate": 0.8
+        },
+        {
+          "type": "recipe",
+          "id": "R_SK_SHOT",
+          "rate": 0.1
+        },
+        {
+          "type": "stone",
+          "count": 1,
+          "rate": 0.03
+        }
+      ]
+    },
+    "EX_FINAL_WEAPON": {
+      "id": "EX_FINAL_WEAPON",
+      "name": "最終兵器",
+      "stageTab": "エクストラ",
+      "category": "extra",
+      "unlockType": "clear",
+      "unlockValue": "EX_FRONT_SP",
+      "info": "ミニ=ガン単体の高難易度ステージ。",
+      "waves": [
+        [
+          {
+            "id": "M_MINI_GUN",
+            "level": 4
+          }
+        ]
+      ],
+      "firstClearRewards": [
+        {
+          "type": "stone",
+          "count": 5
+        }
+      ],
+      "bossModifiers": {
+        "M_MINI_GUN": {
+          "hp": 10,
+          "attack": 1,
+          "speed": 3,
+          "mp": 3
+        }
+      },
+      "extraDrops": [
+        {
+          "type": "recipe",
+          "id": "R_M_MINI_GUN",
+          "rate": 0.7
+        },
+        {
+          "type": "recipe",
+          "id": "R_SK_SHOT",
+          "rate": 0.1
+        },
+        {
+          "type": "recipe",
+          "id": "R_SK_RELOAD",
+          "rate": 0.1
+        },
+        {
+          "type": "stone",
+          "count": 1,
+          "rate": 0.03
         }
       ]
     }
@@ -2697,97 +3642,6 @@
       "level": 1
     },
     {
-      "source_monster_id": "M_NULL",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_POZ",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_POSHE",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_SODD",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_RAPID",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_SHIELD",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_HUME",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_SIDE",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_SUI",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_GLASSCAT",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_PII",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_DORAS",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
-      "source_monster_id": "M_SHIRIP",
-      "drop_type": "stone",
-      "rate": 0.03,
-      "level": 1,
-      "count": 1
-    },
-    {
       "source_monster_id": "M_ADONIS_ORCINUS",
       "drop_type": "monster",
       "rate": 0.25,
@@ -2863,6 +3717,94 @@
       "rate": 0.15,
       "drop_id": "M_SPLENDENS_CAELUM",
       "level": 1
+    },
+    {
+      "source_monster_id": "M_PISTA_GUN",
+      "drop_type": "monster",
+      "drop_id": "M_PISTA_GUN",
+      "rate": 0.25,
+      "level": 1,
+      "count": 1
+    },
+    {
+      "source_monster_id": "M_GRENEED",
+      "drop_type": "monster",
+      "drop_id": "M_GRENEED",
+      "rate": 0.25,
+      "level": 1,
+      "count": 1
+    },
+    {
+      "source_monster_id": "M_SOUL_GUN",
+      "drop_type": "monster",
+      "drop_id": "M_SOUL_GUN",
+      "rate": 0.25,
+      "level": 1,
+      "count": 1
+    },
+    {
+      "source_monster_id": "M_NIKOV_GUN",
+      "drop_type": "monster",
+      "drop_id": "M_NIKOV_GUN",
+      "rate": 0.1,
+      "level": 1,
+      "count": 1
+    },
+    {
+      "source_monster_id": "M_NIKOV_GUN",
+      "drop_type": "monster",
+      "drop_id": "M_GRENEED",
+      "rate": 0.2,
+      "level": 1,
+      "count": 1
+    },
+    {
+      "source_monster_id": "M_NIKOV_GUN",
+      "drop_type": "recipe",
+      "drop_id": "R_SK_SHOT",
+      "rate": 0.2,
+      "level": 1,
+      "count": 1
+    },
+    {
+      "source_monster_id": "M_MINI_GUN",
+      "drop_type": "monster",
+      "drop_id": "M_PISTA_GUN",
+      "rate": 0.2,
+      "level": 1,
+      "count": 1
+    },
+    {
+      "source_monster_id": "M_MINI_GUN",
+      "drop_type": "monster",
+      "drop_id": "M_GRENEED",
+      "rate": 0.2,
+      "level": 1,
+      "count": 1
+    },
+    {
+      "source_monster_id": "M_MINI_GUN",
+      "drop_type": "recipe",
+      "drop_id": "R_M_MINI_GUN",
+      "rate": 0.1,
+      "level": 1,
+      "count": 1
+    },
+    {
+      "source_monster_id": "M_MINI_GUN",
+      "drop_type": "recipe",
+      "drop_id": "R_SK_SHOT",
+      "rate": 0.2,
+      "level": 1,
+      "count": 1
+    },
+    {
+      "source_monster_id": "M_MINI_GUN",
+      "drop_type": "recipe",
+      "drop_id": "R_SK_RELOAD",
+      "rate": 0.2,
+      "level": 1,
+      "count": 1
     }
   ],
   "glossary": {
@@ -2914,6 +3856,34 @@
     "deathCount": {
       "name": "デスカウント",
       "desc": "カウントが4になると、そのターン終了時に死亡する状態。"
+    },
+    "reloadStatus": {
+      "name": "リロード状態",
+      "desc": "次に使うダメージスキルのヒット数が倍になる。効果を消費しないまま3ターン経つと解除される。",
+      "related": [
+        "リロード"
+      ]
+    },
+    "shieldStatus": {
+      "name": "シールド",
+      "desc": "受けるダメージと追加効果を1回だけ0にする。複数付与された場合は回数分だけ防ぐ。",
+      "related": [
+        "シールド状態"
+      ]
+    },
+    "autoMpRegen": {
+      "name": "自動MP回復状態",
+      "desc": "ターン終了時、最大MPの4分の1を回復する。",
+      "related": [
+        "自動MP回復"
+      ]
+    },
+    "focusStatus": {
+      "name": "注目状態",
+      "desc": "3ターンの間、エネミーの優先ターゲットになる。",
+      "related": [
+        "注目"
+      ]
     }
   }
 }
