@@ -2790,16 +2790,7 @@
           "type": "stone",
           "count": 3
         }
-      ],
-      "bossModifiers": {
-        "M_SPLENDENS_CAELUM": {
-          "hp": 4,
-          "attack": 2,
-          "speed": 2,
-          "mp": 2
-        }
-      },
-      "nonBossHpMult": 2
+      ]
     },
     "AQ_BOSS_02": {
       "id": "AQ_BOSS_02",
@@ -2858,16 +2849,7 @@
           "type": "stone",
           "count": 3
         }
-      ],
-      "bossModifiers": {
-        "M_ADONIS_ORCINUS": {
-          "hp": 4,
-          "attack": 2,
-          "speed": 2,
-          "mp": 2
-        }
-      },
-      "nonBossHpMult": 2
+      ]
     },
     "EX_UFO": {
       "id": "EX_UFO",
@@ -2899,14 +2881,6 @@
           "count": 5
         }
       ],
-      "bossModifiers": {
-        "M_UFO": {
-          "hp": 3,
-          "attack": 1,
-          "speed": 1.8,
-          "mp": 1.8
-        }
-      },
       "extraDrops": [
         {
           "type": "monster",
@@ -2953,14 +2927,6 @@
           "count": 5
         }
       ],
-      "bossModifiers": {
-        "M_SHIPKNIGHT": {
-          "hp": 10,
-          "attack": 1,
-          "speed": 2,
-          "mp": 2
-        }
-      },
       "extraDrops": [
         {
           "type": "recipe",
@@ -3010,20 +2976,6 @@
           "count": 5
         }
       ],
-      "bossModifiers": {
-        "M_SPLENDENS_CAELUM": {
-          "hp": 10,
-          "attack": 1,
-          "speed": 2.5,
-          "mp": 2.5
-        },
-        "M_ADONIS_ORCINUS": {
-          "hp": 10,
-          "attack": 1,
-          "speed": 2.5,
-          "mp": 2.5
-        }
-      },
       "extraDrops": [
         {
           "oneOf": [
@@ -3321,12 +3273,7 @@
           "type": "stone",
           "count": 3
         }
-      ],
-      "bossModifiers": {
-        "M_SHIPKNIGHT": {
-          "all": 2
-        }
-      }
+      ]
     },
     "CF_FRONT": {
       "id": "CF_FRONT",
@@ -3385,12 +3332,7 @@
           "type": "stone",
           "count": 3
         }
-      ],
-      "bossModifiers": {
-        "M_NIKOV_GUN": {
-          "all": 3
-        }
-      }
+      ]
     },
     "EX_FRONT_SP": {
       "id": "EX_FRONT_SP",
@@ -3422,14 +3364,6 @@
           "count": 5
         }
       ],
-      "bossModifiers": {
-        "M_NIKOV_GUN": {
-          "hp": 10,
-          "attack": 1,
-          "speed": 2.5,
-          "mp": 2.5
-        }
-      },
       "extraDrops": [
         {
           "type": "monster",
@@ -3471,14 +3405,6 @@
           "count": 5
         }
       ],
-      "bossModifiers": {
-        "M_MINI_GUN": {
-          "hp": 10,
-          "attack": 1,
-          "speed": 3,
-          "mp": 3
-        }
-      },
       "extraDrops": [
         {
           "type": "recipe",
