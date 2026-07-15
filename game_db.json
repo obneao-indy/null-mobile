@@ -274,7 +274,7 @@
     "M_HUME": {
       "id": "M_HUME",
       "name": "ヒューム",
-      "glyph": "人",
+      "glyph": "○",
       "hp": 60,
       "attack": 30,
       "speed": 20,
@@ -469,7 +469,7 @@
     "M_SUI": {
       "id": "M_SUI",
       "name": "スイ",
-      "glyph": "魚",
+      "glyph": "><",
       "hp": 30,
       "attack": 30,
       "speed": 60,
@@ -509,7 +509,7 @@
     "M_GLASSCAT": {
       "id": "M_GLASSCAT",
       "name": "グラスキャット",
-      "glyph": "透",
+      "glyph": "◇",
       "hp": 50,
       "attack": 30,
       "speed": 60,
@@ -553,7 +553,7 @@
     "M_PII": {
       "id": "M_PII",
       "name": "ピィ",
-      "glyph": "魚",
+      "glyph": "◌",
       "hp": 50,
       "attack": 20,
       "speed": 60,
@@ -598,7 +598,7 @@
     "M_DORAS": {
       "id": "M_DORAS",
       "name": "ドラス",
-      "glyph": "底",
+      "glyph": "▱",
       "hp": 70,
       "attack": 25,
       "speed": 10,
@@ -640,7 +640,7 @@
     "M_SHIRIP": {
       "id": "M_SHIRIP",
       "name": "シリプ",
-      "glyph": "蝦",
+      "glyph": "≋",
       "hp": 40,
       "attack": 50,
       "speed": 30,
@@ -679,7 +679,7 @@
     "M_ADONIS_ORCINUS": {
       "id": "M_ADONIS_ORCINUS",
       "name": "アドニス・オルキヌス",
-      "glyph": "甲",
+      "glyph": "⬟",
       "hp": 100,
       "attack": 30,
       "speed": 30,
@@ -730,7 +730,7 @@
     "M_SPLENDENS_CAELUM": {
       "id": "M_SPLENDENS_CAELUM",
       "name": "スプレンデンス・カエルム",
-      "glyph": "闘",
+      "glyph": "✧",
       "hp": 40,
       "attack": 50,
       "speed": 70,
@@ -783,7 +783,7 @@
     "M_ZOBY": {
       "id": "M_ZOBY",
       "name": "ゾビィ",
-      "glyph": "屍",
+      "glyph": "☠",
       "hp": 120,
       "attack": 40,
       "speed": 5,
@@ -828,7 +828,7 @@
     "M_PISTA_GUN": {
       "id": "M_PISTA_GUN",
       "name": "ピスタ=ガン",
-      "glyph": "銃",
+      "glyph": "⌐",
       "hp": 50,
       "attack": 60,
       "speed": 40,
@@ -873,7 +873,7 @@
     "M_GRENEED": {
       "id": "M_GRENEED",
       "name": "グレネド",
-      "glyph": "爆",
+      "glyph": "✹",
       "hp": 20,
       "attack": 65,
       "speed": 70,
@@ -918,7 +918,7 @@
     "M_NIKOV_GUN": {
       "id": "M_NIKOV_GUN",
       "name": "ニクォフ=ガン",
-      "glyph": "銃",
+      "glyph": "▸",
       "hp": 100,
       "attack": 80,
       "speed": 50,
@@ -968,7 +968,7 @@
     "M_MINI_GUN": {
       "id": "M_MINI_GUN",
       "name": "ミニ=ガン",
-      "glyph": "銃",
+      "glyph": "▦",
       "hp": 100,
       "attack": 110,
       "speed": 10,
@@ -1018,7 +1018,7 @@
     "M_SOUL_GUN": {
       "id": "M_SOUL_GUN",
       "name": "ソウル=ガン",
-      "glyph": "魂",
+      "glyph": "☼",
       "hp": 50,
       "attack": 5,
       "speed": 70,
@@ -1063,7 +1063,7 @@
     "M_BIG_SHIELDER": {
       "id": "M_BIG_SHIELDER",
       "name": "ビッグシールダー",
-      "glyph": "盾",
+      "glyph": "▛",
       "hp": 100,
       "attack": 30,
       "speed": 30,
@@ -1306,7 +1306,7 @@
     "SK_HOLY_BREATH": {
       "id": "SK_HOLY_BREATH",
       "name": "ホーリーブレス",
-      "glyph": "白",
+      "glyph": "✧",
       "desc": "敵全体にAの1.5倍ダメージを与え、味方全員に2ターンの自動HP回復を付与する。",
       "target": "enemy",
       "targets": 99,
@@ -1319,7 +1319,7 @@
     "SK_PREA": {
       "id": "SK_PREA",
       "name": "プレア",
-      "glyph": "蘇",
+      "glyph": "✦",
       "desc": "死亡した味方一体を、残りHP三分の一で復活させる。",
       "target": "allyDead",
       "targets": 1,
@@ -1329,7 +1329,7 @@
     "SK_HEIM_BREATH": {
       "id": "SK_HEIM_BREATH",
       "name": "ヘイムブレス",
-      "glyph": "紫",
+      "glyph": "☠",
       "desc": "敵全体にAの1.5倍ダメージを与え、デスカウントを1付与する。デスカウントが4になるとターン終了時に死亡する。",
       "target": "enemy",
       "targets": 99,
@@ -1342,7 +1342,7 @@
     "SK_POISON_HEAL": {
       "id": "SK_POISON_HEAL",
       "name": "ポイズンヒール",
-      "glyph": "毒+",
+      "glyph": "☣+",
       "desc": "エネミー一体にAの1.2倍ダメージ。対象が毒なら与えたダメージ分、自身のHPを回復する。",
       "target": "enemy",
       "targets": 1,
@@ -1428,7 +1428,7 @@
     "SK_SELF_DESTRUCT": {
       "id": "SK_SELF_DESTRUCT",
       "name": "自爆",
-      "glyph": "爆",
+      "glyph": "✹",
       "desc": "敵全体にAの2.5倍ダメージを与え、自身も戦闘不能になる。",
       "target": "enemy",
       "targets": 99,
@@ -1440,7 +1440,7 @@
     "SK_NIOH_STAND": {
       "id": "SK_NIOH_STAND",
       "name": "仁王立ち",
-      "glyph": "盾",
+      "glyph": "▛",
       "desc": "自身に3ターンの注目状態を付与し、シールドを2つ付与する。",
       "target": "self",
       "targets": 1,
@@ -1451,7 +1451,7 @@
     "SK_PALADIN_GUARD": {
       "id": "SK_PALADIN_GUARD",
       "name": "パラディンガード",
-      "glyph": "聖",
+      "glyph": "✚",
       "desc": "味方全体にシールドを3つ付与し、HPを50回復する。",
       "target": "ally",
       "targets": 99,
@@ -1476,9 +1476,7 @@
           "count": 3
         }
       ],
-      "mode": "all",
-      "gacha": true,
-      "gachaRate": 20
+      "mode": "all"
     },
     "R_SK_MINOR_HEAL": {
       "id": "R_SK_MINOR_HEAL",
@@ -1494,9 +1492,7 @@
           "count": 3
         }
       ],
-      "mode": "all",
-      "gacha": true,
-      "gachaRate": 20
+      "mode": "all"
     },
     "R_SK_BEAT": {
       "id": "R_SK_BEAT",
@@ -1581,9 +1577,7 @@
           "count": 3
         }
       ],
-      "mode": "all",
-      "gacha": true,
-      "gachaRate": 20
+      "mode": "all"
     },
     "R_SK_SWIM": {
       "id": "R_SK_SWIM",
@@ -1603,9 +1597,7 @@
           "count": 3
         }
       ],
-      "mode": "any",
-      "gacha": true,
-      "gachaRate": 30
+      "mode": "any"
     },
     "R_M_ZOBY": {
       "id": "R_M_ZOBY",
