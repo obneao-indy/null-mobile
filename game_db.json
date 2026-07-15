@@ -252,7 +252,8 @@
           "speed": 10,
           "mp": 15,
           "skills": [
-            "SK_PROTECT"
+            "SK_PROTECT",
+            "SK_ATTENTION"
           ]
         },
         "4": {
@@ -1459,6 +1460,16 @@
       "allAllies": true,
       "shieldTarget": 3,
       "heal": 50
+    },
+    "SK_ATTENTION": {
+      "id": "SK_ATTENTION",
+      "name": "注目",
+      "glyph": "⌖",
+      "desc": "自身に3ターンの注目状態を付与する。Sの行動順に関係なくターン開始時に発動する。",
+      "target": "self",
+      "targets": 1,
+      "cost": 20,
+      "tauntTurns": 3
     }
   },
   "recipes": {
