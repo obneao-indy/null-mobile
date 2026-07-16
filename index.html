@@ -412,21 +412,20 @@ async function handleActiveSkill(a,sk,db,o){
   if(db.revive){let t=ts[0];if(t){t.dead=false;t.hp=Math.max(1,Math.round(t.maxHp/3));t.koT=0;t.spawnT=.55;fx("wave",t.x||cv.width/2,t.y||cv.height*.56,{t:.8,text:"REVIVE",color:"#fff"});logLine(`${t.name} revived`) } return true}
   if(db.regenAllTurns){alive(a.side==="ally"?game.allies:game.enemies).forEach(t=>{t.regenTurns=Math.max(t.regenTurns||0,db.regenAllTurns);fx("guard",t.x,t.y,{t:.55,r:32,color:"#33ff99"})})}
   if(db.breathColor)fx("wave",a.x,a.y,{t:.65,text:db.name,color:db.breathColor});
-  let hits=db.hits||1,consumeReload=false;
-  if(a.reloadTurns>0&&db.attackMult){hits*=2;consumeReload=true}
+  let baseHits=db.hits||1,reloadBonusHits=0;
+  if(a.reloadTurns>0&&db.attackMult){reloadBonusHits=baseHits;a.reloadTurns=0;fx("text",a.x,a.y-52,{t:.65,text:"RELOAD+",color:"#7ccfff",vy:-18});logLine(`${a.name} reload applies`)}
   for(let t of ts){
     if(!t||t.dead)continue;
-    let before=t.hp,landed=false;
-    if(db.normalAttack){let instant=db.instantDeathChance&&monsterDB[t.id]?.role!=="boss"&&Math.random()<db.instantDeathChance;if(instant)landed=damage(t,t.hp,db.name,a,"skill","heavy",{ignoreHpReduction:true})||landed;else landed=damage(t,normalPower(a),db.name,a,"normal","line")||landed}
-    if(db.attackMult){for(let i=0;i<hits&&!t.dead;i++){let baseMult=db.attackMult,postMult=db.critChance&&Math.random()<db.critChance?(db.critMult||2):1;if(db.ignoreReduction&&db.attackMult>=3){baseMult=1;postMult*=db.attackMult}let style=hits>1||baseMult*postMult>=3?"heavy":(ts.length>1||db.projectile?"bullet":"line");landed=damage(t,Math.max(1,Math.round(effectiveAttack(a)*baseMult)),db.name,a,"skill",style,{ignoreReduction:!!db.ignoreReduction,pierceShield:!!db.pierceShield,postMult})||landed;if(hits>1)await delay(120)}}
+    let before=t.hp,landed=false,effectLanded=false,totalHits=baseHits+reloadBonusHits;
+    if(db.normalAttack){let instant=db.instantDeathChance&&monsterDB[t.id]?.role!=="boss"&&Math.random()<db.instantDeathChance;if(instant){let hit=damage(t,t.hp,db.name,a,"skill","heavy",{ignoreHpReduction:true});landed=hit||landed;effectLanded=hit||effectLanded}else{let hit=damage(t,normalPower(a),db.name,a,"normal","line");landed=hit||landed;effectLanded=hit||effectLanded}}
+    if(db.attackMult){for(let i=0;i<totalHits&&!t.dead;i++){let baseMult=db.attackMult,postMult=db.critChance&&Math.random()<db.critChance?(db.critMult||2):1;if(db.ignoreReduction&&db.attackMult>=3){baseMult=1;postMult*=db.attackMult}let style=totalHits>1||baseMult*postMult>=3?"heavy":(ts.length>1||db.projectile?"bullet":"line"),hit=damage(t,Math.max(1,Math.round(effectiveAttack(a)*baseMult)),db.name,a,"skill",style,{ignoreReduction:!!db.ignoreReduction,pierceShield:!!db.pierceShield,postMult});landed=hit||landed;if(i<baseHits)effectLanded=hit||effectLanded;if(totalHits>1)await delay(120)}}
     let dealt=Math.max(0,before-t.hp);
-    if(db.poisonDrain&&(t.poison?.length||0)&&dealt>0){let heal=Math.min(a.maxHp-a.hp,dealt);a.hp+=heal;fx("text",a.x,a.y-34,{t:.7,text:`+${heal}`,color:"#33ff99",vy:-28})}
-    if(landed&&db.poisonChance&&Math.random()<db.poisonChance)applyPoison(t,db.poisonTurns||3,db.name);
-    if(landed&&db.analyzeChance&&Math.random()<db.analyzeChance)applyAnalyze(t,db.analyzeTurns||3,db.name);
-    if(landed&&db.deathCount){t.deathCount=(t.deathCount||0)+db.deathCount;fx("text",t.x,t.y-48,{t:.7,text:`☠${t.deathCount}`,color:"#b44cff",vy:-20})}
+    if(effectLanded&&db.poisonDrain&&(t.poison?.length||0)&&dealt>0){let heal=Math.min(a.maxHp-a.hp,dealt);a.hp+=heal;fx("text",a.x,a.y-34,{t:.7,text:`+${heal}`,color:"#33ff99",vy:-28})}
+    if(effectLanded&&db.poisonChance&&Math.random()<db.poisonChance)applyPoison(t,db.poisonTurns||3,db.name);
+    if(effectLanded&&db.analyzeChance&&Math.random()<db.analyzeChance)applyAnalyze(t,db.analyzeTurns||3,db.name);
+    if(effectLanded&&db.deathCount){t.deathCount=(t.deathCount||0)+db.deathCount;fx("text",t.x,t.y-48,{t:.7,text:`☠${t.deathCount}`,color:"#b44cff",vy:-20})}
     if(ts.length>1)await delay(180)
   }
-  if(consumeReload)a.reloadTurns=0;
   if(db.stunSelfTurns){a.stunTurns=db.stunSelfTurns;fx("guard",a.x,a.y,{t:.75,r:42,color:"#ff3355"});fx("text",a.x,a.y-48,{t:.7,text:"OVERHEAT",color:"#ff3355",vy:-18})}
   if(db.selfKO&&!a.dead)damage(a,a.hp,db.name,null,"venom","heavy");
   return true
